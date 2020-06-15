@@ -6,6 +6,7 @@
     <Authors>zmjack</Authors>
     <Description>Chinese general utility.</Description>
     <Copyright>Copyright © nstandard.net 2020</Copyright>
+	<PackageId>Chinese</PackageId>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/zmjack/Chinese</PackageProjectUrl>
     <PackageIcon>Chinese.png</PackageIcon>
