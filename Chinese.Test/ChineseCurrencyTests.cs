@@ -37,7 +37,7 @@ namespace Chinese.Test
             Assert.Equal("拾万零壹佰零壹圆整", ChineseCurrency.GetString(10_0101, options));
             Assert.Equal("拾万壹仟零壹圆整", ChineseCurrency.GetString(10_1001, options));
             Assert.Equal("拾万壹仟零壹拾圆整", ChineseCurrency.GetString(10_1010, options));
-            Assert.Equal("拾万零壹元贰角整", ChineseCurrency.GetString(10_0001.2m, options));
+            Assert.Equal("拾万零壹圆贰角整", ChineseCurrency.GetString(10_0001.2m, options));
             Assert.Equal("拾万零壹圆贰角叁分", ChineseCurrency.GetString(10_0001.23m, options));
             Assert.Equal("拾万零壹圆零叁分", ChineseCurrency.GetString(10_0001.03m, options));
         }
@@ -50,7 +50,7 @@ namespace Chinese.Test
             Assert.Equal("壹拾万零壹佰零壹圆整", ChineseCurrency.GetString(10_0101, options));
             Assert.Equal("壹拾万壹仟零壹圆整", ChineseCurrency.GetString(10_1001, options));
             Assert.Equal("壹拾万壹仟零壹拾圆整", ChineseCurrency.GetString(10_1010, options));
-            Assert.Equal("壹拾万零壹元贰角整", ChineseCurrency.GetString(10_0001.2m, options));
+            Assert.Equal("壹拾万零壹圆贰角整", ChineseCurrency.GetString(10_0001.2m, options));
             Assert.Equal("壹拾万零壹圆贰角叁分", ChineseCurrency.GetString(10_0001.23m, options));
             Assert.Equal("壹拾万零壹圆零叁分", ChineseCurrency.GetString(10_0001.03m, options));
         }
