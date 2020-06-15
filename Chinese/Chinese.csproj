@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.1</Version>
+    <Version>0.0.5</Version>
     <Authors>zmjack</Authors>
-    <Description>Chinese general utility.</Description>
+    <Description>中文解析通用工具。包括拼音，数字读法，货币读法。</Description>
     <Copyright>Copyright © nstandard.net 2020</Copyright>
 	<PackageId>Chinese</PackageId>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -12,7 +12,7 @@
     <PackageIcon>Chinese.png</PackageIcon>
     <RepositoryUrl>https://github.com/zmjack/Chinese</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Pinyin CHS CHT</PackageTags>
+    <PackageTags>Chinese Pinyin Number</PackageTags>
 	<LangVersion>8.0</LangVersion>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>

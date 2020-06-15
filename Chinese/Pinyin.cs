@@ -1,7 +1,6 @@
 ﻿using Microsoft.International.Converters.PinYinConverter;
 using NStandard;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Chinese
@@ -10,7 +9,7 @@ namespace Chinese
     {
         public static Polyphone[] Polyphones = new Polyphone[0];
 
-        public static string Get(string chinese, PinyinFormat format = PinyinFormat.Default)
+        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default)
         {
             if (!chinese.IsNullOrWhiteSpace())
             {
