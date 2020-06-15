@@ -10,17 +10,17 @@
 
 ```c#
 // "qu4 ba1，pi2 ka3 qiu1！"
-Pinyin.Get("去吧，皮卡丘！", PinyinFormat.Default);
+Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.Default);
 ```
 
 ```c#
 // "qu ba，pi ka qiu！"
-Pinyin.Get("去吧，皮卡丘！", PinyinFormat.WithoutTone);
+Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.WithoutTone);
 ```
 
 ```c#
 // "qù bā，pí kǎ qiū！"
-Pinyin.Get("去吧，皮卡丘！", PinyinFormat.PhoneticSymbol);
+Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.PhoneticSymbol);
 ```
 
 <br/>
