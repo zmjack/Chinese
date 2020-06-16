@@ -6,21 +6,32 @@
 
 ## 拼音
 
-拼音解析引用：**Microsoft Visual Studio International Pack 1.0 Service**，提供音标解析。
+拼音解析：**Microsoft Visual Studio International Pack 1.0 Service** - Simplified Chinese Pin-Yin Conversion Library，**ChnCharInfo.dll**。
 
 ```c#
-// "qu4 ba1，pi2 ka3 qiu1！"
-Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.Default);
+// "mian3 fei4，kua4 ping2 tai1，kai1 yuan2！"
+Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Default);
 ```
 
 ```c#
-// "qu ba，pi ka qiu！"
-Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.WithoutTone);
+// "mian fei，kua ping tai，kai yuan！"
+Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.WithoutTone);
 ```
 
 ```c#
-// "qù bā，pí kǎ qiū！"
-Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.PhoneticSymbol);
+// "miǎn fèi，kuà píng tāi，kāi yuán！"
+Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.PhoneticSymbol);
+```
+
+<br/>
+
+## 简繁转换
+
+简繁解析：**Microsoft Visual Studio International Pack 1.0 Service** - Traditional Chinese to Simplified Chinese Conversion Library，**ChineseConverter.dll**。
+
+```c#
+ChineseConverter.ToTraditional("免费，跨平台，开源！");    // "免費，跨平臺，開源！"
+ChineseConverter.ToSimplified("免費，跨平臺，開源！");     // "免费，跨平台，开源！"
 ```
 
 <br/>

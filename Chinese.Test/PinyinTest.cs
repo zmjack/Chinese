@@ -7,9 +7,9 @@ namespace Chinese.Test
         [Fact]
         public void Test1()
         {
-            Assert.Equal("qu4 ba1，pi2 ka3 qiu1！", Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.Default));
-            Assert.Equal("qu ba，pi ka qiu！", Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.WithoutTone));
-            Assert.Equal("qù bā，pí kǎ qiū！", Pinyin.GetString("去吧，皮卡丘！", PinyinFormat.PhoneticSymbol));
+            Assert.Equal("mian3 fei4，kua4 ping2 tai1，kai1 yuan2！", Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Default));
+            Assert.Equal("mian fei，kua ping tai，kai yuan！", Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.WithoutTone));
+            Assert.Equal("miǎn fèi，kuà píng tāi，kāi yuán！", Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.PhoneticSymbol));
         }
     }
 }
