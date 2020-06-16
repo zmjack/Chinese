@@ -12,5 +12,23 @@ namespace Chinese.Test
             Assert.Equal("mian fei，kua ping tai，kai yuan！", Pinyin.GetString(str, PinyinFormat.WithoutTone));
             Assert.Equal("miǎn fèi，kuà píng tāi，kāi yuán！", Pinyin.GetString(str, PinyinFormat.PhoneticSymbol));
         }
+
+        [Fact]
+        public void ChineseLexiconTest()
+        {
+            var str = "他是重量级选手。";
+            Assert.Equal("ta1 shi4 chong2 liang2 ji2 shua1 shou3。", Pinyin.GetString(str, PinyinFormat.Default));
+
+            var words = new ChineseWord[]
+            {
+                new ChineseWord { Pinyin = "zhong4 liang4", Simplified = "重量", Traditional = "重量" },
+            };
+
+            using (var lexicon = new ChineseLexicon(words))
+            {
+                Assert.Equal("ta1 shi4 zhong4 liang4 ji2 shua1 shou3。", Pinyin.GetString(str, PinyinFormat.Default));
+            }
+        }
+
     }
 }

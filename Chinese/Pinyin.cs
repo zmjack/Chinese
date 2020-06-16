@@ -1,49 +1,72 @@
 ﻿using Microsoft.International.Converters.PinYinConverter;
 using NStandard;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Chinese
 {
     public static class Pinyin
     {
-        public static Polyphone[] Polyphones = new Polyphone[0];
-
-        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default)
+        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default, ChineseType chineseType = ChineseType.Simplified)
         {
+            var lexicon = ChineseLexicon.Current;
+            IEnumerable<int> GetDefaultSteps() { foreach (var ch in chinese) yield return 1; }
+
+            var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chinese, chineseType).Select(x => x.Length);
+
             if (!chinese.IsNullOrWhiteSpace())
             {
                 var sb = new StringBuilder();
                 var insertSpace = false;
-                foreach (var ch in chinese)
+                var ptext = 0;
+                foreach (var step in steps)
                 {
+                    var word = chinese.Substring(ptext, step);
                     try
                     {
-                        var chineseChar = new ChineseChar(ch);
-                        var pinyin = chineseChar.Pinyins[0].ToString().ToLower();
+                        string pinyin;
+                        if (word.Length == 1)
+                        {
+                            var chineseChar = new ChineseChar(word[0]);
+                            pinyin = chineseChar.Pinyins[0].ToString().ToLower();
+                        }
+                        else
+                        {
+                            var chineseWord = chineseType == ChineseType.Traditional
+                                ? lexicon.Words.First(x => x.Traditional == word)
+                                : lexicon.Words.First(x => x.Simplified == word);
+                            pinyin = chineseWord.Pinyin;
+                        }
 
                         if (insertSpace) sb.Append(" ");
 
                         switch (format)
                         {
                             case PinyinFormat.Default: sb.Append(pinyin); break;
-                            case PinyinFormat.WithoutTone: sb.Append(pinyin.Slice(0, -1)); break;
+                            case PinyinFormat.WithoutTone: sb.Append(GetPinyinWithoutTone(pinyin)); break;
                             case PinyinFormat.PhoneticSymbol: sb.Append(GetPhoneticSymbol(pinyin)); break;
                         }
                         insertSpace = true;
                     }
                     catch
                     {
-                        sb.Append(ch);
+                        sb.Append(word);
                         insertSpace = false;
                     }
+
+                    ptext += step;
                 }
+
                 return sb.ToString();
             }
             return chinese;
         }
 
-        private static string GetPhoneticSymbol(string pinyin)
+        public static string GetPinyinWithoutTone(string pinyin) => pinyin.Slice(0, -1);
+        public static string GetPhoneticSymbol(string pinyin)
         {
             var _pinyin = pinyin.Slice(0, -1);
             var tone = int.Parse(pinyin.Slice(-1));
