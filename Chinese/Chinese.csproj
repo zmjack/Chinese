@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.8</Version>
+    <Version>0.0.9</Version>
     <Authors>zmjack</Authors>
     <Description>中文解析通用工具。包括拼音，简繁转换，数字读法，货币读法。</Description>
     <Copyright>Copyright © nstandard.net 2020</Copyright>

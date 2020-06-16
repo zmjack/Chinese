@@ -90,7 +90,7 @@ namespace Chinese
                 .ToArray();
             var ret = levelParts.Select((v, i) => GetPartString(v, SuperiorLevels[SuperiorLevels.Length - levelParts.Length + i])).Join("");
 
-            if (!options.Verbose && (ret.StartsWith("一十") || ret.StartsWith("壹拾"))) ret = ret.Substring(1);
+            if (options.Simplified && (ret.StartsWith("一十") || ret.StartsWith("壹拾"))) ret = ret.Substring(1);
 
             return ret;
         }

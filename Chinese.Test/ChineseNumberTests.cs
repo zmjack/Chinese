@@ -7,17 +7,7 @@ namespace Chinese.Test
         [Fact]
         public void LowerTest()
         {
-            var options = new ChineseNumberOptions { Verbose = false, Upper = false };
-            Assert.Equal("十万零一", ChineseNumber.GetString(10_0001, options));
-            Assert.Equal("十万零一百零一", ChineseNumber.GetString(10_0101, options));
-            Assert.Equal("十万一千零一", ChineseNumber.GetString(10_1001, options));
-            Assert.Equal("十万一千零一十", ChineseNumber.GetString(10_1010, options));
-        }
-
-        [Fact]
-        public void VerboseLowerTest()
-        {
-            var options = new ChineseNumberOptions { Verbose = true, Upper = false };
+            var options = new ChineseNumberOptions { Simplified = false, Upper = false };
             Assert.Equal("一十万零一", ChineseNumber.GetString(10_0001, options));
             Assert.Equal("一十万零一百零一", ChineseNumber.GetString(10_0101, options));
             Assert.Equal("一十万一千零一", ChineseNumber.GetString(10_1001, options));
@@ -25,23 +15,33 @@ namespace Chinese.Test
         }
 
         [Fact]
-        public void UpperTest()
+        public void SimplifiedLowerTest()
         {
-            var options = new ChineseNumberOptions { Verbose = false, Upper = true };
-            Assert.Equal("拾万零壹", ChineseNumber.GetString(10_0001, options));
-            Assert.Equal("拾万零壹佰零壹", ChineseNumber.GetString(10_0101, options));
-            Assert.Equal("拾万壹仟零壹", ChineseNumber.GetString(10_1001, options));
-            Assert.Equal("拾万壹仟零壹拾", ChineseNumber.GetString(10_1010, options));
+            var options = new ChineseNumberOptions { Simplified = true, Upper = false };
+            Assert.Equal("十万零一", ChineseNumber.GetString(10_0001, options));
+            Assert.Equal("十万零一百零一", ChineseNumber.GetString(10_0101, options));
+            Assert.Equal("十万一千零一", ChineseNumber.GetString(10_1001, options));
+            Assert.Equal("十万一千零一十", ChineseNumber.GetString(10_1010, options));
         }
 
         [Fact]
-        public void VerboseUpperTest()
+        public void UpperTest()
         {
-            var options = new ChineseNumberOptions { Verbose = true, Upper = true };
+            var options = new ChineseNumberOptions { Simplified = false, Upper = true };
             Assert.Equal("壹拾万零壹", ChineseNumber.GetString(10_0001, options));
             Assert.Equal("壹拾万零壹佰零壹", ChineseNumber.GetString(10_0101, options));
             Assert.Equal("壹拾万壹仟零壹", ChineseNumber.GetString(10_1001, options));
             Assert.Equal("壹拾万壹仟零壹拾", ChineseNumber.GetString(10_1010, options));
+        }
+
+        [Fact]
+        public void SimplifiedUpperTest()
+        {
+            var options = new ChineseNumberOptions { Simplified = true, Upper = true };
+            Assert.Equal("拾万零壹", ChineseNumber.GetString(10_0001, options));
+            Assert.Equal("拾万零壹佰零壹", ChineseNumber.GetString(10_0101, options));
+            Assert.Equal("拾万壹仟零壹", ChineseNumber.GetString(10_1001, options));
+            Assert.Equal("拾万壹仟零壹拾", ChineseNumber.GetString(10_1010, options));
         }
 
         [Fact]
