@@ -4,6 +4,16 @@
 
 <br/>
 
+## 安装
+
+通过 **Nuget** 使用 **.NET CLI** 安装：
+
+```powershell
+dotnet add package Chinese
+```
+
+<br/>
+
 ## 拼音
 
 拼音解析：**Microsoft Visual Studio International Pack 1.0 Service** - Simplified Chinese Pin-Yin Conversion Library，**ChnCharInfo.dll**。
