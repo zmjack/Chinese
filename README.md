@@ -123,10 +123,10 @@ ChineseNumber.GetPureString(10_1010, upper: true);     // "壹零壹零壹零"
 
 ```c#
 var options = new ChineseNumberOptions { Verbose = false, Upper = false };
-ChineseCurrency.GetString(10_0001, options);    // "十万零一元整"
-ChineseCurrency.GetString(10_0101, options);    // "十万零一百零一元整"
-ChineseCurrency.GetString(10_1001, options);    // "十万一千零一元整"
-ChineseCurrency.GetString(10_1010, options);    // "十万一千零一十元整"
+ChineseCurrency.GetString(10_0001, options);       // "十万零一元整"
+ChineseCurrency.GetString(10_0101, options);       // "十万零一百零一元整"
+ChineseCurrency.GetString(10_1001, options);       // "十万一千零一元整"
+ChineseCurrency.GetString(10_1010, options);       // "十万一千零一十元整"
 ChineseCurrency.GetString(10_0001.2m, options);    // "十万零一元二角整"
 ChineseCurrency.GetString(10_0001.23m, options);   // "十万零一元二角三分"
 ChineseCurrency.GetString(10_0001.03m, options);   // "十万零一元零三分"
@@ -134,10 +134,10 @@ ChineseCurrency.GetString(10_0001.03m, options);   // "十万零一元零三分"
 
 ```c#
 var options = new ChineseNumberOptions { Verbose = true, Upper = false };
-ChineseCurrency.GetString(10_0001, options);    // "一十万零一元整"
-ChineseCurrency.GetString(10_0101, options);    // "一十万零一百零一元整"
-ChineseCurrency.GetString(10_1001, options);    // "一十万一千零一元整"
-ChineseCurrency.GetString(10_1010, options);    // "一十万一千零一十元整"
+ChineseCurrency.GetString(10_0001, options);       // "一十万零一元整"
+ChineseCurrency.GetString(10_0101, options);       // "一十万零一百零一元整"
+ChineseCurrency.GetString(10_1001, options);       // "一十万一千零一元整"
+ChineseCurrency.GetString(10_1010, options);       // "一十万一千零一十元整"
 ChineseCurrency.GetString(10_0001.2m, options);    // "一十万零一元二角整"
 ChineseCurrency.GetString(10_0001.23m, options);   // "一十万零一元二角三分"
 ChineseCurrency.GetString(10_0001.03m, options);   // "一十万零一元零三分"
@@ -147,10 +147,10 @@ ChineseCurrency.GetString(10_0001.03m, options);   // "一十万零一元零三�
 
 ```c#
 var options = new ChineseNumberOptions { Verbose = false, Upper = true };
-ChineseCurrency.GetString(10_0001, options);    // "拾万零壹圆整"
-ChineseCurrency.GetString(10_0101, options);    // "拾万零壹佰零壹圆整"
-ChineseCurrency.GetString(10_1001, options);    // "拾万壹仟零壹圆整"
-ChineseCurrency.GetString(10_1010, options);    // "拾万壹仟零壹拾圆整"
+ChineseCurrency.GetString(10_0001, options);       // "拾万零壹圆整"
+ChineseCurrency.GetString(10_0101, options);       // "拾万零壹佰零壹圆整"
+ChineseCurrency.GetString(10_1001, options);       // "拾万壹仟零壹圆整"
+ChineseCurrency.GetString(10_1010, options);       // "拾万壹仟零壹拾圆整"
 ChineseCurrency.GetString(10_0001.2m, options);    // "拾万零壹圆贰角整"
 ChineseCurrency.GetString(10_0001.23m, options);   // "拾万零壹圆贰角叁分"
 ChineseCurrency.GetString(10_0001.03m, options);   // "拾万零壹圆零叁分"
@@ -158,10 +158,10 @@ ChineseCurrency.GetString(10_0001.03m, options);   // "拾万零壹圆零叁分"
 
 ```c#
 var options = new ChineseNumberOptions { Verbose = false, Upper = true };
-ChineseCurrency.GetString(10_0001, options);    // "壹拾万零壹圆整"
-ChineseCurrency.GetString(10_0101, options);    // "壹拾万零壹佰零壹圆整"
-ChineseCurrency.GetString(10_1001, options);    // "壹拾万壹仟零壹圆整"
-ChineseCurrency.GetString(10_1010, options);    // "壹拾万壹仟零壹拾圆整"
+ChineseCurrency.GetString(10_0001, options);       // "壹拾万零壹圆整"
+ChineseCurrency.GetString(10_0101, options);       // "壹拾万零壹佰零壹圆整"
+ChineseCurrency.GetString(10_1001, options);       // "壹拾万壹仟零壹圆整"
+ChineseCurrency.GetString(10_1010, options);       // "壹拾万壹仟零壹拾圆整"
 ChineseCurrency.GetString(10_0001.2m, options);    // "壹拾万零壹圆贰角整"
 ChineseCurrency.GetString(10_0001.23m, options);   // "壹拾万零壹圆贰角叁分"
 ChineseCurrency.GetString(10_0001.03m, options);   // "壹拾万零壹圆零叁分"
