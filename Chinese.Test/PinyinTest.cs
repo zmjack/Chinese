@@ -24,7 +24,7 @@ namespace Chinese.Test
                 new ChineseWord { Pinyin = "zhong4 liang4", Simplified = "重量", Traditional = "重量" },
             };
 
-            using (var lexicon = new ChineseLexicon(words))
+            using (new ChineseLexicon(words))
             {
                 Assert.Equal("ta1 shi4 zhong4 liang4 ji2 shua1 shou3。", Pinyin.GetString(str, PinyinFormat.Default));
             }
