@@ -10,9 +10,14 @@ namespace Chinese
     {
         public static ChineseWord[] NumericalWords;
 
+        static ChineseNumber()
+        {
+            SuperiorLevels = new[] { "", "万", "亿", "兆", "京", "垓", "秭", "穰" };
+        }
+
         public static readonly string[] UpperNumberValues = new[] { "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" };
         public static readonly string[] LowerNumberValues = new[] { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
-        public static readonly string[] LowerNumberPureValues = new[] { "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
+        public static readonly string[] LowerNumberCodeValues = new[] { "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
         private const int SUPERIOR_LEVELS_COUNT = 8;
         private static string[] _SuperiorLevels;
@@ -37,26 +42,34 @@ namespace Chinese
             }
         }
 
-        static ChineseNumber()
-        {
-            SuperiorLevels = new[] { "", "万", "亿", "兆", "京", "垓", "秭", "穰" };
-        }
-
         public static readonly string[] UpperLevels = new[] { "", "拾", "佰", "仟" };
         public static readonly string[] LowerLevels = new[] { "", "十", "百", "千" };
 
-        public static string GetPureString(decimal number, bool upper = false)
+        public static string GetCodeString(string number, bool upper = false)
         {
-            number = decimal.Floor(number);
+            if (!number.All(ch => '0' <= ch && ch <= '9')) throw new ArgumentException("不是合法的数字编号。");
 
             string[] numberValues;
             if (upper) numberValues = UpperNumberValues;
-            else numberValues = LowerNumberPureValues;
+            else numberValues = LowerNumberCodeValues;
 
-            var str = number.ToString();
-            var sb = new StringBuilder(str.Length + 1);
-            foreach (var ch in str) sb.Append(numberValues[ch - '0']);
+            var sb = new StringBuilder(number.Length + 1);
+            foreach (var ch in number) sb.Append(numberValues[ch - '0']);
 
+            return sb.ToString();
+        }
+
+        public static string GetCodeNumber(string chineseNumber)
+        {
+            var sb = new StringBuilder(chineseNumber.Length + 1);
+            foreach (var ch in chineseNumber)
+            {
+                var value = LowerNumberCodeValues.IndexOf(ch.ToString());
+                if (value == -1) value = UpperNumberValues.IndexOf(ch.ToString());
+
+                if (value > -1) sb.Append(value);
+                else throw new ArgumentException("不是合法的中文数字编号描述。", nameof(chineseNumber));
+            }
             return sb.ToString();
         }
 
@@ -131,7 +144,7 @@ namespace Chinese
 
         public static decimal GetNumber(string chineseNumber)
         {
-            using (new ChineseLexicon(ChineseNumber.NumericalWords))
+            using (new ChineseLexicon(NumericalWords))
             {
                 var words = ChineseTokenizer.SplitWords(chineseNumber);
                 var total = 0m;

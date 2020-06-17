@@ -97,13 +97,13 @@ ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m);
 ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m, x => x.Upper = true);
 ```
 
-中文读法转数字：
+中文读法转数值：
 
 ```c#
-ChineseNumber.GetNumber("十亿零一");      // 10_0000_0001
-ChineseNumber.GetNumber("一十亿零一");    // 10_0000_0001
-ChineseNumber.GetNumber("二十亿零一");    // 20_0000_0001
-ChineseNumber.GetNumber("二十兆零一");    // 20_0000_0000_0001
+ChineseNumber.GetNumber("一十万零一");          // 10_0001
+ChineseNumber.GetNumber("一十万零一百零一");    // 10_0101
+ChineseNumber.GetNumber("一十万一千零一");      // 10_1001
+ChineseNumber.GetNumber("一十万一千零一十");    // 10_1010
 ```
 ```c#
 // 1_2345_6789_0123_4567_8901_2345_6789
@@ -115,19 +115,27 @@ ChineseNumber.GetNumber("一穰二千三百四十五秭六千七百八十九垓�
 ### 编号读法
 
 ```c#
-ChineseNumber.GetPureString(10_0001, upper: false);    // "一〇〇〇〇一"
-ChineseNumber.GetPureString(10_0101, upper: false);    // "一〇〇一〇一"
-ChineseNumber.GetPureString(10_1001, upper: false);    // "一〇一〇〇一"
-ChineseNumber.GetPureString(10_1010, upper: false);    // "一〇一〇一〇"
+ChineseNumber.GetCodeString(10_0001.ToString(), upper: false);    // "一〇〇〇〇一"
+ChineseNumber.GetCodeString(10_0101.ToString(), upper: false);    // "一〇〇一〇一"
+ChineseNumber.GetCodeString(10_1001.ToString(), upper: false);    // "一〇一〇〇一"
+ChineseNumber.GetCodeString(10_1010.ToString(), upper: false);    // "一〇一〇一〇"
 ```
 
 ```c#
-ChineseNumber.GetPureString(10_0001, upper: true);     // "壹零零零零壹"
-ChineseNumber.GetPureString(10_0101, upper: true);     // "壹零零壹零壹"
-ChineseNumber.GetPureString(10_1001, upper: true);     // "壹零壹零零壹"
-ChineseNumber.GetPureString(10_1010, upper: true);     // "壹零壹零壹零"
+ChineseNumber.GetCodeString(10_0001.ToString(), upper: true);     // "壹零零零零壹"
+ChineseNumber.GetCodeString(10_0101.ToString(), upper: true);     // "壹零零壹零壹"
+ChineseNumber.GetCodeString(10_1001.ToString(), upper: true);     // "壹零壹零零壹"
+ChineseNumber.GetCodeString(10_1010.ToString(), upper: true);     // "壹零壹零壹零"
 ```
 
+中文读法转数值编号：
+
+```c#
+ChineseNumber.GetCodeNumber("一〇〇〇〇一");    // "100001"
+ChineseNumber.GetCodeNumber("一〇〇一〇一");    // "100101"
+ChineseNumber.GetCodeNumber("一〇一〇〇一");    // "101001"
+ChineseNumber.GetCodeNumber("一〇一〇一〇");    // "101010"
+```
 <br/>
 
 ### 货币读法
@@ -180,4 +188,15 @@ ChineseCurrency.GetString(10_0001.23m, options);   // "拾万零壹圆贰角叁�
 ChineseCurrency.GetString(10_0001.03m, options);   // "拾万零壹圆零叁分"
 ```
 
+中文读法转货币数值：
+
+```c#
+ChineseCurrency.GetNumber("一十万零一元整");          // 10_0001
+ChineseCurrency.GetNumber("一十万零一百零一元整");    // 10_0101
+ChineseCurrency.GetNumber("一十万一千零一元整");      // 10_1001
+ChineseCurrency.GetNumber("一十万一千零一十元整");    // 10_1010
+ChineseCurrency.GetNumber("一十万零一元二角整");      // 10_0001.2m
+ChineseCurrency.GetNumber("一十万零一元二角三分");    // 10_0001.23m
+ChineseCurrency.GetNumber("一十万零一元零三分");      // 10_0001.03m
+```
 <br/>

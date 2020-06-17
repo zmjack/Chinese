@@ -1,2 +1,2 @@
-nuget push "Chinese/bin/Release/Chinese.0.1.5.nupkg" -source nuget.org
+nuget push "Chinese/bin/Release/Chinese.0.2.0.nupkg" -source nuget.org
 pause

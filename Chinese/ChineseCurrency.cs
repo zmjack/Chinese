@@ -1,4 +1,7 @@
-﻿using System;
+﻿using NStandard;
+using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Chinese
 {
@@ -43,6 +46,24 @@ namespace Chinese
             }
 
             return ret;
+        }
+
+        public static decimal GetNumber(string chineseCurrency)
+        {
+            var regex = new Regex(@"(.+)(?:圆|元)(?:整|(.)角整|(.)角(.)分|零(.)分)");
+            var match = regex.Match(chineseCurrency);
+
+            if (!match.Success) throw new ArgumentException("不是合法的中文货币描述。");
+
+            var yuan = match.Groups[1].Value.For(x => ChineseNumber.GetNumber(x));
+            var jiao = (match.Groups[2].Value.For(x => x.IsWhiteSpace() ? null : x)
+                     ?? match.Groups[3].Value.For(x => x.IsWhiteSpace() ? null : x))
+                     ?.For(x => ChineseNumber.GetNumber(x)) ?? 0m;
+            var fen = (match.Groups[4].Value.For(x => x.IsWhiteSpace() ? null : x)
+                     ?? match.Groups[5].Value.For(x => x.IsWhiteSpace() ? null : x))
+                     ?.For(x => ChineseNumber.GetNumber(x)) ?? 0m;
+
+            return yuan + (jiao * 0.1m) + (fen * 0.01m);
         }
 
     }

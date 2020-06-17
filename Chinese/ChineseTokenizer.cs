@@ -16,8 +16,9 @@ namespace Chinese
             var list = new LinkedList<string>();
             var length = chinese.Length;
 
-            var ptext = length - lexicon.WordMaxLength;
-            var maxLengthPerTurn = Math.Min(chinese.Length, lexicon.WordMaxLength);
+            var maxOffset = Math.Min(chinese.Length, lexicon.WordMaxLength);
+            var ptext = length - maxOffset;
+            var maxLengthPerTurn = maxOffset;
             int matchLength;
             for (; ptext + maxLengthPerTurn >= 0; ptext -= matchLength)
             {

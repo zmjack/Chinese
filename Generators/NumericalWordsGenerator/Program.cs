@@ -28,7 +28,7 @@ namespace Chinese
         static void Main(string[] args)
         {
             var sb = new StringBuilder();
-            var levelGroups = new[] { ChineseNumber.UpperLevels.Skip(1), ChineseNumber.LowerLevels };
+            var levelGroups = new[] { ChineseNumber.UpperLevels, ChineseNumber.LowerLevels };
             var nums = new int[9].Let(i => i + 1);
 
             foreach (var levels in levelGroups.AsKvPairs())
@@ -42,7 +42,7 @@ namespace Chinese
                         var pinyin = Pinyin.GetString(str);
                         var simplified = ChineseConverter.ToSimplified(str);
                         var traditional = ChineseConverter.ToTraditional(str);
-                        var tag = num * Math.Pow(10, level.Key + 1 - levels.Key);
+                        var tag = num * Math.Pow(10, level.Key);
                         sb.AppendLine($@"{" ".Repeat(12)}new ChineseWord {{ Pinyin = ""{pinyin}"", Simplified = ""{simplified}"", Traditional = ""{traditional}"", Tag = {tag} }},");
                     }
                 }

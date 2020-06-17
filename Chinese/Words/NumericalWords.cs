@@ -5,6 +5,15 @@ namespace Chinese
     {
         public static readonly ChineseWord[] NumericalWords = new[]
         {
+            new ChineseWord { Pinyin = "yi1", Simplified = "壹", Traditional = "壹", Tag = 1 },
+            new ChineseWord { Pinyin = "er4", Simplified = "贰", Traditional = "貳", Tag = 2 },
+            new ChineseWord { Pinyin = "san1", Simplified = "叁", Traditional = "叁", Tag = 3 },
+            new ChineseWord { Pinyin = "si4", Simplified = "肆", Traditional = "肆", Tag = 4 },
+            new ChineseWord { Pinyin = "wu3", Simplified = "伍", Traditional = "伍", Tag = 5 },
+            new ChineseWord { Pinyin = "liu4", Simplified = "陆", Traditional = "陸", Tag = 6 },
+            new ChineseWord { Pinyin = "qi1", Simplified = "柒", Traditional = "柒", Tag = 7 },
+            new ChineseWord { Pinyin = "ba1", Simplified = "捌", Traditional = "捌", Tag = 8 },
+            new ChineseWord { Pinyin = "jiu3", Simplified = "玖", Traditional = "玖", Tag = 9 },
             new ChineseWord { Pinyin = "yi1 she4", Simplified = "壹拾", Traditional = "壹拾", Tag = 10 },
             new ChineseWord { Pinyin = "er4 she4", Simplified = "贰拾", Traditional = "貳拾", Tag = 20 },
             new ChineseWord { Pinyin = "san1 she4", Simplified = "叁拾", Traditional = "叁拾", Tag = 30 },
