@@ -69,5 +69,19 @@ namespace Chinese.Test
             Assert.Equal("壹穰贰仟叁佰肆拾伍秭陆仟柒佰捌拾玖垓零壹佰贰拾叁京肆仟伍佰陆拾柒兆捌仟玖佰零壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖", ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m, x => x.Upper = true));
         }
 
+        [Fact]
+        public void MutilZeroTest()
+        {
+            Assert.Equal("二十亿零一", ChineseNumber.GetString(20_0000_0001));
+            Assert.Equal("二十兆零一", ChineseNumber.GetString(20_0000_0000_0001));
+        }
+
+        [Fact]
+        public void GetNumberTest()
+        {
+            Assert.Equal(20_0000_0000_0001, ChineseNumber.GetNumber("二十兆零一"));
+            Assert.Equal(1_2345_6789_0123_4567_8901_2345_6789m, ChineseNumber.GetNumber("一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九"));
+        }
+
     }
 }
