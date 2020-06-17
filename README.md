@@ -97,6 +97,19 @@ ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m);
 ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m, x => x.Upper = true);
 ```
 
+中文读法转数字：
+
+```c#
+ChineseNumber.GetNumber("十亿零一");      // 10_0000_0001
+ChineseNumber.GetNumber("一十亿零一");    // 10_0000_0001
+ChineseNumber.GetNumber("二十亿零一");    // 20_0000_0001
+ChineseNumber.GetNumber("二十兆零一");    // 20_0000_0000_0001
+```
+```c#
+// 1_2345_6789_0123_4567_8901_2345_6789
+ChineseNumber.GetNumber("一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九");
+```
+
 <br/>
 
 ### 编号读法
