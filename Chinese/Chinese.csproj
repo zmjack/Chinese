@@ -1,51 +1,57 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.1</Version>
-    <Authors>zmjack</Authors>
-    <Description>中文解析通用工具。包括拼音，简繁转换，数字读法，货币读法。</Description>
-    <Copyright>Copyright © nstandard.net 2020</Copyright>
-	<PackageId>Chinese</PackageId>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/zmjack/Chinese</PackageProjectUrl>
-    <PackageIcon>Chinese.png</PackageIcon>
-    <RepositoryUrl>https://github.com/zmjack/Chinese</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Chinese Pinyin Number</PackageTags>
-	<LangVersion>8.0</LangVersion>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Version>0.1.2</Version>
+		<Authors>zmjack</Authors>
+		<Description>中文解析通用工具。包括拼音，简繁转换，数字读法，货币读法。</Description>
+		<Copyright>Copyright © nstandard.net 2020</Copyright>
+		<PackageId>Chinese</PackageId>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/zmjack/Chinese</PackageProjectUrl>
+		<PackageIcon>Chinese.png</PackageIcon>
+		<RepositoryUrl>https://github.com/zmjack/Chinese</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>Chinese Pinyin Number</PackageTags>
+		<LangVersion>8.0</LangVersion>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="lib\netstandard2.0\ChineseConverter.dll" />
-    <None Remove="lib\netstandard2.0\ChnCharInfo.dll" />
-    <None Include="..\Chinese.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="lib\netstandard2.0\ChineseConverter.dll" />
+		<None Remove="lib\netstandard2.0\ChnCharInfo.dll" />
+		<None Include="..\Chinese.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Include="lib\netstandard2.0\ChineseConverter.dll" />
-    <Content Include="lib\netstandard2.0\ChnCharInfo.dll" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="lib\netstandard2.0\ChineseConverter.dll">
+			<Pack>True</Pack>
+			<PackagePath>lib\netstandard2.0\ChineseConverter.dll</PackagePath>
+		</Content>
+		<Content Include="lib\netstandard2.0\ChnCharInfo.dll">
+			<Pack>True</Pack>
+			<PackagePath>lib\netstandard2.0\ChnCharInfo.dll</PackagePath>
+		</Content>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NStandard" Version="0.4.11" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NStandard" Version="0.4.11" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="ChineseConverter">
-      <HintPath>lib\netstandard2.0\ChineseConverter.dll</HintPath>
-    </Reference>
-    <Reference Include="ChnCharInfo">
-      <HintPath>lib\netstandard2.0\ChnCharInfo.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+		<Reference Include="ChineseConverter">
+			<HintPath>lib\netstandard2.0\ChineseConverter.dll</HintPath>
+		</Reference>
+		<Reference Include="ChnCharInfo">
+			<HintPath>lib\netstandard2.0\ChnCharInfo.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
 </Project>
