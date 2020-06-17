@@ -79,8 +79,19 @@ namespace Chinese.Test
         [Fact]
         public void GetNumberTest()
         {
+            Assert.Equal(10_0000_0001, ChineseNumber.GetNumber("十亿零一"));
+            Assert.Equal(10_0000_0001, ChineseNumber.GetNumber("一十亿零一"));
+            Assert.Equal(20_0000_0001, ChineseNumber.GetNumber("二十亿零一"));
             Assert.Equal(20_0000_0000_0001, ChineseNumber.GetNumber("二十兆零一"));
             Assert.Equal(1_2345_6789_0123_4567_8901_2345_6789m, ChineseNumber.GetNumber("一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九"));
+        }
+
+        [Fact]
+        public void TmpTest()
+        {
+            ChineseNumber.SuperiorLevels = new[] { "", "万", "亿", "万亿", "亿亿", "5", "6", "7" };
+            var str = ChineseNumber.GetString(30_0000_0000_0001);
+            var number = ChineseNumber.GetNumber("三十万亿零一");
         }
 
     }

@@ -8,15 +8,17 @@ namespace Chinese
 {
     public static class ChineseNumber
     {
+        public static ChineseWord[] NumericalWords;
+
         public static readonly string[] UpperNumberValues = new[] { "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" };
         public static readonly string[] LowerNumberValues = new[] { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
         public static readonly string[] LowerNumberPureValues = new[] { "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
         private const int SUPERIOR_LEVELS_COUNT = 8;
-        private static string[] _SuperiorLevels = new[] { "", "万", "亿", "兆", "京", "垓", "秭", "穰" };
+        private static string[] _SuperiorLevels;
 
         /// <summary>
-        /// 自定义分级读法（个位为空，从低到高设置八级），默认为 ["", "万", "亿", "兆", "京", "垓", "秭", "穰"]。
+        /// 自定义分级读法（简体中文，个位为空，从低到高设置八级），默认为 ["", "万", "亿", "兆", "京", "垓", "秭", "穰"]。
         /// </summary>
         public static string[] SuperiorLevels
         {
@@ -24,8 +26,20 @@ namespace Chinese
             set
             {
                 if (value.Length != SUPERIOR_LEVELS_COUNT) throw new ArgumentException("自定义分级读法必须设置八级。");
+
                 _SuperiorLevels = value;
+                NumericalWords = Words.NumericalWords.Concat(value.Select(word => new ChineseWord
+                {
+                    Pinyin = Pinyin.GetString(word),
+                    Simplified = word,
+                    Traditional = ChineseConverter.ToTraditional(word),
+                })).ToArray();
             }
+        }
+
+        static ChineseNumber()
+        {
+            SuperiorLevels = new[] { "", "万", "亿", "兆", "京", "垓", "秭", "穰" };
         }
 
         public static readonly string[] UpperLevels = new[] { "", "拾", "佰", "仟" };
@@ -117,7 +131,7 @@ namespace Chinese
 
         public static decimal GetNumber(string chineseNumber)
         {
-            using (new ChineseLexicon(Words.NumericalWords))
+            using (new ChineseLexicon(ChineseNumber.NumericalWords))
             {
                 var words = ChineseTokenizer.SplitWords(chineseNumber);
                 var total = 0m;
