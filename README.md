@@ -30,7 +30,7 @@ Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.WithoutTone);
 
 ```c#
 // "miǎn fèi，kuà píng tāi，kāi yuán！"
-Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.PhoneticSymbol);
+Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Phonetic);
 ```
 
 ```c#
@@ -113,6 +113,13 @@ ChineseNumber.GetNumber("一十万一千零一十");    // 10_1010
 ```c#
 // 1_2345_6789_0123_4567_8901_2345_6789
 ChineseNumber.GetNumber("一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九");
+```
+
+自定义分级单位：
+
+```c#
+ChineseNumber.SuperiorLevels = new[] { "", "万", "亿", "万亿", "亿亿", "万亿亿", "亿亿亿", "万亿亿亿" };            
+ChineseNumber.GetString(30_0020_0000_0001);    // 三十万亿零二十亿零一
 ```
 
 <br/>
