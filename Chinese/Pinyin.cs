@@ -3,6 +3,7 @@ using NStandard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -41,13 +42,17 @@ namespace Chinese
                             pinyin = chineseWord.Pinyin;
                         }
 
-                        if (insertSpace) sb.Append(" ");
+                        if (format != PinyinFormat.Code)
+                        {
+                            if (insertSpace) sb.Append(" ");
+                        }
 
                         switch (format)
                         {
                             case PinyinFormat.Default: sb.Append(pinyin); break;
                             case PinyinFormat.WithoutTone: sb.Append(GetPinyinWithoutTone(pinyin)); break;
-                            case PinyinFormat.PhoneticSymbol: sb.Append(GetPhoneticSymbol(pinyin)); break;
+                            case PinyinFormat.Phonetic: sb.Append(GetPhoneticSymbol(pinyin)); break;
+                            case PinyinFormat.Code: sb.Append(pinyin.First()); break;
                         }
                         insertSpace = true;
                     }
@@ -65,14 +70,26 @@ namespace Chinese
             return chinese;
         }
 
-        public static string GetPinyinWithoutTone(string pinyin) => pinyin.Slice(0, -1);
-        public static string GetPhoneticSymbol(string pinyin)
+        internal static string GetPinyinWithoutTone(string pinyin) => pinyin.Slice(0, -1);
+        internal static string GetPhoneticSymbol(string pinyin)
         {
-            var _pinyin = pinyin.Slice(0, -1);
-            var tone = int.Parse(pinyin.Slice(-1));
-
-            string Convert(string yunmu)
+            var parts = pinyin.Split(' ').Select(part =>
             {
+                var _pinyin = part.Slice(0, -1);
+                var tone = int.Parse(part.Slice(-1));
+
+                string yunmu;
+
+                if (part.Contains("v")) yunmu = "v";
+                else if (part.Contains("iu")) yunmu = "u";
+                else if (part.Contains("ui")) yunmu = "i";
+                else if (part.Contains("a")) yunmu = "a";
+                else if (part.Contains("o")) yunmu = "o";
+                else if (part.Contains("e")) yunmu = "e";
+                else if (part.Contains("i")) yunmu = "i";
+                else if (part.Contains("u")) yunmu = "u";
+                else throw new InvalidCastException("Not a Pinyin.");
+
                 var _yunmu = yunmu switch
                 {
                     "a" => tone switch { 1 => "ā", 2 => "á", 3 => "ǎ", 4 => "à", _ => "a" },
@@ -84,17 +101,9 @@ namespace Chinese
                 };
 
                 return _pinyin.Replace(yunmu, _yunmu);
-            }
+            });
 
-            if (pinyin.Contains("v")) return Convert("v");
-            else if (pinyin.Contains("iu")) return Convert("u");
-            else if (pinyin.Contains("ui")) return Convert("i");
-            else if (pinyin.Contains("a")) return Convert("a");
-            else if (pinyin.Contains("o")) return Convert("o");
-            else if (pinyin.Contains("e")) return Convert("e");
-            else if (pinyin.Contains("i")) return Convert("i");
-            else if (pinyin.Contains("u")) return Convert("u");
-            else throw new InvalidCastException("Not a Pinyin.");
+            return parts.Join(" ");
         }
 
     }

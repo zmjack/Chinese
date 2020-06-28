@@ -48,7 +48,7 @@ namespace Chinese
                 }
             }
 
-            var csFile = Build(sb.ToString());
+            var csFile = Build(sb.ToString()).Replace("she4", "shi2");  // 拾 = shi2
             File.WriteAllText("../../../NumberWords.cs", csFile);
 
             Console.WriteLine("File saved: NumberWords.cs");

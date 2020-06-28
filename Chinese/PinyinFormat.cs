@@ -4,6 +4,7 @@
     {
         Default,
         WithoutTone,
-        PhoneticSymbol,
+        Phonetic,
+        Code,
     }
 }

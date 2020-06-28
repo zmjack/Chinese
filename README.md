@@ -33,6 +33,11 @@ Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.WithoutTone);
 Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.PhoneticSymbol);
 ```
 
+```c#
+// "mf，kpt，ky！"
+Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Code);
+```
+
 <br/>
 
 ## 简繁转换
