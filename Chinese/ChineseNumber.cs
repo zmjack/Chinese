@@ -33,9 +33,9 @@ namespace Chinese
                 if (value.Length != SUPERIOR_LEVELS_COUNT) throw new ArgumentException("自定义分级读法必须设置八级。");
 
                 _SuperiorLevels = value;
-                NumericalWords = Words.NumericalWords.Concat(value.Select(word => new ChineseWord
+                NumericalWords = BuiltinWords.Numerical.Concat(value.Select(word => new ChineseWord
                 {
-                    Pinyin = Pinyin.GetString(word),
+                    Pinyins = new[] { Pinyin.GetString(word) },
                     Simplified = word,
                     Traditional = ChineseConverter.ToTraditional(word),
                 })).ToArray();
@@ -155,7 +155,7 @@ namespace Chinese
                     else if (word == "十" || word == "拾") levelNumber += 10;
                     else
                     {
-                        var numericalWord = Words.NumericalWords.FirstOrDefault(x => x.Simplified == word);
+                        var numericalWord = BuiltinWords.Numerical.FirstOrDefault(x => x.Simplified == word);
                         if (numericalWord != null) levelNumber += (int)numericalWord.Tag;
                         else
                         {
@@ -171,6 +171,7 @@ namespace Chinese
                                     5 => 1_0000_0000_0000_0000_0000m,
                                     6 => 1_0000_0000_0000_0000_0000_0000m,
                                     7 => 1_0000_0000_0000_0000_0000_0000_0000m,
+                                    _ => throw new NotImplementedException(),
                                 });
                                 levelNumber = 0;
                             }

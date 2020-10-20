@@ -18,11 +18,11 @@ namespace Chinese.Test
 
             var words = new[]
             {
-                new ChineseWord { Pinyin = "huang2 hou4", Simplified = "皇后", Traditional = "皇后" },
-                new ChineseWord { Pinyin = "hou4 mian4", Simplified = "后面", Traditional = "後面" },
+                new ChineseWord { Pinyins = new[] { "huang2 hou4" }, Simplified = "皇后", Traditional = "皇后" },
+                new ChineseWord { Pinyins = new[] { "hou4 mian4" }, Simplified = "后面", Traditional = "後面" },
             };
 
-            using (new ChineseLexicon(words))
+            using (new ChineseLexicon(BuiltinWords.Basic, words))
             {
                 Assert.Equal("皇后在國王後面。", ChineseConverter.ToTraditional("皇后在国王后面。"));
             }

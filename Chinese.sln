@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chinese.Test", "Chinese.Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generators", "Generators", "{5E0E22B7-0017-43BD-BCAF-074101C95C3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalWordsGenerator", "Generators\NumericalWordsGenerator\NumericalWordsGenerator.csproj", "{6F623586-8462-4213-8D41-8DE8C77B432D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericalWordsGenerator", "Generators\NumericalWordsGenerator\NumericalWordsGenerator.csproj", "{6F623586-8462-4213-8D41-8DE8C77B432D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictGenerator", "Generators\DictGenerator\DictGenerator.csproj", "{415C200D-E1E5-469C-9E93-649029A5D961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,12 +66,25 @@ Global
 		{6F623586-8462-4213-8D41-8DE8C77B432D}.Release|x64.Build.0 = Release|Any CPU
 		{6F623586-8462-4213-8D41-8DE8C77B432D}.Release|x86.ActiveCfg = Release|Any CPU
 		{6F623586-8462-4213-8D41-8DE8C77B432D}.Release|x86.Build.0 = Release|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Debug|x64.Build.0 = Debug|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Debug|x86.Build.0 = Debug|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Release|x64.ActiveCfg = Release|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Release|x64.Build.0 = Release|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Release|x86.ActiveCfg = Release|Any CPU
+		{415C200D-E1E5-469C-9E93-649029A5D961}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6F623586-8462-4213-8D41-8DE8C77B432D} = {5E0E22B7-0017-43BD-BCAF-074101C95C3F}
+		{415C200D-E1E5-469C-9E93-649029A5D961} = {5E0E22B7-0017-43BD-BCAF-074101C95C3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B428A319-CD27-4E8D-AAEF-BE69A7F02F09}

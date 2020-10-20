@@ -22,10 +22,10 @@ namespace Chinese.Test
 
             var words = new ChineseWord[]
             {
-                new ChineseWord { Pinyin = "zhong4 liang4", Simplified = "重量", Traditional = "重量" },
+                new ChineseWord { Pinyins = new[] { "zhong4 liang4" }, Simplified = "重量", Traditional = "重量" },
             };
 
-            using (new ChineseLexicon(words))
+            using (new ChineseLexicon(BuiltinWords.Basic, words))
             {
                 Assert.Equal("ta1 shi4 zhong4 liang4 ji2 shua1 shou3。", Pinyin.GetString(str, PinyinFormat.Default));
             }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+﻿using Xunit;
 
 namespace Chinese.Test
 {
@@ -10,12 +7,12 @@ namespace Chinese.Test
         [Fact]
         public void Test1()
         {
-            using var tokenizer = new ChineseLexicon(new[]
+            using var tokenizer = new ChineseLexicon(BuiltinWords.Basic, new[]
             {
-                new ChineseWord { Pinyin = "zhong1 guo2", Simplified = "中国" },
-                new ChineseWord { Pinyin = "bei3 jing1", Simplified = "北京" },
-                new ChineseWord { Pinyin = "chong2 qing4", Simplified = "重庆" },
-                new ChineseWord { Pinyin = "zhi2 xia2 shi4", Simplified = "直辖市" },
+                new ChineseWord { Pinyins = new[] { "zhong1 guo2" }, Simplified = "中国" },
+                new ChineseWord { Pinyins = new[] { "bei3 jing1" }, Simplified = "北京" },
+                new ChineseWord { Pinyins = new[] { "chong2 qing4" }, Simplified = "重庆" },
+                new ChineseWord { Pinyins = new[] { "zhi2 xia2 shi4" }, Simplified = "直辖市" },
             });
 
             var sentence = "中国北京是直辖市，重庆也是直辖市。";

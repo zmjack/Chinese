@@ -2,29 +2,12 @@
 using NStandard;
 using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace NumericalWordsGenerator
 {
     class Program
     {
-        static string Build(string content)
-        {
-            return $@"
-namespace Chinese
-{{
-    public static partial class Words
-    {{
-        public static readonly ChineseWord[] NumericalWords = new[]
-        {{
-{content}        }};
-
-    }}
-}}
-";
-        }
-
         static void Main(string[] args)
         {
             var sb = new StringBuilder();
@@ -43,15 +26,32 @@ namespace Chinese
                         var simplified = ChineseConverter.ToSimplified(str);
                         var traditional = ChineseConverter.ToTraditional(str);
                         var tag = num * Math.Pow(10, level.Key);
-                        sb.AppendLine($@"{" ".Repeat(12)}new ChineseWord {{ Pinyin = ""{pinyin}"", Simplified = ""{simplified}"", Traditional = ""{traditional}"", Tag = {tag} }},");
+                        sb.AppendLine($@"{" ".Repeat(12)}new ChineseWord {{ Pinyins = new[] {{ ""{pinyin}"" }}, Simplified = ""{simplified}"", Traditional = ""{traditional}"", Tag = {tag} }},");
                     }
                 }
             }
 
             var csFile = Build(sb.ToString()).Replace("she4", "shi2");  // 拾 = shi2
-            File.WriteAllText("../../../NumberWords.cs", csFile);
+            File.WriteAllText("../../../Numerical.cs", csFile);
 
-            Console.WriteLine("File saved: NumberWords.cs");
+            Console.WriteLine("File saved: Numerical.cs");
         }
+
+        static string Build(string content)
+        {
+            return $@"
+namespace Chinese
+{{
+    public static partial class BuiltinWords
+    {{
+        public static readonly ChineseWord[] Numerical = new[]
+        {{
+{content}        }};
+
+    }}
+}}
+";
+        }
+
     }
 }

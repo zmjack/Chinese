@@ -1,19 +1,39 @@
-﻿using Microsoft.International.Converters.PinYinConverter;
-using NStandard;
+﻿using NStandard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Chinese
 {
     public static class Pinyin
     {
+        public static string[] GetSingle(char ch, PinyinFormat format = PinyinFormat.Default, ChineseType chineseType = ChineseType.Simplified)
+        {
+            var lexicon = ChineseLexicon.Current ?? ChineseLexicon.Default;
+            var word = ch.ToString();
+
+            var chineseWord = chineseType == ChineseType.Traditional
+                ? lexicon.Words.First(x => x.Traditional == word)
+                : lexicon.Words.First(x => x.Simplified == word);
+
+            var pinyins = chineseWord.Pinyins.Select(pinyin =>
+            {
+                return format switch
+                {
+                    PinyinFormat.Default => pinyin,
+                    PinyinFormat.WithoutTone => GetPinyinWithoutTone(pinyin),
+                    PinyinFormat.Phonetic => GetPhoneticSymbol(pinyin),
+                    PinyinFormat.Code => pinyin.First().ToString(),
+                    _ => throw new NotImplementedException(),
+                };
+            }).ToArray();
+            return pinyins;
+        }
+
         public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default, ChineseType chineseType = ChineseType.Simplified)
         {
-            var lexicon = ChineseLexicon.Current;
+            var lexicon = ChineseLexicon.Current ?? ChineseLexicon.Default;
             IEnumerable<int> GetDefaultSteps() { foreach (var ch in chinese) yield return 1; }
 
             var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chinese, chineseType).Select(x => x.Length);
@@ -28,19 +48,10 @@ namespace Chinese
                     var word = chinese.Substring(ptext, step);
                     try
                     {
-                        string pinyin;
-                        if (word.Length == 1)
-                        {
-                            var chineseChar = new ChineseChar(word[0]);
-                            pinyin = chineseChar.Pinyins[0].ToString().ToLower();
-                        }
-                        else
-                        {
-                            var chineseWord = chineseType == ChineseType.Traditional
-                                ? lexicon.Words.First(x => x.Traditional == word)
-                                : lexicon.Words.First(x => x.Simplified == word);
-                            pinyin = chineseWord.Pinyin;
-                        }
+                        var chineseWord = chineseType == ChineseType.Traditional
+                            ? lexicon.Words.First(x => x.Traditional == word)
+                            : lexicon.Words.First(x => x.Simplified == word);
+                        var pinyin = chineseWord.Pinyins.FirstOrDefault()?.ToLower();
 
                         if (format != PinyinFormat.Code)
                         {
@@ -98,6 +109,7 @@ namespace Chinese
                     "i" => tone switch { 1 => "ī", 2 => "í", 3 => "ǐ", 4 => "ì", _ => "i" },
                     "u" => tone switch { 1 => "ū", 2 => "ú", 3 => "ǔ", 4 => "ù", _ => "u" },
                     "v" => tone switch { 1 => "ǖ", 2 => "ǘ", 3 => "ǚ", 4 => "ǜ", _ => "ü" },
+                    _ => throw new NotImplementedException(),
                 };
 
                 return _pinyin.Replace(yunmu, _yunmu);

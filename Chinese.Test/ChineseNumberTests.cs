@@ -1,5 +1,4 @@
-﻿using NStandard;
-using Xunit;
+﻿using Xunit;
 
 namespace Chinese.Test
 {
