@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<Version>0.3.0</Version>
+		<Version>0.3.5</Version>
 		<Authors>zmjack</Authors>
 		<Description>中文解析通用工具。包括拼音，简繁转换，数字读法，货币读法。</Description>
 		<Copyright>Copyright © nstandard.net 2020</Copyright>
@@ -18,12 +18,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="lib\**" />
-	  <EmbeddedResource Remove="lib\**" />
-	  <None Remove="lib\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<None Include="..\Chinese.png">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
@@ -36,15 +30,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="NStandard" Version="0.4.11" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Reference Include="ChineseConverter">
-			<HintPath>lib\netstandard2.0\ChineseConverter.dll</HintPath>
-		</Reference>
-		<Reference Include="ChnCharInfo">
-			<HintPath>lib\netstandard2.0\ChnCharInfo.dll</HintPath>
-		</Reference>
 	</ItemGroup>
 
 </Project>

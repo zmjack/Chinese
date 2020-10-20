@@ -1,9 +1,8 @@
-﻿
+﻿using System.Linq;
+using System.Text;
+
 namespace Chinese
 {
-    using System.Linq;
-    using System.Text;
-
     public static class ChineseConverter
     {
         public static string ToTraditional(string chinese)
