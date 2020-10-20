@@ -14,9 +14,18 @@ dotnet add package Chinese
 
 <br/>
 
-## 拼音
+## 版本更新
 
-拼音解析：**Microsoft Visual Studio International Pack 1.0 Service** - Simplified Chinese Pin-Yin Conversion Library，**ChnCharInfo.dll**。
+**v0.3.5**：
+
+- 移除对 **Microsoft Visual Studio International Pack 1.0 Service** 的依赖；
+  - 拼音解析不再依赖：Simplified Chinese Pin-Yin Conversion Library，**ChnCharInfo.dll**；
+  - 简繁解析不再依赖：Traditional Chinese to Simplified Chinese Conversion Library，**ChineseConverter.dll**。
+- 以内建词库方式提供基本支持（拼音，简繁体）。
+
+<br/>
+
+## 拼音
 
 ```c#
 // "mian3 fei4，kua4 ping2 tai1，kai1 yuan2！"
@@ -41,8 +50,6 @@ Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Code);
 <br/>
 
 ## 简繁转换
-
-简繁解析：**Microsoft Visual Studio International Pack 1.0 Service** - Traditional Chinese to Simplified Chinese Conversion Library，**ChineseConverter.dll**。
 
 ```c#
 ChineseConverter.ToTraditional("免费，跨平台，开源！");    // "免費，跨平臺，開源！"
