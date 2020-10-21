@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generators", "Generators", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericalWordsGenerator", "Generators\NumericalWordsGenerator\NumericalWordsGenerator.csproj", "{6F623586-8462-4213-8D41-8DE8C77B432D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictGenerator", "Generators\DictGenerator\DictGenerator.csproj", "{415C200D-E1E5-469C-9E93-649029A5D961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictGenerator", "Generators\DictGenerator\DictGenerator.csproj", "{415C200D-E1E5-469C-9E93-649029A5D961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

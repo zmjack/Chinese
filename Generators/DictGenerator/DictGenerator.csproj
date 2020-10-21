@@ -15,10 +15,10 @@
 
   <ItemGroup>
     <Reference Include="ChineseConverter">
-      <HintPath>..\lib\netstandard2.0\ChineseConverter.dll</HintPath>
+      <HintPath>..\..\lib\netstandard2.0\ChineseConverter.dll</HintPath>
     </Reference>
     <Reference Include="ChnCharInfo">
-      <HintPath>..\lib\netstandard2.0\ChnCharInfo.dll</HintPath>
+      <HintPath>..\..\lib\netstandard2.0\ChnCharInfo.dll</HintPath>
     </Reference>
   </ItemGroup>
 

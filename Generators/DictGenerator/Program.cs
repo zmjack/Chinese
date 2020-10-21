@@ -72,24 +72,10 @@ namespace Chinese
 ";
         }
 
-        private static MethodInfo GetPinyinWithoutTone = typeof(Pinyin).GetDeclaredMethod("GetPinyinWithoutTone");
-        private static MethodInfo GetPhoneticSymbol = typeof(Pinyin).GetDeclaredMethod("GetPhoneticSymbol");
-
-        public static string[] GetOriginPinyin(char ch, PinyinFormat format = PinyinFormat.Default, ChineseType chineseType = ChineseType.Simplified)
+        public static string[] GetOriginPinyin(char ch)
         {
             var chineseChar = new ChineseChar(ch);
-            var pinyins = chineseChar.Pinyins.OfType<string>().Select(pinyin =>
-            {
-                pinyin = pinyin.ToLower();
-                return format switch
-                {
-                    PinyinFormat.Default => pinyin,
-                    PinyinFormat.WithoutTone => GetPinyinWithoutTone.Invoke(null, new object[] { pinyin }) as string,
-                    PinyinFormat.Phonetic => GetPhoneticSymbol.Invoke(null, new object[] { pinyin }) as string,
-                    PinyinFormat.Code => pinyin.First().ToString(),
-                    _ => throw new NotImplementedException(),
-                };
-            }).ToArray();
+            var pinyins = chineseChar.Pinyins.OfType<string>().Select(pinyin => pinyin.ToLower()).ToArray();
             return pinyins;
         }
 
