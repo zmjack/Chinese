@@ -144,6 +144,11 @@ namespace Chinese
 
         public static decimal GetNumber(string chineseNumber)
         {
+            //Check Rule
+            //1. "两" 不能作为非个位数结尾
+            if (chineseNumber.Count() > 1 && chineseNumber.Last() == '两')
+                throw new ArgumentException($"不能以该字结尾：{chineseNumber.Last()}", nameof(chineseNumber));
+
             using (new ChineseLexicon(NumericalWords))
             {
                 var words = ChineseTokenizer.SplitWords(chineseNumber);
