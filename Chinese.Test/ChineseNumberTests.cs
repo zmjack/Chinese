@@ -1,5 +1,5 @@
 ﻿using Xunit;
-﻿using System;
+using System;
 
 namespace Chinese.Test
 {
@@ -16,9 +16,6 @@ namespace Chinese.Test
             Assert.Equal("一十万一千零一十", ChineseNumber.GetString(10_1010, options));
 
             Assert.Equal(1, ChineseNumber.GetNumber("一"));
-            Assert.Equal(2, ChineseNumber.GetNumber("两"));
-            Assert.Equal(22222, ChineseNumber.GetNumber("两万二千两百二十二"));
-            Assert.Throws<ArgumentException>(() => ChineseNumber.GetNumber("两万二千两百二十两"));
             Assert.Equal(10_0001, ChineseNumber.GetNumber("一十万零一"));
             Assert.Equal(10_0101, ChineseNumber.GetNumber("一十万零一百零一"));
             Assert.Equal(10_1001, ChineseNumber.GetNumber("一十万一千零一"));
@@ -122,6 +119,14 @@ namespace Chinese.Test
 
             Assert.Equal(20_0000_0001, ChineseNumber.GetNumber("二十亿零一"));
             Assert.Equal(20_0000_0000_0001, ChineseNumber.GetNumber("二十兆零一"));
+        }
+
+        [Fact]
+        public void AliasTest()
+        {
+            Assert.Equal(22222, ChineseNumber.GetNumber("两万二千两百二十二"));
+            Assert.Throws<ArgumentException>(() => ChineseNumber.GetNumber("两"));
+            Assert.Throws<ArgumentException>(() => ChineseNumber.GetNumber("两万二千两百二十两"));
         }
 
     }

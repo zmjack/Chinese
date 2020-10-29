@@ -21,7 +21,7 @@ namespace Chinese.Test
         {
             var str = "他是重量级选手。";
             var pinyin = Pinyin.GetString(str, PinyinFormat.Default);
-            Assert.Equal("ta1 shi4 chong2 liang2 ji2 shua1 shou3。".Flow(StringFlow.HexString), pinyin.Flow(StringFlow.HexString));
+            Assert.Equal("ta1 shi4 chong2 liang2 ji2 shua1 shou3。", pinyin);
 
             var words = new ChineseWord[]
             {

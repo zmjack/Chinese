@@ -197,7 +197,7 @@ ChineseCurrency.GetString(10_0001.03m, options);   // "壹拾万零壹圆零叁�
 ```
 
 ```c#
-var options = new ChineseNumberOptions { Simplified = false, Upper = true };
+var options = new ChineseNumberOptions { Simplified = true, Upper = true };
 ChineseCurrency.GetString(10_0001, options);       // "拾万零壹圆整"
 ChineseCurrency.GetString(10_0101, options);       // "拾万零壹佰零壹圆整"
 ChineseCurrency.GetString(10_1001, options);       // "拾万壹仟零壹圆整"

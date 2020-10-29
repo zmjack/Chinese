@@ -144,10 +144,10 @@ namespace Chinese
 
         public static decimal GetNumber(string chineseNumber)
         {
-            //Check Rule
-            //1. "两" 不能作为非个位数结尾
-            if (chineseNumber.Count() > 1 && chineseNumber.Last() == '两')
-                throw new ArgumentException($"不能以该字结尾：{chineseNumber.Last()}", nameof(chineseNumber));
+            if (chineseNumber.Length == 0) return default;
+
+            var last = chineseNumber.Last();
+            if (last == '两') throw new ArgumentException($"不能以该字结尾：{last}", nameof(chineseNumber));
 
             using (new ChineseLexicon(NumericalWords))
             {
