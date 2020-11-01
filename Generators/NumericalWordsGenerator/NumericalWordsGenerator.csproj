@@ -6,6 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Numerical.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Numerical.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Chinese\Chinese.csproj" />
   </ItemGroup>
 

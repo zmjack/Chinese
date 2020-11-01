@@ -1,6 +1,4 @@
-﻿using NStandard;
-using NStandard.Flows;
-using Xunit;
+﻿using Xunit;
 
 namespace Chinese.Test
 {

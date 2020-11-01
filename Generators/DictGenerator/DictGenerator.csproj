@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Generated\Basic.cs" />
+    <Compile Remove="Generated\Numerical.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Generated\Basic.cs" />
+    <None Include="Generated\Numerical.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NStandard" Version="0.5.20" />
   </ItemGroup>
 
