@@ -13,13 +13,13 @@ namespace Chinese
         public ChineseLexicon(ChineseWord[] words)
         {
             Words = words;
-            WordMaxLength = Words.Max(x => x.Simplified.Length);
+            WordMaxLength = Words.Any() ? Words.Max(x => x.Simplified?.Length ?? 0) : 0;
         }
 
         public ChineseLexicon(params ChineseWord[][] wordsSet)
         {
             Words = wordsSet.SelectMany(x => x).ToArray();
-            WordMaxLength = Words.Max(x => x.Simplified.Length);
+            WordMaxLength = Words.Any() ? Words.Max(x => x.Simplified?.Length ?? 0) : 0; ;
         }
 
     }

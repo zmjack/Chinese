@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Generated\Basic.cs" />
-    <None Include="Generated\Numerical.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="NStandard" Version="0.5.20" />
   </ItemGroup>
 
@@ -30,6 +25,11 @@
     <Reference Include="ChnCharInfo">
       <HintPath>..\..\lib\netstandard2.0\ChnCharInfo.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Generated\Basic.cs" />
+    <None Include="Generated\Numerical.cs" />
   </ItemGroup>
 
 </Project>

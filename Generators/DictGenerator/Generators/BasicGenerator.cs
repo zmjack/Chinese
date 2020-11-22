@@ -79,7 +79,5 @@ namespace Chinese
             return pinyins;
         }
 
-        public static string 
-
     }
 }

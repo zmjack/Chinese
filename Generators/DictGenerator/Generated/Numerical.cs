@@ -79,7 +79,8 @@ namespace Chinese
             new ChineseWord { Pinyins = new[] { "jiu3 qian1" }, Simplified = "九千", Traditional = "九千", Tag = 9000 },
             new ChineseWord { Pinyins = new[] { "liang3" }, Simplified = "两", Traditional = "两", Tag = 2 },
             new ChineseWord { Pinyins = new[] { "liang3 bai3" }, Simplified = "两百", Traditional = "两百", Tag = 200 },
-            new ChineseWord { Pinyins = new[] { "liang3 qian1" }, Simplified = "两百", Traditional = "两千", Tag = 2000 },
+            new ChineseWord { Pinyins = new[] { "liang3 qian1" }, Simplified = "两千", Traditional = "两千", Tag = 2000 },
+            // Total 75 words.
         };
 
     }

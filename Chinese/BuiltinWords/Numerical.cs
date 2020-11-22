@@ -43,7 +43,6 @@ namespace Chinese
             new ChineseWord { Pinyins = new[] { "jiu3 qian1" }, Simplified = "玖仟", Traditional = "玖仟", Tag = 9000 },
             new ChineseWord { Pinyins = new[] { "yi1" }, Simplified = "一", Traditional = "一", Tag = 1 },
             new ChineseWord { Pinyins = new[] { "er4" }, Simplified = "二", Traditional = "二", Tag = 2 },
-            new ChineseWord { Pinyins = new[] { "liang3" }, Simplified = "两", Traditional = "两", Tag = 2 },
             new ChineseWord { Pinyins = new[] { "san1" }, Simplified = "三", Traditional = "三", Tag = 3 },
             new ChineseWord { Pinyins = new[] { "si4" }, Simplified = "四", Traditional = "四", Tag = 4 },
             new ChineseWord { Pinyins = new[] { "wu3" }, Simplified = "五", Traditional = "五", Tag = 5 },
@@ -62,7 +61,6 @@ namespace Chinese
             new ChineseWord { Pinyins = new[] { "jiu3 shi2" }, Simplified = "九十", Traditional = "九十", Tag = 90 },
             new ChineseWord { Pinyins = new[] { "yi1 bai3" }, Simplified = "一百", Traditional = "一百", Tag = 100 },
             new ChineseWord { Pinyins = new[] { "er4 bai3" }, Simplified = "二百", Traditional = "二百", Tag = 200 },
-            new ChineseWord { Pinyins = new[] { "liang3 bai3" }, Simplified = "两百", Traditional = "两百", Tag = 200 },
             new ChineseWord { Pinyins = new[] { "san1 bai3" }, Simplified = "三百", Traditional = "三百", Tag = 300 },
             new ChineseWord { Pinyins = new[] { "si4 bai3" }, Simplified = "四百", Traditional = "四百", Tag = 400 },
             new ChineseWord { Pinyins = new[] { "wu3 bai3" }, Simplified = "五百", Traditional = "五百", Tag = 500 },
@@ -72,7 +70,6 @@ namespace Chinese
             new ChineseWord { Pinyins = new[] { "jiu3 bai3" }, Simplified = "九百", Traditional = "九百", Tag = 900 },
             new ChineseWord { Pinyins = new[] { "yi1 qian1" }, Simplified = "一千", Traditional = "一千", Tag = 1000 },
             new ChineseWord { Pinyins = new[] { "er4 qian1" }, Simplified = "二千", Traditional = "二千", Tag = 2000 },
-            new ChineseWord { Pinyins = new[] { "liang3 qian1" }, Simplified = "两千", Traditional = "两千", Tag = 2000 },
             new ChineseWord { Pinyins = new[] { "san1 qian1" }, Simplified = "三千", Traditional = "三千", Tag = 3000 },
             new ChineseWord { Pinyins = new[] { "si4 qian1" }, Simplified = "四千", Traditional = "四千", Tag = 4000 },
             new ChineseWord { Pinyins = new[] { "wu3 qian1" }, Simplified = "五千", Traditional = "五千", Tag = 5000 },
@@ -80,6 +77,10 @@ namespace Chinese
             new ChineseWord { Pinyins = new[] { "qi1 qian1" }, Simplified = "七千", Traditional = "七千", Tag = 7000 },
             new ChineseWord { Pinyins = new[] { "ba1 qian1" }, Simplified = "八千", Traditional = "八千", Tag = 8000 },
             new ChineseWord { Pinyins = new[] { "jiu3 qian1" }, Simplified = "九千", Traditional = "九千", Tag = 9000 },
+            new ChineseWord { Pinyins = new[] { "liang3" }, Simplified = "两", Traditional = "两", Tag = 2 },
+            new ChineseWord { Pinyins = new[] { "liang3 bai3" }, Simplified = "两百", Traditional = "两百", Tag = 200 },
+            new ChineseWord { Pinyins = new[] { "liang3 qian1" }, Simplified = "两千", Traditional = "两千", Tag = 2000 },
+            // Total 75 words.
         };
 
     }

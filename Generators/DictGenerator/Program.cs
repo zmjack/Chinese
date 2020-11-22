@@ -9,23 +9,31 @@ namespace DictGenerator
 {
     class Program
     {
-        static readonly BasicGenerator BasicGen = new BasicGenerator().Then(x => x.OnOutput += output => Console.WriteLine(output));
-        static readonly NumericalGenerator NumericalGen = new NumericalGenerator().Then(x => x.OnOutput += output => Console.WriteLine(output));
-
         static void Main(string[] args)
         {
-            //BasicGen.Generate().Then(code =>
-            //{
-            //    File.WriteAllText("../../../Generated/Basic.cs", code);
-            //    Console.WriteLine("File saved: Basic.cs");
-            //});
+            // GenerateBasic();
+            GenerateNumerical();
+            //GenerateGeneralWords();
+        }
 
-            //NumericalGen.Generate().Then(code =>
-            //{
-            //    File.WriteAllText("../../../Generated/Numerical.cs", code);
-            //    Console.WriteLine("File saved: Numerical.cs");
-            //});
+        static void GenerateBasic()
+        {
+            var gen = new BasicGenerator().Then(g => g.OnOutput += output => Console.WriteLine(output));
+            var code = gen.Generate();
+            File.WriteAllText("../../../Generated/Basic.cs", code);
+            Console.WriteLine("File saved: Basic.cs");
+        }
 
+        static void GenerateNumerical()
+        {
+            var gen = new NumericalGenerator().Then(g => g.OnOutput += output => Console.WriteLine(output));
+            var code = gen.Generate();
+            File.WriteAllText("../../../Generated/Numerical.cs", code);
+            Console.WriteLine("File saved: Numerical.cs");
+        }
+
+        static void GenerateGeneralWords()
+        {
             var words = File.ReadAllText("../../../Generators/General.txt").Split("\r\n").Distinct().Where(x => x.Length > 1).ToArray();
             var content = words.Select((word, i) =>
             {
@@ -44,7 +52,6 @@ namespace DictGenerator
             File.WriteAllText("../../../Generators/General-words.txt", words.Join(Environment.NewLine));
             File.WriteAllText("../../../Generators/General-all.txt", content.Join(Environment.NewLine));
             File.WriteAllText("../../../Generators/General-polyphonic.txt", content.Where(x => x.Contains("[True]")).Join(Environment.NewLine));
-
         }
 
     }
