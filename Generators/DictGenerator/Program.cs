@@ -11,9 +11,9 @@ namespace DictGenerator
     {
         static void Main(string[] args)
         {
-            // GenerateBasic();
-            GenerateNumerical();
-            //GenerateGeneralWords();
+            //GenerateBasic();
+            //GenerateNumerical();
+            GenerateGeneralWords();
         }
 
         static void GenerateBasic()
