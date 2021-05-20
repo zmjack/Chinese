@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NStandard" Version="0.5.20" />
+    <PackageReference Include="NStandard" Version="0.8.0" />
   </ItemGroup>
 
   <ItemGroup>
