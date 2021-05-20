@@ -1,4 +1,5 @@
-﻿using NStandard;
+﻿using Chinese.Options;
+using NStandard;
 using System;
 using System.Text.RegularExpressions;
 
@@ -9,13 +10,30 @@ namespace Chinese
         private static readonly string[] UpperLevels = new[] { "圆", "角", "分" };
         private static readonly string[] LowerLevels = new[] { "元", "角", "分" };
 
+        /// <summary>
+        /// 获取数值的货币读法。
+        /// </summary>
+        /// <param name="money"></param>
+        /// <returns></returns>
         public static string GetString(decimal money) => GetString(money, ChineseNumberOptions.Default);
+        /// <summary>
+        /// 获取数值的货币读法。
+        /// </summary>
+        /// <param name="money"></param>
+        /// <param name="setOptions"></param>
+        /// <returns></returns>
         public static string GetString(decimal money, Action<ChineseNumberOptions> setOptions)
         {
             var options = new ChineseNumberOptions();
             setOptions(options);
             return GetString(money, options);
         }
+        /// <summary>
+        /// 获取数值的货币读法。
+        /// </summary>
+        /// <param name="money"></param>
+        /// <param name="options"></param>
+        /// <returns></returns>
         public static string GetString(decimal money, ChineseNumberOptions options)
         {
             var fractional100 = (int)(money % 1 * 100 % 100);
@@ -47,6 +65,11 @@ namespace Chinese
             return ret;
         }
 
+        /// <summary>
+        /// 获取货币读法的数值。
+        /// </summary>
+        /// <param name="chineseCurrency"></param>
+        /// <returns></returns>
         public static decimal GetNumber(string chineseCurrency)
         {
             var regex = new Regex(@"(.+)(?:圆|元)(?:整|(.)角整|(.)角(.)分|零(.)分)");

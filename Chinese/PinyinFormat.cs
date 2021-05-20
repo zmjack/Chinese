@@ -5,6 +5,6 @@
         Default,
         WithoutTone,
         Phonetic,
-        Code,
+        InitialConsonant,
     }
 }

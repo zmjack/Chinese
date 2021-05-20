@@ -1,11 +1,57 @@
-﻿namespace Chinese
+﻿using System;
+
+namespace Chinese
 {
-    public class ChineseWord
+    public class ChineseWord : IEquatable<ChineseWord>
     {
-        public string[] Pinyins { get; set; }
-        public bool IsPolyphone { get; set; }
+        /// <summary>
+        /// 中文字符串
+        /// </summary>
+        public string Word
+        {
+            set
+            {
+                Simplified = value;
+                Traditional = value;
+            }
+        }
+        /// <summary>
+        /// 简体中文字符串
+        /// </summary>
         public string Simplified { get; set; }
+        /// <summary>
+        /// 繁体中文字符串
+        /// </summary>
         public string Traditional { get; set; }
+
+        /// <summary>
+        /// 拼音
+        /// </summary>
+        public string Pinyin
+        {
+            set
+            {
+                SimplifiedPinyin = value;
+                TraditionalPinyin = value;
+            }
+        }
+        /// <summary>
+        /// 简体中文拼音
+        /// </summary>
+        public string SimplifiedPinyin { get; set; }
+        /// <summary>
+        /// 繁体中文拼音
+        /// </summary>
+        public string TraditionalPinyin { get; set; }
+
+        /// <summary>
+        /// 额外数据
+        /// </summary>
         public object Tag { get; set; }
+
+        public bool Equals(ChineseWord other)
+        {
+            return Simplified == other.Simplified && Traditional == other.Traditional;
+        }
     }
 }

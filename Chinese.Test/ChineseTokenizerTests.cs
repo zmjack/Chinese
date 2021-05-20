@@ -7,16 +7,16 @@ namespace Chinese.Test
         [Fact]
         public void Test1()
         {
-            using var tokenizer = new ChineseLexicon(BuiltinWords.Basic, new[]
+            using var tokenizer = new ChineseLexicon(Builtin.ChineseChars, new[]
             {
-                new ChineseWord { Pinyins = new[] { "zhong1 guo2" }, Simplified = "中国" },
-                new ChineseWord { Pinyins = new[] { "bei3 jing1" }, Simplified = "北京" },
-                new ChineseWord { Pinyins = new[] { "chong2 qing4" }, Simplified = "重庆" },
-                new ChineseWord { Pinyins = new[] { "zhi2 xia2 shi4" }, Simplified = "直辖市" },
+                new ChineseWord { Simplified = "中国", Traditional = "中國", Pinyin = "zhong1 guo2" },
+                new ChineseWord { Word = "北京", Pinyin = "bei3 jing1" },
+                new ChineseWord { Simplified = "重庆", Traditional = "重慶", Pinyin = "chong2 qing4" },
+                new ChineseWord { Simplified = "直辖市", Traditional = "直轄市", Pinyin = "zhi2 xia2 shi4" },
             });
 
             var sentence = "中国北京是直辖市，重庆也是直辖市。";
-            var actual = ChineseTokenizer.SplitWords(sentence, ChineseType.Simplified);
+            var actual = ChineseTokenizer.SplitWords(ChineseType.Simplified, sentence);
             var excepted = new[] { "中国", "北京", "是", "直辖市", "，", "重庆", "也", "是", "直辖市", "。" };
             var pinyin = Pinyin.GetString(sentence, PinyinFormat.Phonetic);
 

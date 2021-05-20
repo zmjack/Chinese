@@ -8,35 +8,27 @@ namespace Chinese
 {
     public static class Pinyin
     {
-        public static string[] GetSingle(char ch, PinyinFormat format = PinyinFormat.Default, ChineseType chineseType = ChineseType.Simplified)
-        {
-            var lexicon = ChineseLexicon.Current ?? ChineseLexicon.Default;
-            var word = ch.ToString();
+        /// <summary>
+        /// 获取拼音（简体中文）
+        /// </summary>
+        /// <param name="chinese"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
+        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default) => GetString(ChineseType.Simplified, chinese, format);
 
-            var chineseWord = chineseType == ChineseType.Traditional
-                ? lexicon.Words.First(x => x.Traditional == word)
-                : lexicon.Words.First(x => x.Simplified == word);
-
-            var pinyins = chineseWord.Pinyins.Select(pinyin =>
-            {
-                return format switch
-                {
-                    PinyinFormat.Default => pinyin,
-                    PinyinFormat.WithoutTone => GetPinyinWithoutTone(pinyin),
-                    PinyinFormat.Phonetic => GetPhoneticSymbol(pinyin),
-                    PinyinFormat.Code => pinyin.First().ToString(),
-                    _ => throw new NotImplementedException(),
-                };
-            }).ToArray();
-            return pinyins;
-        }
-
-        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default, ChineseType chineseType = ChineseType.Simplified)
+        /// <summary>
+        /// 获取指定类型字符串的拼音
+        /// </summary>
+        /// <param name="chineseType"></param>
+        /// <param name="chinese"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
+        public static string GetString(ChineseType chineseType, string chinese, PinyinFormat format = PinyinFormat.Default)
         {
             var lexicon = ChineseLexicon.Current ?? ChineseLexicon.Default;
             IEnumerable<int> GetDefaultSteps() { foreach (var ch in chinese) yield return 1; }
 
-            var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chinese, chineseType).Select(x => x.Length);
+            var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chineseType, chinese).Select(x => x.Length);
 
             if (!chinese.IsNullOrWhiteSpace())
             {
@@ -48,12 +40,20 @@ namespace Chinese
                     var word = chinese.Substring(ptext, step);
                     try
                     {
-                        var chineseWord = chineseType == ChineseType.Traditional
-                            ? lexicon.Words.First(x => x.Traditional == word)
-                            : lexicon.Words.First(x => x.Simplified == word);
-                        var pinyin = chineseWord.Pinyins.FirstOrDefault()?.ToLower();
+                        var chineseWord = chineseType switch
+                        {
+                            ChineseType.Simplified => lexicon.Words.FirstOrDefault(x => x.Simplified == word),
+                            ChineseType.Traditional => lexicon.Words.FirstOrDefault(x => x.Traditional == word),
+                            _ => throw new NotImplementedException(),
+                        };
+                        var pinyin = chineseType switch
+                        {
+                            ChineseType.Simplified => chineseWord.SimplifiedPinyin,
+                            ChineseType.Traditional => chineseWord.TraditionalPinyin,
+                            _ => throw new NotImplementedException(),
+                        };
 
-                        if (format != PinyinFormat.Code)
+                        if (format != PinyinFormat.InitialConsonant)
                         {
                             if (insertSpace) sb.Append(" ");
                         }
@@ -63,7 +63,7 @@ namespace Chinese
                             case PinyinFormat.Default: sb.Append(pinyin); break;
                             case PinyinFormat.WithoutTone: sb.Append(GetPinyinWithoutTone(pinyin)); break;
                             case PinyinFormat.Phonetic: sb.Append(GetPhoneticSymbol(pinyin)); break;
-                            case PinyinFormat.Code: sb.Append(pinyin.First()); break;
+                            case PinyinFormat.InitialConsonant: sb.Append(pinyin.First()); break;
                         }
                         insertSpace = true;
                     }

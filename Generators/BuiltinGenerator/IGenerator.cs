@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DictGenerator
+namespace BuiltinGenerator
 {
     public interface IGenerator
     {

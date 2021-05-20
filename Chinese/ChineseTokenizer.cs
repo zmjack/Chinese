@@ -7,7 +7,20 @@ namespace Chinese
 {
     public static class ChineseTokenizer
     {
-        public static string[] SplitWords(string chinese, ChineseType chineseType = ChineseType.Simplified)
+        /// <summary>
+        /// 获取分词结果。
+        /// </summary>
+        /// <param name="chinese"></param>
+        /// <returns></returns>
+        public static string[] SplitWords(string chinese) => SplitWords(ChineseType.Simplified, chinese);
+
+        /// <summary>
+        /// 获取分词结果。
+        /// </summary>
+        /// <param name="chineseType"></param>
+        /// <param name="chinese"></param>
+        /// <returns></returns>
+        public static string[] SplitWords(ChineseType chineseType, string chinese)
         {
             var lexicon = ChineseLexicon.Current;
             if (lexicon is null) return chinese.Select(ch => ch.ToString()).ToArray();

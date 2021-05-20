@@ -5,7 +5,7 @@ namespace Chinese
 {
     public class ChineseLexicon : Scope<ChineseLexicon>
     {
-        public static ChineseLexicon Default = new ChineseLexicon(BuiltinWords.Basic);
+        public static ChineseLexicon Default = new(Builtin.ChineseChars);
 
         public int WordMaxLength { get; }
         public ChineseWord[] Words { get; }

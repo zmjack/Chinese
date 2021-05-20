@@ -1,4 +1,5 @@
-﻿using NStandard;
+﻿using Chinese.Options;
+using NStandard;
 using System;
 using System.Linq;
 using System.Text;
@@ -20,24 +21,30 @@ namespace Chinese
         public static readonly string[] LowerNumberCodeValues = new[] { "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
         private const int SUPERIOR_LEVELS_COUNT = 8;
-        private static string[] _SuperiorLevels;
+        private static string[] superiorLevels;
 
         /// <summary>
         /// 自定义分级读法（简体中文，个位为空，从低到高设置八级），默认为 ["", "万", "亿", "兆", "京", "垓", "秭", "穰"]。
         /// </summary>
         public static string[] SuperiorLevels
         {
-            get => _SuperiorLevels;
+            get => superiorLevels;
             set
             {
                 if (value.Length != SUPERIOR_LEVELS_COUNT) throw new ArgumentException("自定义分级读法必须设置八级。");
 
-                _SuperiorLevels = value;
-                NumericalWords = BuiltinWords.Numerical.Concat(value.Select(word => new ChineseWord
+                superiorLevels = value;
+                NumericalWords = Builtin.NumericalWords.Concat(value.Select(word =>
                 {
-                    Pinyins = new[] { Pinyin.GetString(word) },
-                    Simplified = word,
-                    Traditional = ChineseConverter.ToTraditional(word),
+                    var pinyin = Pinyin.GetString(word);
+                    var chineseWord = new ChineseWord
+                    {
+                        Simplified = word,
+                        Traditional = ChineseConverter.ToTraditional(word),
+                        SimplifiedPinyin = pinyin,
+                        TraditionalPinyin = pinyin,
+                    };
+                    return chineseWord;
                 })).ToArray();
             }
         }
@@ -45,6 +52,12 @@ namespace Chinese
         public static readonly string[] UpperLevels = new[] { "", "拾", "佰", "仟" };
         public static readonly string[] LowerLevels = new[] { "", "十", "百", "千" };
 
+        /// <summary>
+        /// 获取数字的编号读法。
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="upper"></param>
+        /// <returns></returns>
         public static string GetCodeString(string number, bool upper = false)
         {
             if (!number.All(ch => '0' <= ch && ch <= '9')) throw new ArgumentException("不是合法的数字编号。");
@@ -59,6 +72,11 @@ namespace Chinese
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 获取数字的编号读法。
+        /// </summary>
+        /// <param name="chineseNumber"></param>
+        /// <returns></returns>
         public static string GetCodeNumber(string chineseNumber)
         {
             var sb = new StringBuilder(chineseNumber.Length + 1);
@@ -73,13 +91,30 @@ namespace Chinese
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 获取数值的数值读法。
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static string GetString(decimal number) => GetString(number, ChineseNumberOptions.Default);
+        /// <summary>
+        /// 获取数值的数值读法。
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="setOptions"></param>
+        /// <returns></returns>
         public static string GetString(decimal number, Action<ChineseNumberOptions> setOptions)
         {
             var options = new ChineseNumberOptions();
             setOptions(options);
             return GetString(number, options);
         }
+        /// <summary>
+        /// 获取数值的数值读法。
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="options"></param>
+        /// <returns></returns>
         public static string GetString(decimal number, ChineseNumberOptions options)
         {
             number = decimal.Floor(number);
@@ -127,7 +162,6 @@ namespace Chinese
                 }
             }
 
-            //TODO: Use Linqsharp to calculate
             var sb = new StringBuilder();
             var levelParts = number.ToString()
                 .For(parts => parts.AsKvPairs()
@@ -142,6 +176,11 @@ namespace Chinese
             return ret;
         }
 
+        /// <summary>
+        /// 获取数值读法的数值。
+        /// </summary>
+        /// <param name="chineseNumber"></param>
+        /// <returns></returns>
         public static decimal GetNumber(string chineseNumber)
         {
             if (chineseNumber.Length == 0) return default;
@@ -160,11 +199,11 @@ namespace Chinese
                     else if (word == "十" || word == "拾") levelNumber += 10;
                     else
                     {
-                        var numericalWord = BuiltinWords.Numerical.FirstOrDefault(x => x.Simplified == word);
+                        var numericalWord = Builtin.NumericalWords.FirstOrDefault(x => x.Simplified == word);
                         if (numericalWord != null) levelNumber += (int)numericalWord.Tag;
                         else
                         {
-                            var level = _SuperiorLevels.IndexOf(word);
+                            var level = superiorLevels.IndexOf(word);
                             if (level > -1)
                             {
                                 total += levelNumber * (level switch
