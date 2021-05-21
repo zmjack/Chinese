@@ -16,19 +16,16 @@ dotnet add package Chinese
 
 ## 版本更新
 
-**v0.3.5**：
+**v0.4.1**
 
-- 移除对 **Microsoft Visual Studio International Pack 1.0 Service** 的依赖；
-  - 拼音解析不再依赖：Simplified Chinese Pin-Yin Conversion Library，**ChnCharInfo.dll**；
-  - 简繁解析不再依赖：Traditional Chinese to Simplified Chinese Conversion Library，**ChineseConverter.dll**。
-- 以内建词库方式提供基本支持（拼音，简繁体）。
+- 按词频为单字提供默认拼音。
 
 <br/>
 
 ## 拼音
 
 ```c#
-// "mian3 fei4，kua4 ping2 tai1，kai1 yuan2！"
+// "mian3 fei4，kua4 ping2 tai2，kai1 yuan2！"
 Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Default);
 ```
 
@@ -38,13 +35,13 @@ Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.WithoutTone);
 ```
 
 ```c#
-// "miǎn fèi，kuà píng tāi，kāi yuán！"
+// "miǎn fèi，kuà píng tái，kāi yuán！"
 Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Phonetic);
 ```
 
 ```c#
 // "mf，kpt，ky！"
-Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Code);
+Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.InitialConsonant);
 ```
 
 <br/>
