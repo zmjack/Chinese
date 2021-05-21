@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<Version>0.4.1</Version>
+		<TargetFrameworks>net35;net40;net45;net451;net46;net461;netstandard2.0</TargetFrameworks>
+		<Version>0.4.2</Version>
 		<Authors>zmjack</Authors>
 		<Description>中文解析通用工具。包括拼音，简繁转换，数字读法，货币读法。</Description>
 		<Copyright>Copyright © nstandard.net 2020</Copyright>
