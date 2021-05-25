@@ -25,7 +25,8 @@ namespace Chinese
         /// <returns></returns>
         public static string GetString(ChineseTypes chineseTypes, string chinese, PinyinFormat format = PinyinFormat.Default)
         {
-            var lexicon = LexiconScope.Current?.Lexicon;
+            var scope = LexiconScope.Current ?? LexiconScope.Default;
+            var lexicon = scope.Lexicon;
             IEnumerable<int> GetDefaultSteps() { foreach (var ch in chinese) yield return 1; }
 
             var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chineseTypes, chinese).Select(x => x.Length);

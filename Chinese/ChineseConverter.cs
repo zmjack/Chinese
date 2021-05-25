@@ -13,12 +13,13 @@ namespace Chinese
         public static string ToTraditional(string chinese)
         {
             var scope = LexiconScope.Current ?? LexiconScope.Default;
+            var lexicon = scope.Lexicon;
             var words = ChineseTokenizer.SplitWords(chinese);
             var sb = new StringBuilder();
 
             foreach (var word in words)
             {
-                var result = scope.Lexicon.Words.FirstOrDefault(x => x.Simplified == word)?.Traditional ?? word;
+                var result = lexicon.Words.FirstOrDefault(x => x.Simplified == word)?.Traditional ?? word;
                 sb.Append(result);
             }
             return sb.ToString();
@@ -32,12 +33,13 @@ namespace Chinese
         public static string ToSimplified(string chinese)
         {
             var scope = LexiconScope.Current ?? LexiconScope.Default;
+            var lexicon = scope.Lexicon;
             var words = ChineseTokenizer.SplitWords(ChineseTypes.Simplified, chinese);
             var sb = new StringBuilder();
 
             foreach (var word in words)
             {
-                var result = scope.Lexicon.Words.FirstOrDefault(x => x.Traditional == word)?.Simplified ?? word;
+                var result = lexicon.Words.FirstOrDefault(x => x.Traditional == word)?.Simplified ?? word;
                 sb.Append(result);
             }
             return sb.ToString();

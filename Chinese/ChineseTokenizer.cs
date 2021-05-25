@@ -22,7 +22,8 @@ namespace Chinese
         /// <returns></returns>
         public static string[] SplitWords(ChineseTypes chineseType, string chinese)
         {
-            var lexicon = LexiconScope.Current?.Lexicon;
+            var scope = LexiconScope.Current ?? LexiconScope.Default;
+            var lexicon = scope.Lexicon;
             if (lexicon is null) return chinese.Select(ch => ch.ToString()).ToArray();
 
             var list = new LinkedList<string>();
