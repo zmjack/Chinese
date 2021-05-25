@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <Version>0.0.1</Version>
+    <Description>中文词库。</Description>
+    <Authors>zmjack</Authors>
+    <Company>zmjack</Company>
+    <Copyright>Copyright © nstandard.net 2021</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/zmjack/Chinese</PackageProjectUrl>
+    <PackageIcon>Chinese.png</PackageIcon>
+    <RepositoryUrl>https://github.com/zmjack/Chinese</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Chinese Pinyin</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinese\Chinese.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Chinese.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

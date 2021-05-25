@@ -5,6 +5,11 @@ namespace Chinese.Test
     public class PinyinTest
     {
         [Fact]
+        public void TmpTest1()
+        {
+        }
+
+        [Fact]
         public void Test1()
         {
             var str = "免费，跨平台，开源！";
@@ -27,7 +32,7 @@ namespace Chinese.Test
                 new ChineseWord { Simplified = "重量", Traditional = "重量", Pinyin = "zhong4 liang4" },
             };
 
-            using (new ChineseLexicon(Builtin.ChineseChars, words))
+            using (new ChineseLexicon(Builtin.ChineseChars, words).BeginScope())
             {
                 Assert.Equal("ta1 shi4 lai2 zi4 chong2 qing4 de5 zhong4 liang4 ji2 xuan3 shou3。", Pinyin.GetString(str, PinyinFormat.Default));
             }
@@ -43,11 +48,11 @@ namespace Chinese.Test
                 new ChineseWord { Simplified = "服务器", Traditional = "伺服器", SimplifiedPinyin = "fu2 wu4 qi4", TraditionalPinyin = "si4 fu2 qi4" },
             };
 
-            using (new ChineseLexicon(Builtin.ChineseChars, words))
+            using (new ChineseLexicon(Builtin.ChineseChars, words).BeginScope())
             {
                 Assert.Equal("伺服器中止了服務。", ChineseConverter.ToTraditional("服务器中止了服务。"));
-                Assert.Equal("fu2 wu4 qi4 zhong1 zhi3 le5 fu2 wu4。", Pinyin.GetString(ChineseType.Simplified, "服务器中止了服务。"));
-                Assert.Equal("si4 fu2 qi4 zhong1 zhi3 le5 fu2 wu4。", Pinyin.GetString(ChineseType.Traditional, "伺服器中止了服務。"));
+                Assert.Equal("fu2 wu4 qi4 zhong1 zhi3 le5 fu2 wu4。", Pinyin.GetString(ChineseTypes.Simplified, "服务器中止了服务。"));
+                Assert.Equal("si4 fu2 qi4 zhong1 zhi3 le5 fu2 wu4。", Pinyin.GetString(ChineseTypes.Traditional, "伺服器中止了服務。"));
             }
         }
 

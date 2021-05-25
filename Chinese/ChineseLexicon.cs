@@ -1,12 +1,12 @@
-﻿using NStandard;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Chinese
 {
-    public class ChineseLexicon : Scope<ChineseLexicon>
+    public class ChineseLexicon
     {
-        public static ChineseLexicon Default = new(Builtin.ChineseChars);
-
         public int WordMaxLength { get; }
         public ChineseWord[] Words { get; }
 
@@ -20,6 +20,11 @@ namespace Chinese
         {
             Words = wordsSet.SelectMany(x => x).ToArray();
             WordMaxLength = Words.Any() ? Words.Max(x => x.Simplified?.Length ?? 0) : 0; ;
+        }
+
+        public LexiconScope BeginScope()
+        {
+            return new LexiconScope(this);
         }
 
     }

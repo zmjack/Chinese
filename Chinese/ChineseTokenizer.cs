@@ -12,7 +12,7 @@ namespace Chinese
         /// </summary>
         /// <param name="chinese"></param>
         /// <returns></returns>
-        public static string[] SplitWords(string chinese) => SplitWords(ChineseType.Simplified, chinese);
+        public static string[] SplitWords(string chinese) => SplitWords(ChineseTypes.Simplified, chinese);
 
         /// <summary>
         /// 获取分词结果。
@@ -20,9 +20,9 @@ namespace Chinese
         /// <param name="chineseType"></param>
         /// <param name="chinese"></param>
         /// <returns></returns>
-        public static string[] SplitWords(ChineseType chineseType, string chinese)
+        public static string[] SplitWords(ChineseTypes chineseType, string chinese)
         {
-            var lexicon = ChineseLexicon.Current;
+            var lexicon = LexiconScope.Current?.Lexicon;
             if (lexicon is null) return chinese.Select(ch => ch.ToString()).ToArray();
 
             var list = new LinkedList<string>();
@@ -59,9 +59,9 @@ namespace Chinese
             return list.ToArray();
         }
 
-        private static string Match(ChineseLexicon lexicon, ChineseType chineseType, string part)
+        private static string Match(ChineseLexicon lexicon, ChineseTypes chineseType, string part)
         {
-            var isMatch = chineseType == ChineseType.Traditional
+            var isMatch = chineseType == ChineseTypes.Traditional
                 ? lexicon.Words.Any(x => x.Traditional == part)
                 : lexicon.Words.Any(x => x.Simplified == part);
             return isMatch ? part : null;

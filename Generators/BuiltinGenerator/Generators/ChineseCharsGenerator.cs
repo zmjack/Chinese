@@ -1,6 +1,7 @@
 ﻿using Chinese;
 using NStandard;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -24,22 +25,28 @@ namespace BuiltinGenerator.Generators
         {
             static string GetDefaultPinyin(char ch)
             {
-                var pinyins = GetOriginPinyins(ch);
-                if (pinyins.Skip(1).Any())
+                try
                 {
-                    if (MeasureWords.DefaultPinyins.ContainsKey(ch)) return MeasureWords.DefaultPinyins[ch];
-                    else if (FrequencyWords.DefaultPinyins.ContainsKey(ch)) return FrequencyWords.DefaultPinyins[ch];
+                    var pinyins = GetOriginPinyins(ch);
+                    if (pinyins.Skip(1).Any())
+                    {
+                        if (CharDefaultsModified.DefaultPinyins.ContainsKey(ch)) return CharDefaultsModified.DefaultPinyins[ch];
+                        else if (CharDefaults.DefaultPinyins.ContainsKey(ch)) return CharDefaults.DefaultPinyins[ch];
+                        else return pinyins.First();
+                    }
                     else return pinyins.First();
                 }
-                else return pinyins.First();
+                catch
+                {
+                    return null;
+                }
             }
 
-            var chinese = RangeEx.Create(0x4E00, 0x9FFF - 0x4E00 + 1);
-            var sb = new StringBuilder();
-
+            var charInts = RangeEx.Create(0x4E00, 0x9FFF - 0x4E00 + 1);
+            var charList = new List<ChineseChar>();
             var success = 0;
             var fail = 0;
-            foreach (var c in chinese)
+            foreach (var c in charInts)
             {
                 var ch = (char)c;
                 var str = ch.ToString();
@@ -51,17 +58,16 @@ namespace BuiltinGenerator.Generators
                     var pinyins = GetOriginPinyins(ch);
                     var simplified = Converter.Convert(str, Direction.TraditionalToSimplified);
                     var traditional = Converter.Convert(str, Direction.SimplifiedToTraditional);
-                    var defaultPinyin = GetDefaultPinyin(simplified[0]);
+                    var defaultPinyin = GetDefaultPinyin(ch) ?? GetDefaultPinyin(simplified[0]);
 
-                    var line = $"{" ".Repeat(12)}new {nameof(ChineseChar)}('{ch}', new[] {{{pinyins.Select(x => $"\"{x}\"").Join(", ")}}}) " +
-                        $"{{ " +
-                        $"{nameof(ChineseChar.Simplified)} = \"{simplified}\"" +
-                        $", {nameof(ChineseChar.Traditional)} = \"{traditional}\"" +
-                        $", {nameof(ChineseChar.Pinyin)} = \"{defaultPinyin}\"" +
-                        $", {nameof(ChineseChar.Tag)} = null" +
-                        $" }}";
-
-                    sb.AppendLine($@"{line}, // {(int)ch}");
+                    var chineseChar = new ChineseChar(ch, pinyins)
+                    {
+                        Simplified = simplified,
+                        Traditional = traditional,
+                        Pinyin = defaultPinyin,
+                        Tag = null,
+                    };
+                    charList.Add(chineseChar);
                     success++;
                 }
                 catch
@@ -77,6 +83,18 @@ namespace BuiltinGenerator.Generators
                 Output($"{str}\t{c,2:X2}\tSuccess: {success}\tFail   : {fail}\tTotal  : {success + fail}");
             }
 
+            var sb = new StringBuilder();
+            foreach (var item in charList)
+            {
+                var line = $"{" ".Repeat(12)}new {nameof(ChineseChar)}('{item.Char}', new[] {{{item.Pinyins.Select(x => $"\"{x}\"").Join(", ")}}}) " +
+                    $"{{ " +
+                    $"{nameof(ChineseChar.Simplified)} = \"{item.Simplified}\"" +
+                    $", {nameof(ChineseChar.Traditional)} = \"{item.Traditional}\"" +
+                    $", {nameof(ChineseChar.Pinyin)} = \"{item.SimplifiedPinyin}\"" +
+                    $", {nameof(ChineseChar.Tag)} = null" +
+                    $" }}";
+                sb.AppendLine($@"{line}, // {(int)item.Char}");
+            }
             sb.AppendLine($@"{" ".Repeat(12)}// Total {success} words.");
 
             return Wrap(sb.ToString());

@@ -12,9 +12,20 @@
 dotnet add package Chinese
 ```
 
+词库安装：
+
+```powershell
+dotnet add package Chinese.Words
+```
+
 <br/>
 
 ## 版本更新
+
+**v0.4.5**
+
+- 更新部分字默认拼音。
+- 发布测试词库 **Chinese.Words**（v0.0.1）。
 
 **v0.4.2**
 
@@ -46,6 +57,21 @@ Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.Phonetic);
 ```c#
 // "mf，kpt，ky！"
 Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.InitialConsonant);
+```
+
+<br/>
+
+使用词库 [Chinese.Words](https://github.com/zmjack/Chinese/blob/master/Chinese.Words/README.md) 示例 ：
+
+```csharp
+var lexicon = new ChineseLexicon(Additional.CommonWords, Builtin.ChineseChars);
+using (lexicon.BeginScope())
+{
+    var str = Pinyin.GetString("只有这只鸟跑得很快。");	
+    // zhi3 you3 zhe4 zhi1 niao3 pao3 de2 hen3 kuai4。
+    var words = ChineseTokenizer.SplitWords("只有这只鸟跑得很快。");
+    // 只有 / 这只 / 鸟 / 跑 / 得 / 很快 / 。
+}
 ```
 
 <br/>

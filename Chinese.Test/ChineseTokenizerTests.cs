@@ -13,10 +13,10 @@ namespace Chinese.Test
                 new ChineseWord { Word = "北京", Pinyin = "bei3 jing1" },
                 new ChineseWord { Simplified = "重庆", Traditional = "重慶", Pinyin = "chong2 qing4" },
                 new ChineseWord { Simplified = "直辖市", Traditional = "直轄市", Pinyin = "zhi2 xia2 shi4" },
-            });
+            }).BeginScope();
 
             var sentence = "中国北京是直辖市，重庆也是直辖市。";
-            var actual = ChineseTokenizer.SplitWords(ChineseType.Simplified, sentence);
+            var actual = ChineseTokenizer.SplitWords(ChineseTypes.Simplified, sentence);
             var excepted = new[] { "中国", "北京", "是", "直辖市", "，", "重庆", "也", "是", "直辖市", "。" };
             var pinyin = Pinyin.GetString(sentence, PinyinFormat.Phonetic);
 

@@ -348,7 +348,7 @@ namespace Chinese.Gen
             new ChineseChar('佧', new[] {"ka3", "ka5"}) { Simplified = "佧", Traditional = "佧", Pinyin = "ka3", Tag = null }, // 20327
             new ChineseChar('佨', new[] {"bao1", "bao5"}) { Simplified = "佨", Traditional = "佨", Pinyin = "bao1", Tag = null }, // 20328
             new ChineseChar('佩', new[] {"pei4", "pei5"}) { Simplified = "佩", Traditional = "佩", Pinyin = "pei4", Tag = null }, // 20329
-            new ChineseChar('佪', new[] {"huai2", "hui2"}) { Simplified = "徊", Traditional = "佪", Pinyin = "huai2", Tag = null }, // 20330
+            new ChineseChar('佪', new[] {"huai2", "hui2"}) { Simplified = "徊", Traditional = "佪", Pinyin = "hui2", Tag = null }, // 20330
             new ChineseChar('佫', new[] {"ge2", "he4"}) { Simplified = "佫", Traditional = "佫", Pinyin = "he4", Tag = null }, // 20331
             new ChineseChar('佬', new[] {"lao3"}) { Simplified = "佬", Traditional = "佬", Pinyin = "lao3", Tag = null }, // 20332
             new ChineseChar('佭', new[] {"xiang2"}) { Simplified = "佭", Traditional = "佭", Pinyin = "xiang2", Tag = null }, // 20333
@@ -618,7 +618,7 @@ namespace Chinese.Gen
             new ChineseChar('偷', new[] {"tou1"}) { Simplified = "偷", Traditional = "偷", Pinyin = "tou1", Tag = null }, // 20599
             new ChineseChar('偸', new[] {"tou1"}) { Simplified = "偸", Traditional = "偸", Pinyin = "tou1", Tag = null }, // 20600
             new ChineseChar('偹', new[] {"bei4"}) { Simplified = "偹", Traditional = "偹", Pinyin = "bei4", Tag = null }, // 20601
-            new ChineseChar('偺', new[] {"za2", "za5", "zan2", "zan5"}) { Simplified = "咱", Traditional = "偺", Pinyin = "zan2", Tag = null }, // 20602
+            new ChineseChar('偺', new[] {"za2", "za5", "zan2", "zan5"}) { Simplified = "咱", Traditional = "偺", Pinyin = "za2", Tag = null }, // 20602
             new ChineseChar('偻', new[] {"lou2", "lv3"}) { Simplified = "偻", Traditional = "僂", Pinyin = "lou2", Tag = null }, // 20603
             new ChineseChar('偼', new[] {"jie2"}) { Simplified = "偼", Traditional = "偼", Pinyin = "jie2", Tag = null }, // 20604
             new ChineseChar('偽', new[] {"wei2", "wei3"}) { Simplified = "伪", Traditional = "偽", Pinyin = "wei3", Tag = null }, // 20605
@@ -709,7 +709,7 @@ namespace Chinese.Gen
             new ChineseChar('僒', new[] {"jiong3", "jiong5"}) { Simplified = "僒", Traditional = "僒", Pinyin = "jiong3", Tag = null }, // 20690
             new ChineseChar('僓', new[] {"tui2", "tui3", "tui5"}) { Simplified = "僓", Traditional = "僓", Pinyin = "tui3", Tag = null }, // 20691
             new ChineseChar('僔', new[] {"zun3", "zun5"}) { Simplified = "僔", Traditional = "僔", Pinyin = "zun3", Tag = null }, // 20692
-            new ChineseChar('僕', new[] {"pu2", "pu5"}) { Simplified = "仆", Traditional = "僕", Pinyin = "pu1", Tag = null }, // 20693
+            new ChineseChar('僕', new[] {"pu2", "pu5"}) { Simplified = "仆", Traditional = "僕", Pinyin = "pu2", Tag = null }, // 20693
             new ChineseChar('僖', new[] {"xi1"}) { Simplified = "僖", Traditional = "僖", Pinyin = "xi1", Tag = null }, // 20694
             new ChineseChar('僗', new[] {"lao2", "lao4"}) { Simplified = "僗", Traditional = "僗", Pinyin = "lao2", Tag = null }, // 20695
             new ChineseChar('僘', new[] {"chang3", "chang5"}) { Simplified = "僘", Traditional = "僘", Pinyin = "chang3", Tag = null }, // 20696
@@ -757,7 +757,7 @@ namespace Chinese.Gen
             new ChineseChar('儂', new[] {"nong2"}) { Simplified = "侬", Traditional = "儂", Pinyin = "nong2", Tag = null }, // 20738
             new ChineseChar('儃', new[] {"chan2", "shan4"}) { Simplified = "儃", Traditional = "儃", Pinyin = "chan2", Tag = null }, // 20739
             new ChineseChar('億', new[] {"yi4"}) { Simplified = "亿", Traditional = "億", Pinyin = "yi4", Tag = null }, // 20740
-            new ChineseChar('儅', new[] {"dang1", "dang4"}) { Simplified = "当", Traditional = "儅", Pinyin = "dang1", Tag = null }, // 20741
+            new ChineseChar('儅', new[] {"dang1", "dang4"}) { Simplified = "当", Traditional = "儅", Pinyin = "dang4", Tag = null }, // 20741
             new ChineseChar('儆', new[] {"jing3"}) { Simplified = "儆", Traditional = "儆", Pinyin = "jing3", Tag = null }, // 20742
             new ChineseChar('儇', new[] {"xuan1", "xuan5"}) { Simplified = "儇", Traditional = "儇", Pinyin = "xuan1", Tag = null }, // 20743
             new ChineseChar('儈', new[] {"kuai4"}) { Simplified = "侩", Traditional = "儈", Pinyin = "kuai4", Tag = null }, // 20744
@@ -1230,10 +1230,10 @@ namespace Chinese.Gen
             new ChineseChar('勠', new[] {"lu4"}) { Simplified = "勠", Traditional = "勠", Pinyin = "lu4", Tag = null }, // 21216
             new ChineseChar('勡', new[] {"piao4", "piao5"}) { Simplified = "勡", Traditional = "勡", Pinyin = "piao4", Tag = null }, // 21217
             new ChineseChar('勢', new[] {"shi4", "shi5"}) { Simplified = "势", Traditional = "勢", Pinyin = "shi4", Tag = null }, // 21218
-            new ChineseChar('勣', new[] {"ji4"}) { Simplified = "积", Traditional = "勣", Pinyin = "ji1", Tag = null }, // 21219
+            new ChineseChar('勣', new[] {"ji4"}) { Simplified = "积", Traditional = "勣", Pinyin = "ji4", Tag = null }, // 21219
             new ChineseChar('勤', new[] {"qin2", "qin5"}) { Simplified = "勤", Traditional = "勤", Pinyin = "qin2", Tag = null }, // 21220
             new ChineseChar('勥', new[] {"jiang3", "qiang3"}) { Simplified = "勥", Traditional = "勥", Pinyin = "jiang4", Tag = null }, // 21221
-            new ChineseChar('勦', new[] {"chao1", "jiao3", "jiao5"}) { Simplified = "剿", Traditional = "勦", Pinyin = "jiao3", Tag = null }, // 21222
+            new ChineseChar('勦', new[] {"chao1", "jiao3", "jiao5"}) { Simplified = "剿", Traditional = "勦", Pinyin = "chao1", Tag = null }, // 21222
             new ChineseChar('勧', new[] {"quan4"}) { Simplified = "勧", Traditional = "勧", Pinyin = "quan4", Tag = null }, // 21223
             new ChineseChar('勨', new[] {"xiang4"}) { Simplified = "勨", Traditional = "勨", Pinyin = "xiang4", Tag = null }, // 21224
             new ChineseChar('勩', new[] {"yi4"}) { Simplified = "勩", Traditional = "勩", Pinyin = "yi4", Tag = null }, // 21225
@@ -1306,7 +1306,7 @@ namespace Chinese.Gen
             new ChineseChar('匮', new[] {"kui4", "kui5"}) { Simplified = "匮", Traditional = "匱", Pinyin = "kui4", Tag = null }, // 21294
             new ChineseChar('匯', new[] {"hui4"}) { Simplified = "汇", Traditional = "匯", Pinyin = "hui4", Tag = null }, // 21295
             new ChineseChar('匰', new[] {"dan1"}) { Simplified = "匰", Traditional = "匰", Pinyin = "dan1", Tag = null }, // 21296
-            new ChineseChar('匱', new[] {"gui4", "kui4", "kui5"}) { Simplified = "匮", Traditional = "匱", Pinyin = "kui4", Tag = null }, // 21297
+            new ChineseChar('匱', new[] {"gui4", "kui4", "kui5"}) { Simplified = "匮", Traditional = "匱", Pinyin = "gui4", Tag = null }, // 21297
             new ChineseChar('匲', new[] {"lian2", "lian5"}) { Simplified = "匲", Traditional = "匲", Pinyin = "lian2", Tag = null }, // 21298
             new ChineseChar('匳', new[] {"lian2", "lian5"}) { Simplified = "匳", Traditional = "匳", Pinyin = "lian2", Tag = null }, // 21299
             new ChineseChar('匵', new[] {"du2"}) { Simplified = "匵", Traditional = "匵", Pinyin = "du2", Tag = null }, // 21301
@@ -2068,7 +2068,7 @@ namespace Chinese.Gen
             new ChineseChar('嘵', new[] {"xiao1"}) { Simplified = "哓", Traditional = "嘵", Pinyin = "xiao1", Tag = null }, // 22069
             new ChineseChar('嘶', new[] {"si1"}) { Simplified = "嘶", Traditional = "嘶", Pinyin = "si1", Tag = null }, // 22070
             new ChineseChar('嘷', new[] {"hao2"}) { Simplified = "嘷", Traditional = "嘷", Pinyin = "hao2", Tag = null }, // 22071
-            new ChineseChar('嘸', new[] {"fu3", "mu2", "mu4"}) { Simplified = "呒", Traditional = "嘸", Pinyin = "mu2", Tag = null }, // 22072
+            new ChineseChar('嘸', new[] {"fu3", "mu2", "mu4"}) { Simplified = "呒", Traditional = "嘸", Pinyin = "fu3", Tag = null }, // 22072
             new ChineseChar('嘹', new[] {"liao2"}) { Simplified = "嘹", Traditional = "嘹", Pinyin = "liao2", Tag = null }, // 22073
             new ChineseChar('嘺', new[] {"qiao2", "qiao4", "qiao5"}) { Simplified = "嘺", Traditional = "嘺", Pinyin = "qiao2", Tag = null }, // 22074
             new ChineseChar('嘻', new[] {"xi1"}) { Simplified = "嘻", Traditional = "嘻", Pinyin = "xi1", Tag = null }, // 22075
@@ -2077,7 +2077,7 @@ namespace Chinese.Gen
             new ChineseChar('嘾', new[] {"dan4", "tan2"}) { Simplified = "嘾", Traditional = "嘾", Pinyin = "dan4", Tag = null }, // 22078
             new ChineseChar('嘿', new[] {"hai1", "hai5", "hei1", "hei5", "mo4"}) { Simplified = "嘿", Traditional = "嘿", Pinyin = "hei1", Tag = null }, // 22079
             new ChineseChar('噀', new[] {"xun4"}) { Simplified = "噀", Traditional = "噀", Pinyin = "xun4", Tag = null }, // 22080
-            new ChineseChar('噁', new[] {"e3", "wu4"}) { Simplified = "恶", Traditional = "噁", Pinyin = "e4", Tag = null }, // 22081
+            new ChineseChar('噁', new[] {"e3", "wu4"}) { Simplified = "恶", Traditional = "噁", Pinyin = "e3", Tag = null }, // 22081
             new ChineseChar('噂', new[] {"zun3", "zun5"}) { Simplified = "噂", Traditional = "噂", Pinyin = "zun3", Tag = null }, // 22082
             new ChineseChar('噃', new[] {"bo5", "fan1"}) { Simplified = "噃", Traditional = "噃", Pinyin = "fan1", Tag = null }, // 22083
             new ChineseChar('噄', new[] {"chi1", "chi5", "kai4", "kai5"}) { Simplified = "噄", Traditional = "噄", Pinyin = "chi1", Tag = null }, // 22084
@@ -2113,7 +2113,7 @@ namespace Chinese.Gen
             new ChineseChar('噣', new[] {"zhou4", "zhuo2"}) { Simplified = "噣", Traditional = "噣", Pinyin = "zhou4", Tag = null }, // 22115
             new ChineseChar('噤', new[] {"jin4", "jin5"}) { Simplified = "噤", Traditional = "噤", Pinyin = "jin4", Tag = null }, // 22116
             new ChineseChar('噥', new[] {"nong2", "nong5"}) { Simplified = "哝", Traditional = "噥", Pinyin = "nong2", Tag = null }, // 22117
-            new ChineseChar('噦', new[] {"hui4", "yue1", "yue3", "yue5"}) { Simplified = "哕", Traditional = "噦", Pinyin = "hui4", Tag = null }, // 22118
+            new ChineseChar('噦', new[] {"hui4", "yue1", "yue3", "yue5"}) { Simplified = "哕", Traditional = "噦", Pinyin = "yue3", Tag = null }, // 22118
             new ChineseChar('噧', new[] {"xie4"}) { Simplified = "噧", Traditional = "噧", Pinyin = "xie4", Tag = null }, // 22119
             new ChineseChar('器', new[] {"qi4"}) { Simplified = "器", Traditional = "器", Pinyin = "qi4", Tag = null }, // 22120
             new ChineseChar('噩', new[] {"e4"}) { Simplified = "噩", Traditional = "噩", Pinyin = "e4", Tag = null }, // 22121
@@ -2125,7 +2125,7 @@ namespace Chinese.Gen
             new ChineseChar('噯', new[] {"ai1", "ai3", "ai4", "ai5"}) { Simplified = "嗳", Traditional = "噯", Pinyin = "ai1", Tag = null }, // 22127
             new ChineseChar('噰', new[] {"yong1", "yong5"}) { Simplified = "噰", Traditional = "噰", Pinyin = "yong1", Tag = null }, // 22128
             new ChineseChar('噱', new[] {"jue2", "jue5", "xue2", "xue5"}) { Simplified = "噱", Traditional = "噱", Pinyin = "jue2", Tag = null }, // 22129
-            new ChineseChar('噲', new[] {"guai4"}) { Simplified = "哙", Traditional = "噲", Pinyin = "kuai4", Tag = null }, // 22130
+            new ChineseChar('噲', new[] {"guai4"}) { Simplified = "哙", Traditional = "噲", Pinyin = "guai4", Tag = null }, // 22130
             new ChineseChar('噳', new[] {"yu3", "yu5"}) { Simplified = "噳", Traditional = "噳", Pinyin = "yu3", Tag = null }, // 22131
             new ChineseChar('噴', new[] {"pen1", "pen4", "pen5"}) { Simplified = "喷", Traditional = "噴", Pinyin = "pen1", Tag = null }, // 22132
             new ChineseChar('噵', new[] {"dao4"}) { Simplified = "噵", Traditional = "噵", Pinyin = "dao4", Tag = null }, // 22133
@@ -2158,7 +2158,7 @@ namespace Chinese.Gen
             new ChineseChar('嚑', new[] {"xun1"}) { Simplified = "嚑", Traditional = "嚑", Pinyin = "xun1", Tag = null }, // 22161
             new ChineseChar('嚓', new[] {"ca1", "ca5", "cha1", "cha5"}) { Simplified = "嚓", Traditional = "嚓", Pinyin = "ca1", Tag = null }, // 22163
             new ChineseChar('嚔', new[] {"ti4"}) { Simplified = "嚔", Traditional = "嚔", Pinyin = "ti4", Tag = null }, // 22164
-            new ChineseChar('嚕', new[] {"lu1", "lu5"}) { Simplified = "噜", Traditional = "嚕", Pinyin = "lu1", Tag = null }, // 22165
+            new ChineseChar('嚕', new[] {"lu1", "lu5"}) { Simplified = "噜", Traditional = "嚕", Pinyin = "lu3", Tag = null }, // 22165
             new ChineseChar('嚖', new[] {"hui4"}) { Simplified = "嚖", Traditional = "嚖", Pinyin = "hui4", Tag = null }, // 22166
             new ChineseChar('嚗', new[] {"bo2", "pao4"}) { Simplified = "嚗", Traditional = "嚗", Pinyin = "bo2", Tag = null }, // 22167
             new ChineseChar('嚘', new[] {"you1"}) { Simplified = "嚘", Traditional = "嚘", Pinyin = "you1", Tag = null }, // 22168
@@ -2209,7 +2209,7 @@ namespace Chinese.Gen
             new ChineseChar('囆', new[] {"chai4", "chai5"}) { Simplified = "囆", Traditional = "囆", Pinyin = "chai4", Tag = null }, // 22214
             new ChineseChar('囇', new[] {"li4"}) { Simplified = "囇", Traditional = "囇", Pinyin = "li4", Tag = null }, // 22215
             new ChineseChar('囈', new[] {"yi4"}) { Simplified = "呓", Traditional = "囈", Pinyin = "yi4", Tag = null }, // 22216
-            new ChineseChar('囉', new[] {"luo1", "luo2", "luo5"}) { Simplified = "罗", Traditional = "囉", Pinyin = "luo2", Tag = null }, // 22217
+            new ChineseChar('囉', new[] {"luo1", "luo2", "luo5"}) { Simplified = "罗", Traditional = "囉", Pinyin = "luo1", Tag = null }, // 22217
             new ChineseChar('囊', new[] {"nang1", "nang2", "nang5"}) { Simplified = "囊", Traditional = "囊", Pinyin = "nang2", Tag = null }, // 22218
             new ChineseChar('囋', new[] {"za2", "za5", "zan4"}) { Simplified = "囋", Traditional = "囋", Pinyin = "za2", Tag = null }, // 22219
             new ChineseChar('囌', new[] {"su1", "su5"}) { Simplified = "苏", Traditional = "囌", Pinyin = "su1", Tag = null }, // 22220
@@ -2372,7 +2372,7 @@ namespace Chinese.Gen
             new ChineseChar('坭', new[] {"ni2"}) { Simplified = "坭", Traditional = "坭", Pinyin = "ni2", Tag = null }, // 22381
             new ChineseChar('坮', new[] {"tai2"}) { Simplified = "坮", Traditional = "坮", Pinyin = "tai2", Tag = null }, // 22382
             new ChineseChar('坯', new[] {"pi1", "pi5"}) { Simplified = "坯", Traditional = "坯", Pinyin = "pi1", Tag = null }, // 22383
-            new ChineseChar('坰', new[] {"jiong1", "jiong5", "shang3"}) { Simplified = "垧", Traditional = "坰", Pinyin = "shang3", Tag = null }, // 22384
+            new ChineseChar('坰', new[] {"jiong1", "jiong5", "shang3"}) { Simplified = "垧", Traditional = "坰", Pinyin = "jiong1", Tag = null }, // 22384
             new ChineseChar('坱', new[] {"yang3"}) { Simplified = "坱", Traditional = "坱", Pinyin = "yang3", Tag = null }, // 22385
             new ChineseChar('坲', new[] {"fo2", "fo5"}) { Simplified = "坲", Traditional = "坲", Pinyin = "fo2", Tag = null }, // 22386
             new ChineseChar('坳', new[] {"ao4", "ao5"}) { Simplified = "坳", Traditional = "坳", Pinyin = "ao4", Tag = null }, // 22387
@@ -2654,7 +2654,7 @@ namespace Chinese.Gen
             new ChineseChar('墎', new[] {"guo1"}) { Simplified = "墎", Traditional = "墎", Pinyin = "guo1", Tag = null }, // 22670
             new ChineseChar('墏', new[] {"qiang3"}) { Simplified = "墏", Traditional = "墏", Pinyin = "qiang3", Tag = null }, // 22671
             new ChineseChar('墐', new[] {"jin4", "jin5", "qin2", "qin5"}) { Simplified = "墐", Traditional = "墐", Pinyin = "jin4", Tag = null }, // 22672
-            new ChineseChar('墑', new[] {"di4"}) { Simplified = "墒", Traditional = "墑", Pinyin = "shang1", Tag = null }, // 22673
+            new ChineseChar('墑', new[] {"di4"}) { Simplified = "墒", Traditional = "墑", Pinyin = "di4", Tag = null }, // 22673
             new ChineseChar('墒', new[] {"shang1"}) { Simplified = "墒", Traditional = "墑", Pinyin = "shang1", Tag = null }, // 22674
             new ChineseChar('墓', new[] {"mu4"}) { Simplified = "墓", Traditional = "墓", Pinyin = "mu4", Tag = null }, // 22675
             new ChineseChar('墔', new[] {"cui1", "cui5"}) { Simplified = "墔", Traditional = "墔", Pinyin = "cui1", Tag = null }, // 22676
@@ -3613,7 +3613,7 @@ namespace Chinese.Gen
             new ChineseChar('屚', new[] {"lou2", "lou4"}) { Simplified = "屚", Traditional = "屚", Pinyin = "lou4", Tag = null }, // 23642
             new ChineseChar('屛', new[] {"bing3", "ping2", "ping5"}) { Simplified = "屛", Traditional = "屛", Pinyin = "ping2", Tag = null }, // 23643
             new ChineseChar('屜', new[] {"ti4"}) { Simplified = "屉", Traditional = "屜", Pinyin = "ti4", Tag = null }, // 23644
-            new ChineseChar('屝', new[] {"fei4", "fei5"}) { Simplified = "扉", Traditional = "屝", Pinyin = "fei1", Tag = null }, // 23645
+            new ChineseChar('屝', new[] {"fei4", "fei5"}) { Simplified = "扉", Traditional = "屝", Pinyin = "fei4", Tag = null }, // 23645
             new ChineseChar('属', new[] {"shu3", "zhu3"}) { Simplified = "属", Traditional = "屬", Pinyin = "shu3", Tag = null }, // 23646
             new ChineseChar('屟', new[] {"ti4", "xie4"}) { Simplified = "屟", Traditional = "屟", Pinyin = "xie4", Tag = null }, // 23647
             new ChineseChar('屠', new[] {"tu2"}) { Simplified = "屠", Traditional = "屠", Pinyin = "tu2", Tag = null }, // 23648
@@ -3980,7 +3980,7 @@ namespace Chinese.Gen
             new ChineseChar('巎', new[] {"nao2"}) { Simplified = "巎", Traditional = "巎", Pinyin = "nao2", Tag = null }, // 24014
             new ChineseChar('巏', new[] {"quan2"}) { Simplified = "巏", Traditional = "巏", Pinyin = "quan2", Tag = null }, // 24015
             new ChineseChar('巐', new[] {"chao3"}) { Simplified = "巐", Traditional = "巐", Pinyin = "chao3", Tag = null }, // 24016
-            new ChineseChar('巑', new[] {"cuan2", "cuan5"}) { Simplified = "漓", Traditional = "巑", Pinyin = "li2", Tag = null }, // 24017
+            new ChineseChar('巑', new[] {"cuan2", "cuan5"}) { Simplified = "漓", Traditional = "巑", Pinyin = "cuan2", Tag = null }, // 24017
             new ChineseChar('巒', new[] {"luan2", "luan5"}) { Simplified = "峦", Traditional = "巒", Pinyin = "luan2", Tag = null }, // 24018
             new ChineseChar('巓', new[] {"dian1"}) { Simplified = "巓", Traditional = "巓", Pinyin = "dian1", Tag = null }, // 24019
             new ChineseChar('巔', new[] {"dian1"}) { Simplified = "巅", Traditional = "巔", Pinyin = "dian1", Tag = null }, // 24020
@@ -4089,7 +4089,7 @@ namespace Chinese.Gen
             new ChineseChar('帽', new[] {"mao4"}) { Simplified = "帽", Traditional = "帽", Pinyin = "mao4", Tag = null }, // 24125
             new ChineseChar('帾', new[] {"du3"}) { Simplified = "帾", Traditional = "帾", Pinyin = "du3", Tag = null }, // 24126
             new ChineseChar('帿', new[] {"hou2"}) { Simplified = "帿", Traditional = "帿", Pinyin = "hou2", Tag = null }, // 24127
-            new ChineseChar('幀', new[] {"zhen1", "zhen5"}) { Simplified = "帧", Traditional = "幀", Pinyin = "zhen1", Tag = null }, // 24128
+            new ChineseChar('幀', new[] {"zhen1", "zhen5"}) { Simplified = "帧", Traditional = "幀", Pinyin = "zheng4", Tag = null }, // 24128
             new ChineseChar('幁', new[] {"xu1"}) { Simplified = "幁", Traditional = "幁", Pinyin = "xu1", Tag = null }, // 24129
             new ChineseChar('幂', new[] {"mi4", "mi5"}) { Simplified = "幂", Traditional = "冪", Pinyin = "mi4", Tag = null }, // 24130
             new ChineseChar('幃', new[] {"wei2"}) { Simplified = "帏", Traditional = "幃", Pinyin = "wei2", Tag = null }, // 24131
@@ -4344,11 +4344,11 @@ namespace Chinese.Gen
             new ChineseChar('彃', new[] {"bi4", "bi5"}) { Simplified = "彃", Traditional = "彃", Pinyin = "bi4", Tag = null }, // 24387
             new ChineseChar('彄', new[] {"kou1"}) { Simplified = "彄", Traditional = "彄", Pinyin = "kou1", Tag = null }, // 24388
             new ChineseChar('彅', new[] {"jian3"}) { Simplified = "彅", Traditional = "彅", Pinyin = "jian3", Tag = null }, // 24389
-            new ChineseChar('彆', new[] {"bie4", "bie5"}) { Simplified = "别", Traditional = "彆", Pinyin = "bie2", Tag = null }, // 24390
+            new ChineseChar('彆', new[] {"bie4", "bie5"}) { Simplified = "别", Traditional = "彆", Pinyin = "bie4", Tag = null }, // 24390
             new ChineseChar('彇', new[] {"xiao1"}) { Simplified = "彇", Traditional = "彇", Pinyin = "xiao1", Tag = null }, // 24391
             new ChineseChar('彈', new[] {"dan4", "tan2", "tan5"}) { Simplified = "弹", Traditional = "彈", Pinyin = "dan4", Tag = null }, // 24392
             new ChineseChar('彉', new[] {"guo1", "kuo4", "kuo5"}) { Simplified = "彉", Traditional = "彉", Pinyin = "guo1", Tag = null }, // 24393
-            new ChineseChar('彊', new[] {"jiang1", "qiang2"}) { Simplified = "强", Traditional = "彊", Pinyin = "qiang2", Tag = null }, // 24394
+            new ChineseChar('彊', new[] {"jiang1", "qiang2"}) { Simplified = "强", Traditional = "彊", Pinyin = "jiang4", Tag = null }, // 24394
             new ChineseChar('彋', new[] {"hong2"}) { Simplified = "彋", Traditional = "彋", Pinyin = "hong2", Tag = null }, // 24395
             new ChineseChar('彌', new[] {"mi2", "mi3", "mi5"}) { Simplified = "弥", Traditional = "彌", Pinyin = "mi2", Tag = null }, // 24396
             new ChineseChar('彍', new[] {"guo1", "kuo4", "kuo5"}) { Simplified = "彍", Traditional = "彍", Pinyin = "guo1", Tag = null }, // 24397
@@ -5043,7 +5043,7 @@ namespace Chinese.Gen
             new ChineseChar('戄', new[] {"jue2", "jue5"}) { Simplified = "戄", Traditional = "戄", Pinyin = "jue2", Tag = null }, // 25092
             new ChineseChar('戅', new[] {"gang4", "gang5", "zhuang4"}) { Simplified = "戅", Traditional = "戅", Pinyin = "gang4", Tag = null }, // 25093
             new ChineseChar('戆', new[] {"gang4", "gang5", "zhuang4"}) { Simplified = "戆", Traditional = "戇", Pinyin = "gang4", Tag = null }, // 25094
-            new ChineseChar('戇', new[] {"gang4", "gang5", "zhuang4"}) { Simplified = "戆", Traditional = "戇", Pinyin = "gang4", Tag = null }, // 25095
+            new ChineseChar('戇', new[] {"gang4", "gang5", "zhuang4"}) { Simplified = "戆", Traditional = "戇", Pinyin = "zhuang4", Tag = null }, // 25095
             new ChineseChar('戈', new[] {"ge1"}) { Simplified = "戈", Traditional = "戈", Pinyin = "ge1", Tag = null }, // 25096
             new ChineseChar('戉', new[] {"yue4"}) { Simplified = "钺", Traditional = "戉", Pinyin = "yue4", Tag = null }, // 25097
             new ChineseChar('戊', new[] {"wu4"}) { Simplified = "戊", Traditional = "戊", Pinyin = "wu4", Tag = null }, // 25098
@@ -5132,7 +5132,7 @@ namespace Chinese.Gen
             new ChineseChar('扟', new[] {"shen1"}) { Simplified = "扟", Traditional = "扟", Pinyin = "shen1", Tag = null }, // 25183
             new ChineseChar('扠', new[] {"cha1", "cha5", "chai1", "chai5"}) { Simplified = "叉", Traditional = "扠", Pinyin = "cha1", Tag = null }, // 25184
             new ChineseChar('扡', new[] {"chi3", "chi5", "qian1", "tuo1", "tuo5", "yi3"}) { Simplified = "扡", Traditional = "扡", Pinyin = "tuo1", Tag = null }, // 25185
-            new ChineseChar('扢', new[] {"ge1", "gu3", "qi4"}) { Simplified = "扦", Traditional = "扢", Pinyin = "qian1", Tag = null }, // 25186
+            new ChineseChar('扢', new[] {"ge1", "gu3", "qi4"}) { Simplified = "扦", Traditional = "扢", Pinyin = "gu3", Tag = null }, // 25186
             new ChineseChar('扣', new[] {"kou4"}) { Simplified = "扣", Traditional = "扣", Pinyin = "kou4", Tag = null }, // 25187
             new ChineseChar('扤', new[] {"wu4"}) { Simplified = "扤", Traditional = "扤", Pinyin = "wu4", Tag = null }, // 25188
             new ChineseChar('扦', new[] {"qian1"}) { Simplified = "扦", Traditional = "扦", Pinyin = "qian1", Tag = null }, // 25190
@@ -5155,7 +5155,7 @@ namespace Chinese.Gen
             new ChineseChar('扷', new[] {"ao4", "ao5"}) { Simplified = "扷", Traditional = "扷", Pinyin = "ao4", Tag = null }, // 25207
             new ChineseChar('扸', new[] {"xi1", "zhe2"}) { Simplified = "扸", Traditional = "扸", Pinyin = "xi1", Tag = null }, // 25208
             new ChineseChar('批', new[] {"pi1", "pi5"}) { Simplified = "批", Traditional = "批", Pinyin = "pi1", Tag = null }, // 25209
-            new ChineseChar('扺', new[] {"zhi3"}) { Simplified = "抵", Traditional = "扺", Pinyin = "di3", Tag = null }, // 25210
+            new ChineseChar('扺', new[] {"zhi3"}) { Simplified = "抵", Traditional = "扺", Pinyin = "zhi3", Tag = null }, // 25210
             new ChineseChar('扻', new[] {"zhi4"}) { Simplified = "扻", Traditional = "扻", Pinyin = "zhi4", Tag = null }, // 25211
             new ChineseChar('扼', new[] {"e4"}) { Simplified = "扼", Traditional = "扼", Pinyin = "e4", Tag = null }, // 25212
             new ChineseChar('找', new[] {"zhao3", "zhao5"}) { Simplified = "找", Traditional = "找", Pinyin = "zhao3", Tag = null }, // 25214
@@ -5163,10 +5163,10 @@ namespace Chinese.Gen
             new ChineseChar('技', new[] {"ji4"}) { Simplified = "技", Traditional = "技", Pinyin = "ji4", Tag = null }, // 25216
             new ChineseChar('抁', new[] {"yan3", "yan5"}) { Simplified = "抁", Traditional = "抁", Pinyin = "yan3", Tag = null }, // 25217
             new ChineseChar('抂', new[] {"kuang2", "wang3"}) { Simplified = "抂", Traditional = "抂", Pinyin = "kuang2", Tag = null }, // 25218
-            new ChineseChar('抃', new[] {"bian4"}) { Simplified = "拚", Traditional = "抃", Pinyin = "pan4", Tag = null }, // 25219
+            new ChineseChar('抃', new[] {"bian4"}) { Simplified = "拚", Traditional = "抃", Pinyin = "bian4", Tag = null }, // 25219
             new ChineseChar('抄', new[] {"chao1"}) { Simplified = "抄", Traditional = "抄", Pinyin = "chao1", Tag = null }, // 25220
             new ChineseChar('抅', new[] {"gou1", "gou5", "ju1"}) { Simplified = "抅", Traditional = "抅", Pinyin = "ju1", Tag = null }, // 25221
-            new ChineseChar('抆', new[] {"wen3", "wen5"}) { Simplified = "擦", Traditional = "抆", Pinyin = "ca1", Tag = null }, // 25222
+            new ChineseChar('抆', new[] {"wen3", "wen5"}) { Simplified = "擦", Traditional = "抆", Pinyin = "wen3", Tag = null }, // 25222
             new ChineseChar('抇', new[] {"gu3", "hu2"}) { Simplified = "抇", Traditional = "抇", Pinyin = "hu2", Tag = null }, // 25223
             new ChineseChar('抈', new[] {"yue4"}) { Simplified = "抈", Traditional = "抈", Pinyin = "yue4", Tag = null }, // 25224
             new ChineseChar('抉', new[] {"jue2", "jue5"}) { Simplified = "抉", Traditional = "抉", Pinyin = "jue2", Tag = null }, // 25225
@@ -5340,7 +5340,7 @@ namespace Chinese.Gen
             new ChineseChar('挳', new[] {"keng1", "keng5", "qian1"}) { Simplified = "挳", Traditional = "挳", Pinyin = "keng1", Tag = null }, // 25395
             new ChineseChar('挴', new[] {"mei3"}) { Simplified = "挴", Traditional = "挴", Pinyin = "mei3", Tag = null }, // 25396
             new ChineseChar('挵', new[] {"nong4"}) { Simplified = "挵", Traditional = "挵", Pinyin = "nong4", Tag = null }, // 25397
-            new ChineseChar('挶', new[] {"ju1"}) { Simplified = "局", Traditional = "挶", Pinyin = "ju2", Tag = null }, // 25398
+            new ChineseChar('挶', new[] {"ju1"}) { Simplified = "局", Traditional = "挶", Pinyin = "ju1", Tag = null }, // 25398
             new ChineseChar('挷', new[] {"bang4", "bang5", "beng1", "beng5", "peng2"}) { Simplified = "挷", Traditional = "挷", Pinyin = "peng2", Tag = null }, // 25399
             new ChineseChar('挸', new[] {"jian3"}) { Simplified = "挸", Traditional = "挸", Pinyin = "jian3", Tag = null }, // 25400
             new ChineseChar('挹', new[] {"yi4"}) { Simplified = "挹", Traditional = "挹", Pinyin = "yi4", Tag = null }, // 25401
@@ -5363,7 +5363,7 @@ namespace Chinese.Gen
             new ChineseChar('捊', new[] {"fu2", "pou1", "pou2", "pou5"}) { Simplified = "捊", Traditional = "捊", Pinyin = "pou2", Tag = null }, // 25418
             new ChineseChar('捋', new[] {"luo1", "lv3"}) { Simplified = "捋", Traditional = "捋", Pinyin = "lv3", Tag = null }, // 25419
             new ChineseChar('捌', new[] {"ba1"}) { Simplified = "捌", Traditional = "捌", Pinyin = "ba1", Tag = null }, // 25420
-            new ChineseChar('捍', new[] {"han4"}) { Simplified = "扞", Traditional = "捍", Pinyin = "gan3", Tag = null }, // 25421
+            new ChineseChar('捍', new[] {"han4"}) { Simplified = "扞", Traditional = "捍", Pinyin = "han4", Tag = null }, // 25421
             new ChineseChar('捎', new[] {"shao1", "shao4", "shao5"}) { Simplified = "捎", Traditional = "捎", Pinyin = "shao1", Tag = null }, // 25422
             new ChineseChar('捏', new[] {"nie1", "nie5"}) { Simplified = "捏", Traditional = "捏", Pinyin = "nie1", Tag = null }, // 25423
             new ChineseChar('捐', new[] {"juan1", "juan5"}) { Simplified = "捐", Traditional = "捐", Pinyin = "juan1", Tag = null }, // 25424
@@ -5533,7 +5533,7 @@ namespace Chinese.Gen
             new ChineseChar('揶', new[] {"ye2"}) { Simplified = "揶", Traditional = "揶", Pinyin = "ye2", Tag = null }, // 25590
             new ChineseChar('揷', new[] {"cha1", "cha5"}) { Simplified = "揷", Traditional = "揷", Pinyin = "cha1", Tag = null }, // 25591
             new ChineseChar('揸', new[] {"zha1"}) { Simplified = "揸", Traditional = "揸", Pinyin = "zha1", Tag = null }, // 25592
-            new ChineseChar('揹', new[] {"bei1"}) { Simplified = "背", Traditional = "揹", Pinyin = "bei4", Tag = null }, // 25593
+            new ChineseChar('揹', new[] {"bei1"}) { Simplified = "背", Traditional = "揹", Pinyin = "bei1", Tag = null }, // 25593
             new ChineseChar('揺', new[] {"yao2"}) { Simplified = "揺", Traditional = "揺", Pinyin = "yao2", Tag = null }, // 25594
             new ChineseChar('揻', new[] {"wei1"}) { Simplified = "揻", Traditional = "揻", Pinyin = "wei1", Tag = null }, // 25595
             new ChineseChar('揼', new[] {"beng4", "beng5"}) { Simplified = "揼", Traditional = "揼", Pinyin = "beng5", Tag = null }, // 25596
@@ -5571,7 +5571,7 @@ namespace Chinese.Gen
             new ChineseChar('搜', new[] {"sou1"}) { Simplified = "搜", Traditional = "搜", Pinyin = "sou1", Tag = null }, // 25628
             new ChineseChar('搝', new[] {"qiu3", "qiu5"}) { Simplified = "搝", Traditional = "搝", Pinyin = "qiu3", Tag = null }, // 25629
             new ChineseChar('搞', new[] {"gao3", "gao5"}) { Simplified = "搞", Traditional = "搞", Pinyin = "gao3", Tag = null }, // 25630
-            new ChineseChar('搟', new[] {"xian1"}) { Simplified = "擀", Traditional = "搟", Pinyin = "gan3", Tag = null }, // 25631
+            new ChineseChar('搟', new[] {"xian1"}) { Simplified = "擀", Traditional = "搟", Pinyin = "xian1", Tag = null }, // 25631
             new ChineseChar('搠', new[] {"shuo4", "shuo5"}) { Simplified = "搠", Traditional = "搠", Pinyin = "shuo4", Tag = null }, // 25632
             new ChineseChar('搡', new[] {"sang3", "sang5"}) { Simplified = "搡", Traditional = "搡", Pinyin = "sang3", Tag = null }, // 25633
             new ChineseChar('搢', new[] {"jin4", "jin5"}) { Simplified = "搢", Traditional = "搢", Pinyin = "jin4", Tag = null }, // 25634
@@ -6230,7 +6230,7 @@ namespace Chinese.Gen
             new ChineseChar('暵', new[] {"han4"}) { Simplified = "暵", Traditional = "暵", Pinyin = "han4", Tag = null }, // 26293
             new ChineseChar('暶', new[] {"xuan2", "xuan5"}) { Simplified = "暶", Traditional = "暶", Pinyin = "xuan2", Tag = null }, // 26294
             new ChineseChar('暷', new[] {"chuan2", "chuan5"}) { Simplified = "暷", Traditional = "暷", Pinyin = "chuan2", Tag = null }, // 26295
-            new ChineseChar('暸', new[] {"liao2"}) { Simplified = "了", Traditional = "暸", Pinyin = "le5", Tag = null }, // 26296
+            new ChineseChar('暸', new[] {"liao2"}) { Simplified = "了", Traditional = "暸", Pinyin = "liao2", Tag = null }, // 26296
             new ChineseChar('暹', new[] {"xian1"}) { Simplified = "暹", Traditional = "暹", Pinyin = "xian1", Tag = null }, // 26297
             new ChineseChar('暺', new[] {"tan3"}) { Simplified = "暺", Traditional = "暺", Pinyin = "tan3", Tag = null }, // 26298
             new ChineseChar('暻', new[] {"jing3"}) { Simplified = "暻", Traditional = "暻", Pinyin = "jing3", Tag = null }, // 26299
@@ -6448,7 +6448,7 @@ namespace Chinese.Gen
             new ChineseChar('枖', new[] {"yao1", "yao3"}) { Simplified = "枖", Traditional = "枖", Pinyin = "yao1", Tag = null }, // 26518
             new ChineseChar('林', new[] {"lin2", "lin5"}) { Simplified = "林", Traditional = "林", Pinyin = "lin2", Tag = null }, // 26519
             new ChineseChar('枘', new[] {"rui4", "rui5"}) { Simplified = "枘", Traditional = "枘", Pinyin = "rui4", Tag = null }, // 26520
-            new ChineseChar('枙', new[] {"e3", "e4"}) { Simplified = "栀", Traditional = "枙", Pinyin = "zhi1", Tag = null }, // 26521
+            new ChineseChar('枙', new[] {"e3", "e4"}) { Simplified = "栀", Traditional = "枙", Pinyin = "e3", Tag = null }, // 26521
             new ChineseChar('枚', new[] {"mei2"}) { Simplified = "枚", Traditional = "枚", Pinyin = "mei2", Tag = null }, // 26522
             new ChineseChar('枛', new[] {"zhao4", "zhao5"}) { Simplified = "枛", Traditional = "枛", Pinyin = "zhao4", Tag = null }, // 26523
             new ChineseChar('果', new[] {"guo3"}) { Simplified = "果", Traditional = "果", Pinyin = "guo3", Tag = null }, // 26524
@@ -6537,7 +6537,7 @@ namespace Chinese.Gen
             new ChineseChar('柲', new[] {"bi4", "bi5", "bie2"}) { Simplified = "柲", Traditional = "柲", Pinyin = "bi4", Tag = null }, // 26610
             new ChineseChar('柳', new[] {"liu3"}) { Simplified = "柳", Traditional = "柳", Pinyin = "liu3", Tag = null }, // 26611
             new ChineseChar('柴', new[] {"chai2", "chai5"}) { Simplified = "柴", Traditional = "柴", Pinyin = "chai2", Tag = null }, // 26612
-            new ChineseChar('柵', new[] {"shan1", "zha4"}) { Simplified = "栅", Traditional = "柵", Pinyin = "zha4", Tag = null }, // 26613
+            new ChineseChar('柵', new[] {"shan1", "zha4"}) { Simplified = "栅", Traditional = "柵", Pinyin = "shan1", Tag = null }, // 26613
             new ChineseChar('柶', new[] {"si4"}) { Simplified = "柶", Traditional = "柶", Pinyin = "si4", Tag = null }, // 26614
             new ChineseChar('柷', new[] {"zhu4"}) { Simplified = "柷", Traditional = "柷", Pinyin = "zhu4", Tag = null }, // 26615
             new ChineseChar('柸', new[] {"bei1"}) { Simplified = "柸", Traditional = "柸", Pinyin = "bei1", Tag = null }, // 26616
@@ -6669,7 +6669,7 @@ namespace Chinese.Gen
             new ChineseChar('桼', new[] {"qi1"}) { Simplified = "桼", Traditional = "桼", Pinyin = "qi1", Tag = null }, // 26748
             new ChineseChar('桽', new[] {"wen3", "wen5"}) { Simplified = "桽", Traditional = "桽", Pinyin = "wen3", Tag = null }, // 26749
             new ChineseChar('桾', new[] {"jun1", "jun5"}) { Simplified = "桾", Traditional = "桾", Pinyin = "jun1", Tag = null }, // 26750
-            new ChineseChar('桿', new[] {"gan1", "gan3", "han4"}) { Simplified = "杆", Traditional = "桿", Pinyin = "gan1", Tag = null }, // 26751
+            new ChineseChar('桿', new[] {"gan1", "gan3", "han4"}) { Simplified = "杆", Traditional = "桿", Pinyin = "gan3", Tag = null }, // 26751
             new ChineseChar('梀', new[] {"su4", "su5", "yin4", "yin5"}) { Simplified = "梀", Traditional = "梀", Pinyin = "su4", Tag = null }, // 26752
             new ChineseChar('梁', new[] {"liang2", "liang5"}) { Simplified = "梁", Traditional = "梁", Pinyin = "liang2", Tag = null }, // 26753
             new ChineseChar('梂', new[] {"qiu2", "qiu5"}) { Simplified = "梂", Traditional = "梂", Pinyin = "qiu2", Tag = null }, // 26754
@@ -6995,7 +6995,7 @@ namespace Chinese.Gen
             new ChineseChar('槐', new[] {"huai2"}) { Simplified = "槐", Traditional = "槐", Pinyin = "huai2", Tag = null }, // 27088
             new ChineseChar('槑', new[] {"mei2"}) { Simplified = "槑", Traditional = "槑", Pinyin = "mei2", Tag = null }, // 27089
             new ChineseChar('槒', new[] {"chu4", "xu4"}) { Simplified = "槒", Traditional = "槒", Pinyin = "xu4", Tag = null }, // 27090
-            new ChineseChar('槓', new[] {"gang4", "gang5"}) { Simplified = "杠", Traditional = "槓", Pinyin = "gang1", Tag = null }, // 27091
+            new ChineseChar('槓', new[] {"gang4", "gang5"}) { Simplified = "杠", Traditional = "槓", Pinyin = "gang4", Tag = null }, // 27091
             new ChineseChar('槔', new[] {"gao1", "gao5"}) { Simplified = "槔", Traditional = "槔", Pinyin = "gao1", Tag = null }, // 27092
             new ChineseChar('槕', new[] {"zhuo1"}) { Simplified = "槕", Traditional = "槕", Pinyin = "zhuo1", Tag = null }, // 27093
             new ChineseChar('槖', new[] {"tuo2", "tuo5"}) { Simplified = "槖", Traditional = "槖", Pinyin = "tuo2", Tag = null }, // 27094
@@ -7485,7 +7485,7 @@ namespace Chinese.Gen
             new ChineseChar('毉', new[] {"yi1"}) { Simplified = "毉", Traditional = "毉", Pinyin = "yi1", Tag = null }, // 27593
             new ChineseChar('毊', new[] {"xiao1"}) { Simplified = "毊", Traditional = "毊", Pinyin = "xiao1", Tag = null }, // 27594
             new ChineseChar('毋', new[] {"wu2"}) { Simplified = "毋", Traditional = "毋", Pinyin = "wu2", Tag = null }, // 27595
-            new ChineseChar('毌', new[] {"guan4"}) { Simplified = "毋", Traditional = "毌", Pinyin = "wu2", Tag = null }, // 27596
+            new ChineseChar('毌', new[] {"guan4"}) { Simplified = "毋", Traditional = "毌", Pinyin = "guan4", Tag = null }, // 27596
             new ChineseChar('母', new[] {"mu3", "mu5"}) { Simplified = "母", Traditional = "母", Pinyin = "mu3", Tag = null }, // 27597
             new ChineseChar('毎', new[] {"mei3"}) { Simplified = "毎", Traditional = "毎", Pinyin = "mei3", Tag = null }, // 27598
             new ChineseChar('每', new[] {"mei3"}) { Simplified = "每", Traditional = "每", Pinyin = "mei3", Tag = null }, // 27599
@@ -7548,7 +7548,7 @@ namespace Chinese.Gen
             new ChineseChar('氉', new[] {"sao4", "sao5"}) { Simplified = "氉", Traditional = "氉", Pinyin = "sao4", Tag = null }, // 27657
             new ChineseChar('氊', new[] {"zhan1"}) { Simplified = "氊", Traditional = "氊", Pinyin = "zhan1", Tag = null }, // 27658
             new ChineseChar('氋', new[] {"meng2", "meng5"}) { Simplified = "氋", Traditional = "氋", Pinyin = "meng2", Tag = null }, // 27659
-            new ChineseChar('氌', new[] {"lu1", "lu3", "lu5"}) { Simplified = "氇", Traditional = "氌", Pinyin = "lu5", Tag = null }, // 27660
+            new ChineseChar('氌', new[] {"lu1", "lu3", "lu5"}) { Simplified = "氇", Traditional = "氌", Pinyin = "lu3", Tag = null }, // 27660
             new ChineseChar('氍', new[] {"qu2"}) { Simplified = "氍", Traditional = "氍", Pinyin = "qu2", Tag = null }, // 27661
             new ChineseChar('氎', new[] {"die2", "die5"}) { Simplified = "氎", Traditional = "氎", Pinyin = "die2", Tag = null }, // 27662
             new ChineseChar('氏', new[] {"shi4", "zhi1"}) { Simplified = "氏", Traditional = "氏", Pinyin = "shi4", Tag = null }, // 27663
@@ -8391,7 +8391,7 @@ namespace Chinese.Gen
             new ChineseChar('潜', new[] {"qian2"}) { Simplified = "潜", Traditional = "潛", Pinyin = "qian2", Tag = null }, // 28508
             new ChineseChar('潝', new[] {"xi1"}) { Simplified = "潝", Traditional = "潝", Pinyin = "xi1", Tag = null }, // 28509
             new ChineseChar('潞', new[] {"lu4"}) { Simplified = "潞", Traditional = "潞", Pinyin = "lu4", Tag = null }, // 28510
-            new ChineseChar('潟', new[] {"xi4"}) { Simplified = "泻", Traditional = "潟", Pinyin = "xie4", Tag = null }, // 28511
+            new ChineseChar('潟', new[] {"xi4"}) { Simplified = "泻", Traditional = "潟", Pinyin = "xi4", Tag = null }, // 28511
             new ChineseChar('潠', new[] {"sun5"}) { Simplified = "潠", Traditional = "潠", Pinyin = "sun5", Tag = null }, // 28512
             new ChineseChar('潡', new[] {"dun4", "dun5"}) { Simplified = "潡", Traditional = "潡", Pinyin = "dun4", Tag = null }, // 28513
             new ChineseChar('潢', new[] {"huang2"}) { Simplified = "潢", Traditional = "潢", Pinyin = "huang2", Tag = null }, // 28514
@@ -9160,7 +9160,7 @@ namespace Chinese.Gen
             new ChineseChar('牧', new[] {"mu4"}) { Simplified = "牧", Traditional = "牧", Pinyin = "mu4", Tag = null }, // 29287
             new ChineseChar('牨', new[] {"gang1", "gang5"}) { Simplified = "牨", Traditional = "牨", Pinyin = "gang1", Tag = null }, // 29288
             new ChineseChar('物', new[] {"wu4"}) { Simplified = "物", Traditional = "物", Pinyin = "wu4", Tag = null }, // 29289
-            new ChineseChar('牪', new[] {"yan4", "yan5"}) { Simplified = "瘪", Traditional = "牪", Pinyin = "bie3", Tag = null }, // 29290
+            new ChineseChar('牪', new[] {"yan4", "yan5"}) { Simplified = "瘪", Traditional = "牪", Pinyin = "yan4", Tag = null }, // 29290
             new ChineseChar('牫', new[] {"ge1", "qiu2", "qiu5"}) { Simplified = "牫", Traditional = "牫", Pinyin = "ge1", Tag = null }, // 29291
             new ChineseChar('牬', new[] {"bei4"}) { Simplified = "牬", Traditional = "牬", Pinyin = "bei4", Tag = null }, // 29292
             new ChineseChar('牭', new[] {"si4"}) { Simplified = "牭", Traditional = "牭", Pinyin = "si4", Tag = null }, // 29293
@@ -9209,7 +9209,7 @@ namespace Chinese.Gen
             new ChineseChar('犘', new[] {"ma2"}) { Simplified = "犘", Traditional = "犘", Pinyin = "ma2", Tag = null }, // 29336
             new ChineseChar('犙', new[] {"san1"}) { Simplified = "犙", Traditional = "犙", Pinyin = "san1", Tag = null }, // 29337
             new ChineseChar('犚', new[] {"wei4"}) { Simplified = "犚", Traditional = "犚", Pinyin = "wei4", Tag = null }, // 29338
-            new ChineseChar('犛', new[] {"li2", "mao2"}) { Simplified = "犁", Traditional = "犛", Pinyin = "li2", Tag = null }, // 29339
+            new ChineseChar('犛', new[] {"li2", "mao2"}) { Simplified = "犁", Traditional = "犛", Pinyin = "mao2", Tag = null }, // 29339
             new ChineseChar('犜', new[] {"dun1", "dun5"}) { Simplified = "犜", Traditional = "犜", Pinyin = "dun1", Tag = null }, // 29340
             new ChineseChar('犝', new[] {"tong2"}) { Simplified = "犝", Traditional = "犝", Pinyin = "tong2", Tag = null }, // 29341
             new ChineseChar('犟', new[] {"jiang4"}) { Simplified = "犟", Traditional = "犟", Pinyin = "jiang4", Tag = null }, // 29343
@@ -9416,7 +9416,7 @@ namespace Chinese.Gen
             new ChineseChar('獫', new[] {"xian3"}) { Simplified = "猃", Traditional = "獫", Pinyin = "xian3", Tag = null }, // 29547
             new ChineseChar('獬', new[] {"xie4"}) { Simplified = "獬", Traditional = "獬", Pinyin = "xie4", Tag = null }, // 29548
             new ChineseChar('獭', new[] {"ta3"}) { Simplified = "獭", Traditional = "獺", Pinyin = "ta3", Tag = null }, // 29549
-            new ChineseChar('獮', new[] {"xian3"}) { Simplified = "猕", Traditional = "獮", Pinyin = "mi2", Tag = null }, // 29550
+            new ChineseChar('獮', new[] {"xian3"}) { Simplified = "猕", Traditional = "獮", Pinyin = "xian3", Tag = null }, // 29550
             new ChineseChar('獯', new[] {"xun1"}) { Simplified = "獯", Traditional = "獯", Pinyin = "xun1", Tag = null }, // 29551
             new ChineseChar('獰', new[] {"ning2", "ning5"}) { Simplified = "狞", Traditional = "獰", Pinyin = "ning2", Tag = null }, // 29552
             new ChineseChar('獱', new[] {"bian1"}) { Simplified = "獱", Traditional = "獱", Pinyin = "bian1", Tag = null }, // 29553
@@ -9623,7 +9623,7 @@ namespace Chinese.Gen
             new ChineseChar('琼', new[] {"qiong2", "qiong5"}) { Simplified = "琼", Traditional = "瓊", Pinyin = "qiong2", Tag = null }, // 29756
             new ChineseChar('琽', new[] {"du3"}) { Simplified = "琽", Traditional = "琽", Pinyin = "du3", Tag = null }, // 29757
             new ChineseChar('琾', new[] {"jie4"}) { Simplified = "琾", Traditional = "琾", Pinyin = "jie4", Tag = null }, // 29758
-            new ChineseChar('琿', new[] {"hui1", "hun2"}) { Simplified = "珲", Traditional = "琿", Pinyin = "hui1", Tag = null }, // 29759
+            new ChineseChar('琿', new[] {"hui1", "hun2"}) { Simplified = "珲", Traditional = "琿", Pinyin = "hun2", Tag = null }, // 29759
             new ChineseChar('瑀', new[] {"yu3", "yu5"}) { Simplified = "瑀", Traditional = "瑀", Pinyin = "yu3", Tag = null }, // 29760
             new ChineseChar('瑁', new[] {"mao4"}) { Simplified = "瑁", Traditional = "瑁", Pinyin = "mao4", Tag = null }, // 29761
             new ChineseChar('瑂', new[] {"mei2"}) { Simplified = "瑂", Traditional = "瑂", Pinyin = "mei2", Tag = null }, // 29762
@@ -10045,7 +10045,7 @@ namespace Chinese.Gen
             new ChineseChar('痰', new[] {"tan2"}) { Simplified = "痰", Traditional = "痰", Pinyin = "tan2", Tag = null }, // 30192
             new ChineseChar('痱', new[] {"fei4", "fei5"}) { Simplified = "痱", Traditional = "痱", Pinyin = "fei4", Tag = null }, // 30193
             new ChineseChar('痲', new[] {"ma2"}) { Simplified = "麻", Traditional = "痲", Pinyin = "ma2", Tag = null }, // 30194
-            new ChineseChar('痳', new[] {"lin4", "lin5", "ma2"}) { Simplified = "麻", Traditional = "痳", Pinyin = "ma2", Tag = null }, // 30195
+            new ChineseChar('痳', new[] {"lin4", "lin5", "ma2"}) { Simplified = "麻", Traditional = "痳", Pinyin = "lin2", Tag = null }, // 30195
             new ChineseChar('痴', new[] {"chi1", "chi5"}) { Simplified = "痴", Traditional = "癡", Pinyin = "chi1", Tag = null }, // 30196
             new ChineseChar('痵', new[] {"ji4"}) { Simplified = "痵", Traditional = "痵", Pinyin = "ji4", Tag = null }, // 30197
             new ChineseChar('痶', new[] {"dian3", "tian3", "tian5"}) { Simplified = "痶", Traditional = "痶", Pinyin = "tian3", Tag = null }, // 30198
@@ -10159,7 +10159,7 @@ namespace Chinese.Gen
             new ChineseChar('癢', new[] {"yang3", "yang5"}) { Simplified = "痒", Traditional = "癢", Pinyin = "yang3", Tag = null }, // 30306
             new ChineseChar('癣', new[] {"xuan3", "xuan5"}) { Simplified = "癣", Traditional = "癬", Pinyin = "xuan3", Tag = null }, // 30307
             new ChineseChar('癤', new[] {"jie1"}) { Simplified = "疖", Traditional = "癤", Pinyin = "jie1", Tag = null }, // 30308
-            new ChineseChar('癥', new[] {"zheng1"}) { Simplified = "症", Traditional = "癥", Pinyin = "zheng4", Tag = null }, // 30309
+            new ChineseChar('癥', new[] {"zheng1"}) { Simplified = "症", Traditional = "癥", Pinyin = "zheng1", Tag = null }, // 30309
             new ChineseChar('癧', new[] {"li4"}) { Simplified = "癧", Traditional = "癧", Pinyin = "li4", Tag = null }, // 30311
             new ChineseChar('癨', new[] {"huo4"}) { Simplified = "癨", Traditional = "癨", Pinyin = "huo4", Tag = null }, // 30312
             new ChineseChar('癩', new[] {"la4", "lai4", "lai5"}) { Simplified = "癞", Traditional = "癩", Pinyin = "lai4", Tag = null }, // 30313
@@ -10241,7 +10241,7 @@ namespace Chinese.Gen
             new ChineseChar('皸', new[] {"jun1", "jun5"}) { Simplified = "皲", Traditional = "皸", Pinyin = "jun1", Tag = null }, // 30392
             new ChineseChar('皹', new[] {"jun1", "jun5"}) { Simplified = "皹", Traditional = "皹", Pinyin = "jun1", Tag = null }, // 30393
             new ChineseChar('皺', new[] {"zhou1", "zhou4"}) { Simplified = "皱", Traditional = "皺", Pinyin = "zhou4", Tag = null }, // 30394
-            new ChineseChar('皻', new[] {"zha1"}) { Simplified = "隳", Traditional = "皻", Pinyin = "hui1", Tag = null }, // 30395
+            new ChineseChar('皻', new[] {"zha1"}) { Simplified = "隳", Traditional = "皻", Pinyin = "zha1", Tag = null }, // 30395
             new ChineseChar('皼', new[] {"gu3"}) { Simplified = "皼", Traditional = "皼", Pinyin = "gu3", Tag = null }, // 30396
             new ChineseChar('皽', new[] {"zhan3", "zhao1", "zhao5"}) { Simplified = "皽", Traditional = "皽", Pinyin = "zhao1", Tag = null }, // 30397
             new ChineseChar('皾', new[] {"du2"}) { Simplified = "皾", Traditional = "皾", Pinyin = "du2", Tag = null }, // 30398
@@ -10416,7 +10416,7 @@ namespace Chinese.Gen
             new ChineseChar('睧', new[] {"hun1"}) { Simplified = "睧", Traditional = "睧", Pinyin = "hun1", Tag = null }, // 30567
             new ChineseChar('睨', new[] {"ni4"}) { Simplified = "睨", Traditional = "睨", Pinyin = "ni4", Tag = null }, // 30568
             new ChineseChar('睩', new[] {"lu4"}) { Simplified = "睩", Traditional = "睩", Pinyin = "lu4", Tag = null }, // 30569
-            new ChineseChar('睪', new[] {"gao1", "gao5", "yi4"}) { Simplified = "睾", Traditional = "睪", Pinyin = "gao1", Tag = null }, // 30570
+            new ChineseChar('睪', new[] {"gao1", "gao5", "yi4"}) { Simplified = "睾", Traditional = "睪", Pinyin = "yi4", Tag = null }, // 30570
             new ChineseChar('睫', new[] {"jie2"}) { Simplified = "睫", Traditional = "睫", Pinyin = "jie2", Tag = null }, // 30571
             new ChineseChar('睬', new[] {"cai3"}) { Simplified = "睬", Traditional = "睬", Pinyin = "cai3", Tag = null }, // 30572
             new ChineseChar('睭', new[] {"zhou3"}) { Simplified = "睭", Traditional = "睭", Pinyin = "zhou3", Tag = null }, // 30573
@@ -10483,7 +10483,7 @@ namespace Chinese.Gen
             new ChineseChar('瞪', new[] {"deng1", "deng4"}) { Simplified = "瞪", Traditional = "瞪", Pinyin = "deng4", Tag = null }, // 30634
             new ChineseChar('瞫', new[] {"shen3"}) { Simplified = "瞫", Traditional = "瞫", Pinyin = "shen3", Tag = null }, // 30635
             new ChineseChar('瞬', new[] {"shun4", "shun5"}) { Simplified = "瞬", Traditional = "瞬", Pinyin = "shun4", Tag = null }, // 30636
-            new ChineseChar('瞭', new[] {"liao3", "liao4"}) { Simplified = "了", Traditional = "瞭", Pinyin = "le5", Tag = null }, // 30637
+            new ChineseChar('瞭', new[] {"liao3", "liao4"}) { Simplified = "了", Traditional = "瞭", Pinyin = "liao3", Tag = null }, // 30637
             new ChineseChar('瞮', new[] {"che4"}) { Simplified = "瞮", Traditional = "瞮", Pinyin = "che4", Tag = null }, // 30638
             new ChineseChar('瞯', new[] {"jian4", "xian2"}) { Simplified = "瞯", Traditional = "瞯", Pinyin = "xian2", Tag = null }, // 30639
             new ChineseChar('瞰', new[] {"kan4"}) { Simplified = "瞰", Traditional = "瞰", Pinyin = "kan4", Tag = null }, // 30640
@@ -10888,9 +10888,9 @@ namespace Chinese.Gen
             new ChineseChar('祂', new[] {"ta1"}) { Simplified = "祂", Traditional = "祂", Pinyin = "ta1", Tag = null }, // 31042
             new ChineseChar('祃', new[] {"ma4"}) { Simplified = "祃", Traditional = "祃", Pinyin = "ma4", Tag = null }, // 31043
             new ChineseChar('祄', new[] {"xie4"}) { Simplified = "祄", Traditional = "祄", Pinyin = "xie4", Tag = null }, // 31044
-            new ChineseChar('祅', new[] {"yao1"}) { Simplified = "祆", Traditional = "祅", Pinyin = "xian1", Tag = null }, // 31045
+            new ChineseChar('祅', new[] {"yao1"}) { Simplified = "祆", Traditional = "祅", Pinyin = "yao1", Tag = null }, // 31045
             new ChineseChar('祆', new[] {"xian1"}) { Simplified = "祆", Traditional = "祆", Pinyin = "xian1", Tag = null }, // 31046
-            new ChineseChar('祇', new[] {"chi2", "chi5", "qi2", "zhi3"}) { Simplified = "只", Traditional = "祇", Pinyin = "zhi1", Tag = null }, // 31047
+            new ChineseChar('祇', new[] {"chi2", "chi5", "qi2", "zhi3"}) { Simplified = "只", Traditional = "祇", Pinyin = "qi2", Tag = null }, // 31047
             new ChineseChar('祈', new[] {"qi2"}) { Simplified = "祈", Traditional = "祈", Pinyin = "qi2", Tag = null }, // 31048
             new ChineseChar('祉', new[] {"zhi3"}) { Simplified = "祉", Traditional = "祉", Pinyin = "zhi3", Tag = null }, // 31049
             new ChineseChar('祊', new[] {"beng1", "beng5", "fang1"}) { Simplified = "祊", Traditional = "祊", Pinyin = "beng1", Tag = null }, // 31050
@@ -11457,7 +11457,7 @@ namespace Chinese.Gen
             new ChineseChar('箁', new[] {"bu4", "fu2", "pou2", "pou5"}) { Simplified = "箁", Traditional = "箁", Pinyin = "pou2", Tag = null }, // 31617
             new ChineseChar('箂', new[] {"lai2", "lai5"}) { Simplified = "箂", Traditional = "箂", Pinyin = "lai2", Tag = null }, // 31618
             new ChineseChar('箃', new[] {"zou1", "zou5"}) { Simplified = "箃", Traditional = "箃", Pinyin = "zou1", Tag = null }, // 31619
-            new ChineseChar('箄', new[] {"bei1", "pai2"}) { Simplified = "箅", Traditional = "箄", Pinyin = "bi4", Tag = null }, // 31620
+            new ChineseChar('箄', new[] {"bei1", "pai2"}) { Simplified = "箅", Traditional = "箄", Pinyin = "bi3", Tag = null }, // 31620
             new ChineseChar('箅', new[] {"bi4", "bi5"}) { Simplified = "箅", Traditional = "箅", Pinyin = "bi4", Tag = null }, // 31621
             new ChineseChar('箆', new[] {"bi4", "bi5", "pi2", "pi5"}) { Simplified = "箆", Traditional = "箆", Pinyin = "bi4", Tag = null }, // 31622
             new ChineseChar('箇', new[] {"ge4"}) { Simplified = "个", Traditional = "箇", Pinyin = "ge4", Tag = null }, // 31623
@@ -11685,7 +11685,7 @@ namespace Chinese.Gen
             new ChineseChar('籯', new[] {"ying2"}) { Simplified = "籯", Traditional = "籯", Pinyin = "ying2", Tag = null }, // 31855
             new ChineseChar('籰', new[] {"yue4"}) { Simplified = "籰", Traditional = "籰", Pinyin = "yue4", Tag = null }, // 31856
             new ChineseChar('籱', new[] {"zhuo2"}) { Simplified = "籱", Traditional = "籱", Pinyin = "zhuo2", Tag = null }, // 31857
-            new ChineseChar('籲', new[] {"yu4", "yu5"}) { Simplified = "吁", Traditional = "籲", Pinyin = "xu1", Tag = null }, // 31858
+            new ChineseChar('籲', new[] {"yu4", "yu5"}) { Simplified = "吁", Traditional = "籲", Pinyin = "yu4", Tag = null }, // 31858
             new ChineseChar('米', new[] {"mi3", "mi5"}) { Simplified = "米", Traditional = "米", Pinyin = "mi3", Tag = null }, // 31859
             new ChineseChar('籴', new[] {"di2"}) { Simplified = "籴", Traditional = "糴", Pinyin = "di2", Tag = null }, // 31860
             new ChineseChar('籵', new[] {"fan2"}) { Simplified = "籵", Traditional = "籵", Pinyin = "fan2", Tag = null }, // 31861
@@ -11824,7 +11824,7 @@ namespace Chinese.Gen
             new ChineseChar('約', new[] {"yao1", "yue1"}) { Simplified = "约", Traditional = "約", Pinyin = "yue1", Tag = null }, // 32004
             new ChineseChar('紅', new[] {"gong1", "hong1", "hong2"}) { Simplified = "红", Traditional = "紅", Pinyin = "hong2", Tag = null }, // 32005
             new ChineseChar('紆', new[] {"yu1", "yu5"}) { Simplified = "纡", Traditional = "紆", Pinyin = "yu1", Tag = null }, // 32006
-            new ChineseChar('紇', new[] {"ge1", "he2"}) { Simplified = "纥", Traditional = "紇", Pinyin = "ge1", Tag = null }, // 32007
+            new ChineseChar('紇', new[] {"ge1", "he2"}) { Simplified = "纥", Traditional = "紇", Pinyin = "he2", Tag = null }, // 32007
             new ChineseChar('紈', new[] {"wan2", "wan5"}) { Simplified = "纨", Traditional = "紈", Pinyin = "wan2", Tag = null }, // 32008
             new ChineseChar('紉', new[] {"ren4"}) { Simplified = "纫", Traditional = "紉", Pinyin = "ren4", Tag = null }, // 32009
             new ChineseChar('紊', new[] {"wen3", "wen5"}) { Simplified = "紊", Traditional = "紊", Pinyin = "wen3", Tag = null }, // 32010
@@ -11931,7 +11931,7 @@ namespace Chinese.Gen
             new ChineseChar('絰', new[] {"die2", "die5"}) { Simplified = "絰", Traditional = "絰", Pinyin = "die2", Tag = null }, // 32112
             new ChineseChar('統', new[] {"tong3"}) { Simplified = "统", Traditional = "統", Pinyin = "tong3", Tag = null }, // 32113
             new ChineseChar('絲', new[] {"si1"}) { Simplified = "丝", Traditional = "絲", Pinyin = "si1", Tag = null }, // 32114
-            new ChineseChar('絳', new[] {"jiang4"}) { Simplified = "绦", Traditional = "絳", Pinyin = "tao1", Tag = null }, // 32115
+            new ChineseChar('絳', new[] {"jiang4"}) { Simplified = "绦", Traditional = "絳", Pinyin = "jiang4", Tag = null }, // 32115
             new ChineseChar('絴', new[] {"xiang2"}) { Simplified = "絴", Traditional = "絴", Pinyin = "xiang2", Tag = null }, // 32116
             new ChineseChar('絶', new[] {"jue2", "jue5"}) { Simplified = "絶", Traditional = "絶", Pinyin = "jue2", Tag = null }, // 32118
             new ChineseChar('絷', new[] {"zhi2"}) { Simplified = "絷", Traditional = "縶", Pinyin = "zhi2", Tag = null }, // 32119
@@ -11958,7 +11958,7 @@ namespace Chinese.Gen
             new ChineseChar('綌', new[] {"xi4"}) { Simplified = "綌", Traditional = "綌", Pinyin = "xi4", Tag = null }, // 32140
             new ChineseChar('綍', new[] {"fu2"}) { Simplified = "綍", Traditional = "綍", Pinyin = "fu2", Tag = null }, // 32141
             new ChineseChar('綎', new[] {"ting1"}) { Simplified = "綎", Traditional = "綎", Pinyin = "ting1", Tag = null }, // 32142
-            new ChineseChar('綏', new[] {"sui2", "sui5"}) { Simplified = "绥", Traditional = "綏", Pinyin = "sui2", Tag = null }, // 32143
+            new ChineseChar('綏', new[] {"sui2", "sui5"}) { Simplified = "绥", Traditional = "綏", Pinyin = "sui1", Tag = null }, // 32143
             new ChineseChar('綐', new[] {"dui4"}) { Simplified = "綐", Traditional = "綐", Pinyin = "dui4", Tag = null }, // 32144
             new ChineseChar('綑', new[] {"kun3", "kun5"}) { Simplified = "綑", Traditional = "綑", Pinyin = "kun3", Tag = null }, // 32145
             new ChineseChar('綒', new[] {"fu1"}) { Simplified = "綒", Traditional = "綒", Pinyin = "fu1", Tag = null }, // 32146
@@ -12095,7 +12095,7 @@ namespace Chinese.Gen
             new ChineseChar('縚', new[] {"tao1"}) { Simplified = "绦", Traditional = "縚", Pinyin = "tao1", Tag = null }, // 32282
             new ChineseChar('縛', new[] {"fu4"}) { Simplified = "缚", Traditional = "縛", Pinyin = "fu4", Tag = null }, // 32283
             new ChineseChar('縜', new[] {"yun2", "yun5"}) { Simplified = "縜", Traditional = "縜", Pinyin = "yun2", Tag = null }, // 32284
-            new ChineseChar('縝', new[] {"chen1", "zhen3", "zhen5"}) { Simplified = "缜", Traditional = "縝", Pinyin = "zhen3", Tag = null }, // 32285
+            new ChineseChar('縝', new[] {"chen1", "zhen3", "zhen5"}) { Simplified = "缜", Traditional = "縝", Pinyin = "chen1", Tag = null }, // 32285
             new ChineseChar('縞', new[] {"gao3", "gao5"}) { Simplified = "缟", Traditional = "縞", Pinyin = "gao3", Tag = null }, // 32286
             new ChineseChar('縟', new[] {"ru4", "ru5"}) { Simplified = "缛", Traditional = "縟", Pinyin = "ru4", Tag = null }, // 32287
             new ChineseChar('縠', new[] {"hu2"}) { Simplified = "縠", Traditional = "縠", Pinyin = "hu2", Tag = null }, // 32288
@@ -12116,13 +12116,13 @@ namespace Chinese.Gen
             new ChineseChar('縰', new[] {"xi3"}) { Simplified = "縰", Traditional = "縰", Pinyin = "xi3", Tag = null }, // 32304
             new ChineseChar('縱', new[] {"zong3", "zong4", "zong5"}) { Simplified = "纵", Traditional = "縱", Pinyin = "zong4", Tag = null }, // 32305
             new ChineseChar('縲', new[] {"lei2"}) { Simplified = "缧", Traditional = "縲", Pinyin = "lei2", Tag = null }, // 32306
-            new ChineseChar('縳', new[] {"juan4", "juan5", "zhuan4", "zhuan5"}) { Simplified = "缚", Traditional = "縳", Pinyin = "fu4", Tag = null }, // 32307
-            new ChineseChar('縴', new[] {"qian4"}) { Simplified = "纤", Traditional = "縴", Pinyin = "xian1", Tag = null }, // 32308
+            new ChineseChar('縳', new[] {"juan4", "juan5", "zhuan4", "zhuan5"}) { Simplified = "缚", Traditional = "縳", Pinyin = "juan4", Tag = null }, // 32307
+            new ChineseChar('縴', new[] {"qian4"}) { Simplified = "纤", Traditional = "縴", Pinyin = "qian4", Tag = null }, // 32308
             new ChineseChar('縵', new[] {"man4", "man5"}) { Simplified = "缦", Traditional = "縵", Pinyin = "man4", Tag = null }, // 32309
             new ChineseChar('縶', new[] {"zhi2"}) { Simplified = "絷", Traditional = "縶", Pinyin = "zhi2", Tag = null }, // 32310
             new ChineseChar('縷', new[] {"lv3", "lv5"}) { Simplified = "缕", Traditional = "縷", Pinyin = "lv3", Tag = null }, // 32311
             new ChineseChar('縸', new[] {"mo4", "mu4"}) { Simplified = "縸", Traditional = "縸", Pinyin = "mu4", Tag = null }, // 32312
-            new ChineseChar('縹', new[] {"piao1", "piao3", "piao5"}) { Simplified = "缥", Traditional = "縹", Pinyin = "piao1", Tag = null }, // 32313
+            new ChineseChar('縹', new[] {"piao1", "piao3", "piao5"}) { Simplified = "缥", Traditional = "縹", Pinyin = "piao3", Tag = null }, // 32313
             new ChineseChar('縺', new[] {"lian2", "lian5"}) { Simplified = "縺", Traditional = "縺", Pinyin = "lian2", Tag = null }, // 32314
             new ChineseChar('縻', new[] {"mi2", "mi5"}) { Simplified = "縻", Traditional = "縻", Pinyin = "mi2", Tag = null }, // 32315
             new ChineseChar('縼', new[] {"xuan4", "xuan5"}) { Simplified = "縼", Traditional = "縼", Pinyin = "xuan4", Tag = null }, // 32316
@@ -12132,7 +12132,7 @@ namespace Chinese.Gen
             new ChineseChar('繀', new[] {"cui3", "cui5", "sui4", "sui5"}) { Simplified = "繀", Traditional = "繀", Pinyin = "sui4", Tag = null }, // 32320
             new ChineseChar('繁', new[] {"fan2", "po2", "po5"}) { Simplified = "繁", Traditional = "繁", Pinyin = "fan2", Tag = null }, // 32321
             new ChineseChar('繂', new[] {"lv4"}) { Simplified = "繂", Traditional = "繂", Pinyin = "lv4", Tag = null }, // 32322
-            new ChineseChar('繃', new[] {"beng1", "beng3", "beng4", "beng5"}) { Simplified = "绷", Traditional = "繃", Pinyin = "beng1", Tag = null }, // 32323
+            new ChineseChar('繃', new[] {"beng1", "beng3", "beng4", "beng5"}) { Simplified = "绷", Traditional = "繃", Pinyin = "beng3", Tag = null }, // 32323
             new ChineseChar('繄', new[] {"yi1", "yi4"}) { Simplified = "繄", Traditional = "繄", Pinyin = "yi1", Tag = null }, // 32324
             new ChineseChar('繅', new[] {"sao1", "sao5"}) { Simplified = "缫", Traditional = "繅", Pinyin = "sao1", Tag = null }, // 32325
             new ChineseChar('繆', new[] {"miao4", "miao5", "miu4", "miu5", "mou2", "mou5"}) { Simplified = "缪", Traditional = "繆", Pinyin = "mou2", Tag = null }, // 32326
@@ -12175,7 +12175,7 @@ namespace Chinese.Gen
             new ChineseChar('繭', new[] {"jian3"}) { Simplified = "茧", Traditional = "繭", Pinyin = "jian3", Tag = null }, // 32365
             new ChineseChar('繮', new[] {"jiang1"}) { Simplified = "繮", Traditional = "繮", Pinyin = "jiang1", Tag = null }, // 32366
             new ChineseChar('繯', new[] {"huan2"}) { Simplified = "缳", Traditional = "繯", Pinyin = "huan2", Tag = null }, // 32367
-            new ChineseChar('繰', new[] {"qiao1", "qiao5", "sao1", "sao5", "zao3"}) { Simplified = "缲", Traditional = "繰", Pinyin = "qiao1", Tag = null }, // 32368
+            new ChineseChar('繰', new[] {"qiao1", "qiao5", "sao1", "sao5", "zao3"}) { Simplified = "缲", Traditional = "繰", Pinyin = "zao3", Tag = null }, // 32368
             new ChineseChar('繱', new[] {"cong1", "cong5"}) { Simplified = "繱", Traditional = "繱", Pinyin = "cong1", Tag = null }, // 32369
             new ChineseChar('繲', new[] {"jie4", "xie4"}) { Simplified = "繲", Traditional = "繲", Pinyin = "xie4", Tag = null }, // 32370
             new ChineseChar('繳', new[] {"jiao3", "jiao5"}) { Simplified = "缴", Traditional = "繳", Pinyin = "jiao3", Tag = null }, // 32371
@@ -12203,7 +12203,7 @@ namespace Chinese.Gen
             new ChineseChar('纊', new[] {"kuang4"}) { Simplified = "纩", Traditional = "纊", Pinyin = "kuang4", Tag = null }, // 32394
             new ChineseChar('纋', new[] {"you1"}) { Simplified = "纋", Traditional = "纋", Pinyin = "you1", Tag = null }, // 32395
             new ChineseChar('續', new[] {"xu4"}) { Simplified = "续", Traditional = "續", Pinyin = "xu4", Tag = null }, // 32396
-            new ChineseChar('纍', new[] {"lei2", "lei3", "lei4"}) { Simplified = "累", Traditional = "纍", Pinyin = "lei4", Tag = null }, // 32397
+            new ChineseChar('纍', new[] {"lei2", "lei3", "lei4"}) { Simplified = "累", Traditional = "纍", Pinyin = "lei2", Tag = null }, // 32397
             new ChineseChar('纎', new[] {"jian1", "xian1"}) { Simplified = "纎", Traditional = "纎", Pinyin = "xian1", Tag = null }, // 32398
             new ChineseChar('纏', new[] {"chan2", "chan5"}) { Simplified = "缠", Traditional = "纏", Pinyin = "chan2", Tag = null }, // 32399
             new ChineseChar('纐', new[] {"jiao3", "jiao5"}) { Simplified = "纐", Traditional = "纐", Pinyin = "jiao3", Tag = null }, // 32400
@@ -12859,7 +12859,7 @@ namespace Chinese.Gen
             new ChineseChar('脤', new[] {"shen4"}) { Simplified = "脤", Traditional = "脤", Pinyin = "shen4", Tag = null }, // 33060
             new ChineseChar('脥', new[] {"jia2", "qian3"}) { Simplified = "脥", Traditional = "脥", Pinyin = "qian3", Tag = null }, // 33061
             new ChineseChar('脦', new[] {"de5", "te4", "te5"}) { Simplified = "脦", Traditional = "脦", Pinyin = "de5", Tag = null }, // 33062
-            new ChineseChar('脧', new[] {"juan1", "juan5", "zui1", "zui5"}) { Simplified = "睃", Traditional = "脧", Pinyin = "suo1", Tag = null }, // 33063
+            new ChineseChar('脧', new[] {"juan1", "juan5", "zui1", "zui5"}) { Simplified = "睃", Traditional = "脧", Pinyin = "juan1", Tag = null }, // 33063
             new ChineseChar('脨', new[] {"cu4", "cu5", "ji2"}) { Simplified = "脨", Traditional = "脨", Pinyin = "cu4", Tag = null }, // 33064
             new ChineseChar('脩', new[] {"xiao1", "xiu1", "xiu5", "you3"}) { Simplified = "修", Traditional = "脩", Pinyin = "xiu1", Tag = null }, // 33065
             new ChineseChar('脪', new[] {"chi1", "chi5", "xin4"}) { Simplified = "脪", Traditional = "脪", Pinyin = "xin4", Tag = null }, // 33066
@@ -13079,7 +13079,7 @@ namespace Chinese.Gen
             new ChineseChar('舅', new[] {"jiu4"}) { Simplified = "舅", Traditional = "舅", Pinyin = "jiu4", Tag = null }, // 33285
             new ChineseChar('舆', new[] {"yu2", "yu5"}) { Simplified = "舆", Traditional = "輿", Pinyin = "yu2", Tag = null }, // 33286
             new ChineseChar('與', new[] {"yu2", "yu3", "yu4", "yu5"}) { Simplified = "与", Traditional = "與", Pinyin = "yu3", Tag = null }, // 33287
-            new ChineseChar('興', new[] {"xing1", "xing4", "xing5"}) { Simplified = "兴", Traditional = "興", Pinyin = "xing1", Tag = null }, // 33288
+            new ChineseChar('興', new[] {"xing1", "xing4", "xing5"}) { Simplified = "兴", Traditional = "興", Pinyin = "xing4", Tag = null }, // 33288
             new ChineseChar('舉', new[] {"ju3", "ju5"}) { Simplified = "举", Traditional = "舉", Pinyin = "ju3", Tag = null }, // 33289
             new ChineseChar('舊', new[] {"jiu4"}) { Simplified = "旧", Traditional = "舊", Pinyin = "jiu4", Tag = null }, // 33290
             new ChineseChar('舋', new[] {"wen4", "wen5", "xin4"}) { Simplified = "舋", Traditional = "舋", Pinyin = "xin4", Tag = null }, // 33291
@@ -13213,7 +13213,7 @@ namespace Chinese.Gen
             new ChineseChar('芍', new[] {"shao2", "shao5"}) { Simplified = "芍", Traditional = "芍", Pinyin = "shao2", Tag = null }, // 33421
             new ChineseChar('芎', new[] {"xiong1", "xiong5"}) { Simplified = "芎", Traditional = "芎", Pinyin = "qiong1", Tag = null }, // 33422
             new ChineseChar('芏', new[] {"du4"}) { Simplified = "芏", Traditional = "芏", Pinyin = "du4", Tag = null }, // 33423
-            new ChineseChar('芐', new[] {"hu4", "xia4"}) { Simplified = "苄", Traditional = "芐", Pinyin = "bian4", Tag = null }, // 33424
+            new ChineseChar('芐', new[] {"hu4", "xia4"}) { Simplified = "苄", Traditional = "芐", Pinyin = "hu4", Tag = null }, // 33424
             new ChineseChar('芑', new[] {"qi3"}) { Simplified = "芑", Traditional = "芑", Pinyin = "qi3", Tag = null }, // 33425
             new ChineseChar('芒', new[] {"mang2"}) { Simplified = "芒", Traditional = "芒", Pinyin = "mang2", Tag = null }, // 33426
             new ChineseChar('芓', new[] {"zi1", "zi4"}) { Simplified = "芓", Traditional = "芓", Pinyin = "zi4", Tag = null }, // 33427
@@ -13299,7 +13299,7 @@ namespace Chinese.Gen
             new ChineseChar('苤', new[] {"pie3", "pie5"}) { Simplified = "苤", Traditional = "苤", Pinyin = "pie3", Tag = null }, // 33508
             new ChineseChar('若', new[] {"re3", "re5", "ruo4", "ruo5"}) { Simplified = "若", Traditional = "若", Pinyin = "ruo4", Tag = null }, // 33509
             new ChineseChar('苦', new[] {"ku3", "ku5"}) { Simplified = "苦", Traditional = "苦", Pinyin = "ku3", Tag = null }, // 33510
-            new ChineseChar('苧', new[] {"ning2", "ning5", "zhu4"}) { Simplified = "苎", Traditional = "苧", Pinyin = "zhu4", Tag = null }, // 33511
+            new ChineseChar('苧', new[] {"ning2", "ning5", "zhu4"}) { Simplified = "苎", Traditional = "苧", Pinyin = "ning2", Tag = null }, // 33511
             new ChineseChar('苨', new[] {"ni3"}) { Simplified = "苨", Traditional = "苨", Pinyin = "ni3", Tag = null }, // 33512
             new ChineseChar('苩', new[] {"bo2", "pa1"}) { Simplified = "苩", Traditional = "苩", Pinyin = "bo2", Tag = null }, // 33513
             new ChineseChar('苪', new[] {"bing3"}) { Simplified = "苪", Traditional = "苪", Pinyin = "bing3", Tag = null }, // 33514
@@ -13337,7 +13337,7 @@ namespace Chinese.Gen
             new ChineseChar('茊', new[] {"zi1"}) { Simplified = "茊", Traditional = "茊", Pinyin = "zi1", Tag = null }, // 33546
             new ChineseChar('茋', new[] {"zhi3"}) { Simplified = "茋", Traditional = "茋", Pinyin = "zhi3", Tag = null }, // 33547
             new ChineseChar('茌', new[] {"chi2", "chi5"}) { Simplified = "茌", Traditional = "茌", Pinyin = "chi2", Tag = null }, // 33548
-            new ChineseChar('茍', new[] {"ji4"}) { Simplified = "苟", Traditional = "茍", Pinyin = "gou3", Tag = null }, // 33549
+            new ChineseChar('茍', new[] {"ji4"}) { Simplified = "苟", Traditional = "茍", Pinyin = "ji4", Tag = null }, // 33549
             new ChineseChar('茎', new[] {"jing1"}) { Simplified = "茎", Traditional = "莖", Pinyin = "jing1", Tag = null }, // 33550
             new ChineseChar('茏', new[] {"long2", "long3"}) { Simplified = "茏", Traditional = "蘢", Pinyin = "long2", Tag = null }, // 33551
             new ChineseChar('茐', new[] {"cong1", "cong5"}) { Simplified = "茐", Traditional = "茐", Pinyin = "cong1", Tag = null }, // 33552
@@ -13663,7 +13663,7 @@ namespace Chinese.Gen
             new ChineseChar('葔', new[] {"hou2"}) { Simplified = "葔", Traditional = "葔", Pinyin = "hou2", Tag = null }, // 33876
             new ChineseChar('葕', new[] {"yan4", "yan5"}) { Simplified = "葕", Traditional = "葕", Pinyin = "yan4", Tag = null }, // 33877
             new ChineseChar('葖', new[] {"tu1"}) { Simplified = "葖", Traditional = "葖", Pinyin = "tu1", Tag = null }, // 33878
-            new ChineseChar('著', new[] {"zhe5", "zhu4", "zhuo2", "zhuo5"}) { Simplified = "着", Traditional = "著", Pinyin = "zhe5", Tag = null }, // 33879
+            new ChineseChar('著', new[] {"zhe5", "zhu4", "zhuo2", "zhuo5"}) { Simplified = "着", Traditional = "著", Pinyin = "zhu4", Tag = null }, // 33879
             new ChineseChar('葘', new[] {"zi1"}) { Simplified = "葘", Traditional = "葘", Pinyin = "zi1", Tag = null }, // 33880
             new ChineseChar('葙', new[] {"xiang1"}) { Simplified = "葙", Traditional = "葙", Pinyin = "xiang1", Tag = null }, // 33881
             new ChineseChar('葚', new[] {"ren4", "shen4"}) { Simplified = "葚", Traditional = "葚", Pinyin = "ren4", Tag = null }, // 33882
@@ -13892,7 +13892,7 @@ namespace Chinese.Gen
             new ChineseChar('蔾', new[] {"li2"}) { Simplified = "蔾", Traditional = "蔾", Pinyin = "li2", Tag = null }, // 34110
             new ChineseChar('蔿', new[] {"wei3"}) { Simplified = "蔿", Traditional = "蔿", Pinyin = "wei3", Tag = null }, // 34111
             new ChineseChar('蕀', new[] {"ji2"}) { Simplified = "蕀", Traditional = "蕀", Pinyin = "ji2", Tag = null }, // 34112
-            new ChineseChar('蕁', new[] {"qian2", "xun2"}) { Simplified = "荨", Traditional = "蕁", Pinyin = "xun2", Tag = null }, // 34113
+            new ChineseChar('蕁', new[] {"qian2", "xun2"}) { Simplified = "荨", Traditional = "蕁", Pinyin = "qian2", Tag = null }, // 34113
             new ChineseChar('蕂', new[] {"sheng4"}) { Simplified = "蕂", Traditional = "蕂", Pinyin = "sheng4", Tag = null }, // 34114
             new ChineseChar('蕃', new[] {"fan1", "fan2"}) { Simplified = "蕃", Traditional = "蕃", Pinyin = "fan1", Tag = null }, // 34115
             new ChineseChar('蕄', new[] {"meng2", "meng5"}) { Simplified = "蕄", Traditional = "蕄", Pinyin = "meng2", Tag = null }, // 34116
@@ -13994,7 +13994,7 @@ namespace Chinese.Gen
             new ChineseChar('薤', new[] {"xie4"}) { Simplified = "薤", Traditional = "薤", Pinyin = "xie4", Tag = null }, // 34212
             new ChineseChar('薥', new[] {"shu3", "zhu2"}) { Simplified = "薥", Traditional = "薥", Pinyin = "shu3", Tag = null }, // 34213
             new ChineseChar('薦', new[] {"jian4"}) { Simplified = "荐", Traditional = "薦", Pinyin = "jian4", Tag = null }, // 34214
-            new ChineseChar('薧', new[] {"hao1", "kao3", "kao5"}) { Simplified = "槁", Traditional = "薧", Pinyin = "gao3", Tag = null }, // 34215
+            new ChineseChar('薧', new[] {"hao1", "kao3", "kao5"}) { Simplified = "槁", Traditional = "薧", Pinyin = "hao1", Tag = null }, // 34215
             new ChineseChar('薨', new[] {"hong1"}) { Simplified = "薨", Traditional = "薨", Pinyin = "hong1", Tag = null }, // 34216
             new ChineseChar('薩', new[] {"sa4"}) { Simplified = "萨", Traditional = "薩", Pinyin = "sa4", Tag = null }, // 34217
             new ChineseChar('薪', new[] {"xin1"}) { Simplified = "薪", Traditional = "薪", Pinyin = "xin1", Tag = null }, // 34218
@@ -14106,7 +14106,7 @@ namespace Chinese.Gen
             new ChineseChar('蘔', new[] {"jiong3", "jiong5"}) { Simplified = "蘔", Traditional = "蘔", Pinyin = "jiong1", Tag = null }, // 34324
             new ChineseChar('蘕', new[] {"peng2"}) { Simplified = "蘕", Traditional = "蘕", Pinyin = "peng2", Tag = null }, // 34325
             new ChineseChar('蘖', new[] {"nie4", "nie5"}) { Simplified = "蘖", Traditional = "蘗", Pinyin = "nie4", Tag = null }, // 34326
-            new ChineseChar('蘗', new[] {"bi4", "bi5", "bo4"}) { Simplified = "蘖", Traditional = "蘗", Pinyin = "nie4", Tag = null }, // 34327
+            new ChineseChar('蘗', new[] {"bi4", "bi5", "bo4"}) { Simplified = "蘖", Traditional = "蘗", Pinyin = "bo4", Tag = null }, // 34327
             new ChineseChar('蘘', new[] {"rang2", "xiang1"}) { Simplified = "蘘", Traditional = "蘘", Pinyin = "rang2", Tag = null }, // 34328
             new ChineseChar('蘙', new[] {"yi4"}) { Simplified = "蘙", Traditional = "蘙", Pinyin = "yi4", Tag = null }, // 34329
             new ChineseChar('蘚', new[] {"xian3"}) { Simplified = "藓", Traditional = "蘚", Pinyin = "xian3", Tag = null }, // 34330
@@ -14340,7 +14340,7 @@ namespace Chinese.Gen
             new ChineseChar('蜃', new[] {"shen4"}) { Simplified = "蜃", Traditional = "蜃", Pinyin = "shen4", Tag = null }, // 34563
             new ChineseChar('蜄', new[] {"shen4", "zhen4", "zhen5"}) { Simplified = "蜄", Traditional = "蜄", Pinyin = "shen4", Tag = null }, // 34564
             new ChineseChar('蜅', new[] {"fu3", "pu2", "pu5"}) { Simplified = "蜅", Traditional = "蜅", Pinyin = "fu3", Tag = null }, // 34565
-            new ChineseChar('蜆', new[] {"xian3", "xian4"}) { Simplified = "蚬", Traditional = "蜆", Pinyin = "xian3", Tag = null }, // 34566
+            new ChineseChar('蜆', new[] {"xian3", "xian4"}) { Simplified = "蚬", Traditional = "蜆", Pinyin = "xian4", Tag = null }, // 34566
             new ChineseChar('蜇', new[] {"zhe1", "zhe2"}) { Simplified = "蜇", Traditional = "蜇", Pinyin = "zhe1", Tag = null }, // 34567
             new ChineseChar('蜈', new[] {"wu2"}) { Simplified = "蜈", Traditional = "蜈", Pinyin = "wu2", Tag = null }, // 34568
             new ChineseChar('蜉', new[] {"fu2"}) { Simplified = "蜉", Traditional = "蜉", Pinyin = "fu2", Tag = null }, // 34569
@@ -14707,7 +14707,7 @@ namespace Chinese.Gen
             new ChineseChar('衶', new[] {"zhong4"}) { Simplified = "衶", Traditional = "衶", Pinyin = "zhong4", Tag = null }, // 34934
             new ChineseChar('衷', new[] {"zhong1"}) { Simplified = "衷", Traditional = "衷", Pinyin = "zhong1", Tag = null }, // 34935
             new ChineseChar('衸', new[] {"jie4"}) { Simplified = "衸", Traditional = "衸", Pinyin = "jie4", Tag = null }, // 34936
-            new ChineseChar('衹', new[] {"ti3", "zhi1"}) { Simplified = "只", Traditional = "衹", Pinyin = "zhi1", Tag = null }, // 34937
+            new ChineseChar('衹', new[] {"ti3", "zhi1"}) { Simplified = "只", Traditional = "衹", Pinyin = "zhi3", Tag = null }, // 34937
             new ChineseChar('衺', new[] {"xie2"}) { Simplified = "衺", Traditional = "衺", Pinyin = "xie2", Tag = null }, // 34938
             new ChineseChar('衻', new[] {"ran2", "ran5"}) { Simplified = "衻", Traditional = "衻", Pinyin = "ran2", Tag = null }, // 34939
             new ChineseChar('衼', new[] {"zhi1"}) { Simplified = "衼", Traditional = "衼", Pinyin = "zhi1", Tag = null }, // 34940
@@ -15261,7 +15261,7 @@ namespace Chinese.Gen
             new ChineseChar('誫', new[] {"zhen4", "zhen5"}) { Simplified = "誫", Traditional = "誫", Pinyin = "zhen4", Tag = null }, // 35499
             new ChineseChar('説', new[] {"shui4", "shuo1", "shuo5", "yue4"}) { Simplified = "説", Traditional = "説", Pinyin = "shuo1", Tag = null }, // 35500
             new ChineseChar('誯', new[] {"chang4", "chang5"}) { Simplified = "誯", Traditional = "誯", Pinyin = "chang4", Tag = null }, // 35503
-            new ChineseChar('誰', new[] {"shei2", "shei5", "shui2"}) { Simplified = "谁", Traditional = "誰", Pinyin = "shei2", Tag = null }, // 35504
+            new ChineseChar('誰', new[] {"shei2", "shei5", "shui2"}) { Simplified = "谁", Traditional = "誰", Pinyin = "shui2", Tag = null }, // 35504
             new ChineseChar('誱', new[] {"jie2"}) { Simplified = "誱", Traditional = "誱", Pinyin = "jie2", Tag = null }, // 35505
             new ChineseChar('課', new[] {"ke4"}) { Simplified = "课", Traditional = "課", Pinyin = "ke4", Tag = null }, // 35506
             new ChineseChar('誳', new[] {"qu1"}) { Simplified = "誳", Traditional = "誳", Pinyin = "qu1", Tag = null }, // 35507
@@ -15307,7 +15307,7 @@ namespace Chinese.Gen
             new ChineseChar('諛', new[] {"yu2", "yu5"}) { Simplified = "谀", Traditional = "諛", Pinyin = "yu2", Tag = null }, // 35547
             new ChineseChar('諜', new[] {"die2", "die5", "xie4"}) { Simplified = "谍", Traditional = "諜", Pinyin = "die2", Tag = null }, // 35548
             new ChineseChar('諝', new[] {"xu1"}) { Simplified = "諝", Traditional = "諝", Pinyin = "xu1", Tag = null }, // 35549
-            new ChineseChar('諞', new[] {"pian3", "pian5"}) { Simplified = "谝", Traditional = "諞", Pinyin = "pian2", Tag = null }, // 35550
+            new ChineseChar('諞', new[] {"pian3", "pian5"}) { Simplified = "谝", Traditional = "諞", Pinyin = "pian3", Tag = null }, // 35550
             new ChineseChar('諟', new[] {"di4", "shi4"}) { Simplified = "諟", Traditional = "諟", Pinyin = "shi4", Tag = null }, // 35551
             new ChineseChar('諠', new[] {"xuan1", "xuan5"}) { Simplified = "諠", Traditional = "諠", Pinyin = "xuan1", Tag = null }, // 35552
             new ChineseChar('諡', new[] {"shi4"}) { Simplified = "諡", Traditional = "諡", Pinyin = "shi4", Tag = null }, // 35553
@@ -15430,7 +15430,7 @@ namespace Chinese.Gen
             new ChineseChar('譖', new[] {"zen4", "zen5"}) { Simplified = "谮", Traditional = "譖", Pinyin = "zen4", Tag = null }, // 35670
             new ChineseChar('譗', new[] {"zha2"}) { Simplified = "譗", Traditional = "譗", Pinyin = "zha2", Tag = null }, // 35671
             new ChineseChar('識', new[] {"shi2", "shi5", "zhi4"}) { Simplified = "识", Traditional = "識", Pinyin = "shi2", Tag = null }, // 35672
-            new ChineseChar('譙', new[] {"qiao2", "qiao4", "qiao5"}) { Simplified = "谯", Traditional = "譙", Pinyin = "qiao2", Tag = null }, // 35673
+            new ChineseChar('譙', new[] {"qiao2", "qiao4", "qiao5"}) { Simplified = "谯", Traditional = "譙", Pinyin = "qiao4", Tag = null }, // 35673
             new ChineseChar('譚', new[] {"tan2"}) { Simplified = "谭", Traditional = "譚", Pinyin = "tan2", Tag = null }, // 35674
             new ChineseChar('譛', new[] {"zen4", "zen5"}) { Simplified = "譛", Traditional = "譛", Pinyin = "zen4", Tag = null }, // 35675
             new ChineseChar('譜', new[] {"pu3", "pu5"}) { Simplified = "谱", Traditional = "譜", Pinyin = "pu3", Tag = null }, // 35676
@@ -15787,7 +15787,7 @@ namespace Chinese.Gen
             new ChineseChar('貾', new[] {"chi2", "chi5"}) { Simplified = "貾", Traditional = "貾", Pinyin = "chi2", Tag = null }, // 36030
             new ChineseChar('貿', new[] {"mao4"}) { Simplified = "贸", Traditional = "貿", Pinyin = "mao4", Tag = null }, // 36031
             new ChineseChar('賀', new[] {"he4"}) { Simplified = "贺", Traditional = "賀", Pinyin = "he4", Tag = null }, // 36032
-            new ChineseChar('賁', new[] {"ben1", "ben5", "bi4", "bi5"}) { Simplified = "贲", Traditional = "賁", Pinyin = "ben1", Tag = null }, // 36033
+            new ChineseChar('賁', new[] {"ben1", "ben5", "bi4", "bi5"}) { Simplified = "贲", Traditional = "賁", Pinyin = "bi4", Tag = null }, // 36033
             new ChineseChar('賂', new[] {"lu4"}) { Simplified = "赂", Traditional = "賂", Pinyin = "lu4", Tag = null }, // 36034
             new ChineseChar('賃', new[] {"lin4", "lin5"}) { Simplified = "赁", Traditional = "賃", Pinyin = "lin4", Tag = null }, // 36035
             new ChineseChar('賄', new[] {"hui4"}) { Simplified = "贿", Traditional = "賄", Pinyin = "hui4", Tag = null }, // 36036
@@ -15825,7 +15825,7 @@ namespace Chinese.Gen
             new ChineseChar('賤', new[] {"jian4"}) { Simplified = "贱", Traditional = "賤", Pinyin = "jian4", Tag = null }, // 36068
             new ChineseChar('賥', new[] {"sui4", "sui5"}) { Simplified = "賥", Traditional = "賥", Pinyin = "sui4", Tag = null }, // 36069
             new ChineseChar('賦', new[] {"fu4"}) { Simplified = "赋", Traditional = "賦", Pinyin = "fu4", Tag = null }, // 36070
-            new ChineseChar('賧', new[] {"dan3", "tan4"}) { Simplified = "赕", Traditional = "賧", Pinyin = "dan3", Tag = null }, // 36071
+            new ChineseChar('賧', new[] {"dan3", "tan4"}) { Simplified = "赕", Traditional = "賧", Pinyin = "tan4", Tag = null }, // 36071
             new ChineseChar('賨', new[] {"cong2", "cong5"}) { Simplified = "賨", Traditional = "賨", Pinyin = "cong2", Tag = null }, // 36072
             new ChineseChar('賩', new[] {"cong2", "cong5"}) { Simplified = "賩", Traditional = "賩", Pinyin = "cong2", Tag = null }, // 36073
             new ChineseChar('質', new[] {"zhi4"}) { Simplified = "质", Traditional = "質", Pinyin = "zhi4", Tag = null }, // 36074
@@ -16271,7 +16271,7 @@ namespace Chinese.Gen
             new ChineseChar('躣', new[] {"qu2"}) { Simplified = "躣", Traditional = "躣", Pinyin = "qu2", Tag = null }, // 36515
             new ChineseChar('躤', new[] {"ji2", "qi4"}) { Simplified = "躤", Traditional = "躤", Pinyin = "ji2", Tag = null }, // 36516
             new ChineseChar('躥', new[] {"cuan1", "cuan5"}) { Simplified = "蹿", Traditional = "躥", Pinyin = "cuan1", Tag = null }, // 36517
-            new ChineseChar('躦', new[] {"cuo2", "cuo5", "zuan1", "zuan5"}) { Simplified = "躜", Traditional = "躦", Pinyin = "zuan1", Tag = null }, // 36518
+            new ChineseChar('躦', new[] {"cuo2", "cuo5", "zuan1", "zuan5"}) { Simplified = "躜", Traditional = "躦", Pinyin = "cuo2", Tag = null }, // 36518
             new ChineseChar('躧', new[] {"xi3"}) { Simplified = "躧", Traditional = "躧", Pinyin = "xi3", Tag = null }, // 36519
             new ChineseChar('躨', new[] {"kui2", "kui5"}) { Simplified = "躨", Traditional = "躨", Pinyin = "kui2", Tag = null }, // 36520
             new ChineseChar('躩', new[] {"jue2", "jue5", "qi4"}) { Simplified = "躩", Traditional = "躩", Pinyin = "jue2", Tag = null }, // 36521
@@ -16416,7 +16416,7 @@ namespace Chinese.Gen
             new ChineseChar('輻', new[] {"fu2"}) { Simplified = "辐", Traditional = "輻", Pinyin = "fu2", Tag = null }, // 36667
             new ChineseChar('輼', new[] {"wen1", "wen5", "yun1", "yun5"}) { Simplified = "輼", Traditional = "輼", Pinyin = "wen1", Tag = null }, // 36668
             new ChineseChar('輽', new[] {"ben4", "ben5"}) { Simplified = "輽", Traditional = "輽", Pinyin = "ben4", Tag = null }, // 36669
-            new ChineseChar('輾', new[] {"nian3", "nian5", "zhan3"}) { Simplified = "辗", Traditional = "輾", Pinyin = "nian3", Tag = null }, // 36670
+            new ChineseChar('輾', new[] {"nian3", "nian5", "zhan3"}) { Simplified = "辗", Traditional = "輾", Pinyin = "zhan3", Tag = null }, // 36670
             new ChineseChar('輿', new[] {"yu2", "yu5"}) { Simplified = "舆", Traditional = "輿", Pinyin = "yu2", Tag = null }, // 36671
             new ChineseChar('轀', new[] {"wen1", "wen5", "yun1", "yun5"}) { Simplified = "轀", Traditional = "轀", Pinyin = "wen1", Tag = null }, // 36672
             new ChineseChar('轁', new[] {"kan3", "tao1"}) { Simplified = "轁", Traditional = "轁", Pinyin = "tao1", Tag = null }, // 36673
@@ -17066,13 +17066,13 @@ namespace Chinese.Gen
             new ChineseChar('釐', new[] {"li2", "xi1"}) { Simplified = "厘", Traditional = "釐", Pinyin = "li2", Tag = null }, // 37328
             new ChineseChar('金', new[] {"jin1", "jin5"}) { Simplified = "金", Traditional = "金", Pinyin = "jin1", Tag = null }, // 37329
             new ChineseChar('釒', new[] {"jin1", "jin5"}) { Simplified = "釒", Traditional = "釒", Pinyin = "jin1", Tag = null }, // 37330
-            new ChineseChar('釓', new[] {"ga2", "qiu2", "qiu5"}) { Simplified = "钆", Traditional = "釓", Pinyin = "ga2", Tag = null }, // 37331
+            new ChineseChar('釓', new[] {"ga2", "qiu2", "qiu5"}) { Simplified = "钆", Traditional = "釓", Pinyin = "qiu2", Tag = null }, // 37331
             new ChineseChar('釔', new[] {"yi3"}) { Simplified = "钇", Traditional = "釔", Pinyin = "yi3", Tag = null }, // 37332
             new ChineseChar('釕', new[] {"liao3", "liao4"}) { Simplified = "钌", Traditional = "釕", Pinyin = "liao3", Tag = null }, // 37333
             new ChineseChar('釖', new[] {"dao1"}) { Simplified = "釖", Traditional = "釖", Pinyin = "dao1", Tag = null }, // 37334
             new ChineseChar('釗', new[] {"zhao1", "zhao5"}) { Simplified = "钊", Traditional = "釗", Pinyin = "zhao1", Tag = null }, // 37335
             new ChineseChar('釘', new[] {"ding1", "ding4", "ding5"}) { Simplified = "钉", Traditional = "釘", Pinyin = "ding1", Tag = null }, // 37336
-            new ChineseChar('釙', new[] {"po1", "po4", "po5"}) { Simplified = "钋", Traditional = "釙", Pinyin = "po1", Tag = null }, // 37337
+            new ChineseChar('釙', new[] {"po1", "po4", "po5"}) { Simplified = "钋", Traditional = "釙", Pinyin = "po4", Tag = null }, // 37337
             new ChineseChar('釚', new[] {"qiu2", "qiu5"}) { Simplified = "釚", Traditional = "釚", Pinyin = "qiu2", Tag = null }, // 37338
             new ChineseChar('釛', new[] {"ba1"}) { Simplified = "釛", Traditional = "釛", Pinyin = "ba1", Tag = null }, // 37339
             new ChineseChar('釜', new[] {"fu3"}) { Simplified = "釜", Traditional = "釜", Pinyin = "fu3", Tag = null }, // 37340
@@ -17083,15 +17083,15 @@ namespace Chinese.Gen
             new ChineseChar('釡', new[] {"fu3"}) { Simplified = "釡", Traditional = "釡", Pinyin = "fu3", Tag = null }, // 37345
             new ChineseChar('釢', new[] {"nai3"}) { Simplified = "釢", Traditional = "釢", Pinyin = "nai3", Tag = null }, // 37346
             new ChineseChar('釣', new[] {"diao4"}) { Simplified = "钓", Traditional = "釣", Pinyin = "diao4", Tag = null }, // 37347
-            new ChineseChar('釤', new[] {"shan1", "shan4"}) { Simplified = "钐", Traditional = "釤", Pinyin = "shan1", Tag = null }, // 37348
+            new ChineseChar('釤', new[] {"shan1", "shan4"}) { Simplified = "钐", Traditional = "釤", Pinyin = "shan4", Tag = null }, // 37348
             new ChineseChar('釥', new[] {"qiao3", "qiao5"}) { Simplified = "釥", Traditional = "釥", Pinyin = "qiao3", Tag = null }, // 37349
             new ChineseChar('釦', new[] {"kou4"}) { Simplified = "扣", Traditional = "釦", Pinyin = "kou4", Tag = null }, // 37350
             new ChineseChar('釧', new[] {"chuan1", "chuan4", "chuan5"}) { Simplified = "钏", Traditional = "釧", Pinyin = "chuan4", Tag = null }, // 37351
             new ChineseChar('釨', new[] {"zi3"}) { Simplified = "釨", Traditional = "釨", Pinyin = "zi3", Tag = null }, // 37352
-            new ChineseChar('釩', new[] {"fan2", "fan3"}) { Simplified = "钒", Traditional = "釩", Pinyin = "fan2", Tag = null }, // 37353
+            new ChineseChar('釩', new[] {"fan2", "fan3"}) { Simplified = "钒", Traditional = "釩", Pinyin = "fan3", Tag = null }, // 37353
             new ChineseChar('釪', new[] {"yu2", "yu5"}) { Simplified = "釪", Traditional = "釪", Pinyin = "hua2", Tag = null }, // 37354
             new ChineseChar('釫', new[] {"hua2", "wu1"}) { Simplified = "釫", Traditional = "釫", Pinyin = "hua2", Tag = null }, // 37355
-            new ChineseChar('釬', new[] {"gan1", "han4"}) { Simplified = "钎", Traditional = "釬", Pinyin = "qian1", Tag = null }, // 37356
+            new ChineseChar('釬', new[] {"gan1", "han4"}) { Simplified = "钎", Traditional = "釬", Pinyin = "han4", Tag = null }, // 37356
             new ChineseChar('釭', new[] {"gang1", "gang5"}) { Simplified = "釭", Traditional = "釭", Pinyin = "gang1", Tag = null }, // 37357
             new ChineseChar('釮', new[] {"qi2"}) { Simplified = "釮", Traditional = "釮", Pinyin = "qi2", Tag = null }, // 37358
             new ChineseChar('釯', new[] {"mang2"}) { Simplified = "釯", Traditional = "釯", Pinyin = "mang2", Tag = null }, // 37359
@@ -17154,7 +17154,7 @@ namespace Chinese.Gen
             new ChineseChar('鈪', new[] {"e4"}) { Simplified = "鈪", Traditional = "鈪", Pinyin = "e4", Tag = null }, // 37418
             new ChineseChar('鈫', new[] {"qin2", "qin5"}) { Simplified = "鈫", Traditional = "鈫", Pinyin = "qin2", Tag = null }, // 37419
             new ChineseChar('鈭', new[] {"zi1"}) { Simplified = "鈭", Traditional = "鈭", Pinyin = "zi1", Tag = null }, // 37421
-            new ChineseChar('鈮', new[] {"ni2", "ni3"}) { Simplified = "铌", Traditional = "鈮", Pinyin = "ni2", Tag = null }, // 37422
+            new ChineseChar('鈮', new[] {"ni2", "ni3"}) { Simplified = "铌", Traditional = "鈮", Pinyin = "ni3", Tag = null }, // 37422
             new ChineseChar('鈯', new[] {"tu2"}) { Simplified = "鈯", Traditional = "鈯", Pinyin = "tu2", Tag = null }, // 37423
             new ChineseChar('鈰', new[] {"shi4"}) { Simplified = "铈", Traditional = "鈰", Pinyin = "shi4", Tag = null }, // 37424
             new ChineseChar('鈱', new[] {"min2", "min3", "min5"}) { Simplified = "鈱", Traditional = "鈱", Pinyin = "min2", Tag = null }, // 37425
@@ -17171,19 +17171,19 @@ namespace Chinese.Gen
             new ChineseChar('鈼', new[] {"zuo2"}) { Simplified = "鈼", Traditional = "鈼", Pinyin = "zuo2", Tag = null }, // 37436
             new ChineseChar('鈽', new[] {"bu1"}) { Simplified = "钸", Traditional = "鈽", Pinyin = "bu1", Tag = null }, // 37437
             new ChineseChar('鈾', new[] {"you2"}) { Simplified = "铀", Traditional = "鈾", Pinyin = "you2", Tag = null }, // 37438
-            new ChineseChar('鈿', new[] {"dian4", "tian2", "tian5"}) { Simplified = "钿", Traditional = "鈿", Pinyin = "dian4", Tag = null }, // 37439
+            new ChineseChar('鈿', new[] {"dian4", "tian2", "tian5"}) { Simplified = "钿", Traditional = "鈿", Pinyin = "tian2", Tag = null }, // 37439
             new ChineseChar('鉀', new[] {"jia3"}) { Simplified = "钾", Traditional = "鉀", Pinyin = "jia3", Tag = null }, // 37440
             new ChineseChar('鉁', new[] {"zhen1", "zhen4", "zhen5"}) { Simplified = "鉁", Traditional = "鉁", Pinyin = "zhen1", Tag = null }, // 37441
             new ChineseChar('鉂', new[] {"shi3"}) { Simplified = "鉂", Traditional = "鉂", Pinyin = "shi3", Tag = null }, // 37442
             new ChineseChar('鉃', new[] {"shi4"}) { Simplified = "鉃", Traditional = "鉃", Pinyin = "shi4", Tag = null }, // 37443
             new ChineseChar('鉄', new[] {"tie3"}) { Simplified = "鉄", Traditional = "鉄", Pinyin = "tie3", Tag = null }, // 37444
             new ChineseChar('鉅', new[] {"ju4"}) { Simplified = "钜", Traditional = "鉅", Pinyin = "ju4", Tag = null }, // 37445
-            new ChineseChar('鉆', new[] {"chan1", "qian2", "zuan1", "zuan5"}) { Simplified = "钻", Traditional = "鉆", Pinyin = "zuan1", Tag = null }, // 37446
+            new ChineseChar('鉆', new[] {"chan1", "qian2", "zuan1", "zuan5"}) { Simplified = "钻", Traditional = "鉆", Pinyin = "chan1", Tag = null }, // 37446
             new ChineseChar('鉇', new[] {"shi1", "yi2"}) { Simplified = "鉇", Traditional = "鉇", Pinyin = "shi1", Tag = null }, // 37447
-            new ChineseChar('鉈', new[] {"ta1", "tuo2", "tuo5"}) { Simplified = "铊", Traditional = "鉈", Pinyin = "ta1", Tag = null }, // 37448
+            new ChineseChar('鉈', new[] {"ta1", "tuo2", "tuo5"}) { Simplified = "铊", Traditional = "鉈", Pinyin = "shi1", Tag = null }, // 37448
             new ChineseChar('鉉', new[] {"xuan4", "xuan5"}) { Simplified = "铉", Traditional = "鉉", Pinyin = "xuan4", Tag = null }, // 37449
             new ChineseChar('鉊', new[] {"zhao1", "zhao5"}) { Simplified = "鉊", Traditional = "鉊", Pinyin = "zhao1", Tag = null }, // 37450
-            new ChineseChar('鉋', new[] {"bao2", "bao4", "bao5", "pao2"}) { Simplified = "刨", Traditional = "鉋", Pinyin = "pao2", Tag = null }, // 37451
+            new ChineseChar('鉋', new[] {"bao2", "bao4", "bao5", "pao2"}) { Simplified = "刨", Traditional = "鉋", Pinyin = "bao4", Tag = null }, // 37451
             new ChineseChar('鉌', new[] {"he2"}) { Simplified = "鉌", Traditional = "鉌", Pinyin = "he2", Tag = null }, // 37452
             new ChineseChar('鉍', new[] {"bi4", "bi5", "se4"}) { Simplified = "铋", Traditional = "鉍", Pinyin = "bi4", Tag = null }, // 37453
             new ChineseChar('鉎', new[] {"sheng1"}) { Simplified = "鉎", Traditional = "鉎", Pinyin = "sheng1", Tag = null }, // 37454
@@ -17230,12 +17230,12 @@ namespace Chinese.Gen
             new ChineseChar('鉷', new[] {"hong2"}) { Simplified = "鉷", Traditional = "鉷", Pinyin = "hong2", Tag = null }, // 37495
             new ChineseChar('鉸', new[] {"jiao3", "jiao5"}) { Simplified = "铰", Traditional = "鉸", Pinyin = "jiao3", Tag = null }, // 37496
             new ChineseChar('鉹', new[] {"chi3", "chi5"}) { Simplified = "鉹", Traditional = "鉹", Pinyin = "chi3", Tag = null }, // 37497
-            new ChineseChar('鉺', new[] {"er3", "er4"}) { Simplified = "铒", Traditional = "鉺", Pinyin = "er3", Tag = null }, // 37498
-            new ChineseChar('鉻', new[] {"ge4", "luo4"}) { Simplified = "铬", Traditional = "鉻", Pinyin = "ge4", Tag = null }, // 37499
+            new ChineseChar('鉺', new[] {"er3", "er4"}) { Simplified = "铒", Traditional = "鉺", Pinyin = "er4", Tag = null }, // 37498
+            new ChineseChar('鉻', new[] {"ge4", "luo4"}) { Simplified = "铬", Traditional = "鉻", Pinyin = "luo4", Tag = null }, // 37499
             new ChineseChar('鉼', new[] {"bing3", "ping2", "ping5"}) { Simplified = "鉼", Traditional = "鉼", Pinyin = "bing3", Tag = null }, // 37500
             new ChineseChar('鉽', new[] {"shi2"}) { Simplified = "鉽", Traditional = "鉽", Pinyin = "shi2", Tag = null }, // 37501
             new ChineseChar('鉾', new[] {"mao2", "mou2", "mou5"}) { Simplified = "鉾", Traditional = "鉾", Pinyin = "mou2", Tag = null }, // 37502
-            new ChineseChar('鉿', new[] {"ha1", "jia1"}) { Simplified = "铪", Traditional = "鉿", Pinyin = "ha1", Tag = null }, // 37503
+            new ChineseChar('鉿', new[] {"ha1", "jia1"}) { Simplified = "铪", Traditional = "鉿", Pinyin = "jia1", Tag = null }, // 37503
             new ChineseChar('銀', new[] {"yin2", "yin5"}) { Simplified = "银", Traditional = "銀", Pinyin = "yin2", Tag = null }, // 37504
             new ChineseChar('銁', new[] {"jun1", "jun5"}) { Simplified = "銁", Traditional = "銁", Pinyin = "jun1", Tag = null }, // 37505
             new ChineseChar('銂', new[] {"zhou1"}) { Simplified = "銂", Traditional = "銂", Pinyin = "zhou1", Tag = null }, // 37506
@@ -17253,7 +17253,7 @@ namespace Chinese.Gen
             new ChineseChar('銎', new[] {"qiong2", "qiong5"}) { Simplified = "銎", Traditional = "銎", Pinyin = "qiong2", Tag = null }, // 37518
             new ChineseChar('銏', new[] {"shan1"}) { Simplified = "銏", Traditional = "銏", Pinyin = "shan1", Tag = null }, // 37519
             new ChineseChar('銐', new[] {"chi4", "chi5", "li4"}) { Simplified = "銐", Traditional = "銐", Pinyin = "chi4", Tag = null }, // 37520
-            new ChineseChar('銑', new[] {"xi3", "xian3"}) { Simplified = "铣", Traditional = "銑", Pinyin = "xi3", Tag = null }, // 37521
+            new ChineseChar('銑', new[] {"xi3", "xian3"}) { Simplified = "铣", Traditional = "銑", Pinyin = "xian3", Tag = null }, // 37521
             new ChineseChar('銒', new[] {"jian1"}) { Simplified = "銒", Traditional = "銒", Pinyin = "jian1", Tag = null }, // 37522
             new ChineseChar('銓', new[] {"quan2"}) { Simplified = "铨", Traditional = "銓", Pinyin = "quan2", Tag = null }, // 37523
             new ChineseChar('銔', new[] {"pi1", "pi5"}) { Simplified = "銔", Traditional = "銔", Pinyin = "pi1", Tag = null }, // 37524
@@ -17262,7 +17262,7 @@ namespace Chinese.Gen
             new ChineseChar('銗', new[] {"hou2", "xiang4"}) { Simplified = "銗", Traditional = "銗", Pinyin = "xiang4", Tag = null }, // 37527
             new ChineseChar('銘', new[] {"ming2", "ming5"}) { Simplified = "铭", Traditional = "銘", Pinyin = "ming2", Tag = null }, // 37528
             new ChineseChar('銙', new[] {"kua3", "kua5"}) { Simplified = "銙", Traditional = "銙", Pinyin = "kua3", Tag = null }, // 37529
-            new ChineseChar('銚', new[] {"diao4", "tiao2", "yao2"}) { Simplified = "铫", Traditional = "銚", Pinyin = "diao4", Tag = null }, // 37530
+            new ChineseChar('銚', new[] {"diao4", "tiao2", "yao2"}) { Simplified = "铫", Traditional = "銚", Pinyin = "yao2", Tag = null }, // 37530
             new ChineseChar('銛', new[] {"gua1", "gua5", "tian3", "tian5", "xian1"}) { Simplified = "銛", Traditional = "銛", Pinyin = "xian1", Tag = null }, // 37531
             new ChineseChar('銜', new[] {"xian2"}) { Simplified = "衔", Traditional = "銜", Pinyin = "xian2", Tag = null }, // 37532
             new ChineseChar('銝', new[] {"xiu1", "xiu5"}) { Simplified = "銝", Traditional = "銝", Pinyin = "xiu1", Tag = null }, // 37533
@@ -17339,7 +17339,7 @@ namespace Chinese.Gen
             new ChineseChar('鋥', new[] {"zeng1", "zeng4", "zeng5"}) { Simplified = "鋥", Traditional = "鋥", Pinyin = "zeng4", Tag = null }, // 37605
             new ChineseChar('鋦', new[] {"ju1", "ju2"}) { Simplified = "锔", Traditional = "鋦", Pinyin = "ju1", Tag = null }, // 37606
             new ChineseChar('鋧', new[] {"xian4"}) { Simplified = "鋧", Traditional = "鋧", Pinyin = "xian4", Tag = null }, // 37607
-            new ChineseChar('鋨', new[] {"e2", "tie3"}) { Simplified = "锇", Traditional = "鋨", Pinyin = "e2", Tag = null }, // 37608
+            new ChineseChar('鋨', new[] {"e2", "tie3"}) { Simplified = "锇", Traditional = "鋨", Pinyin = "tie3", Tag = null }, // 37608
             new ChineseChar('鋩', new[] {"mang2"}) { Simplified = "鋩", Traditional = "鋩", Pinyin = "mang2", Tag = null }, // 37609
             new ChineseChar('鋪', new[] {"pu1", "pu4", "pu5"}) { Simplified = "铺", Traditional = "鋪", Pinyin = "pu4", Tag = null }, // 37610
             new ChineseChar('鋫', new[] {"li2"}) { Simplified = "鋫", Traditional = "鋫", Pinyin = "li2", Tag = null }, // 37611
@@ -17380,7 +17380,7 @@ namespace Chinese.Gen
             new ChineseChar('錏', new[] {"ya1", "ya4", "yai1", "yai4"}) { Simplified = "錏", Traditional = "錏", Pinyin = "ya1", Tag = null }, // 37647
             new ChineseChar('錐', new[] {"zhui1", "zhui5"}) { Simplified = "锥", Traditional = "錐", Pinyin = "zhui1", Tag = null }, // 37648
             new ChineseChar('錑', new[] {"lei4", "li4"}) { Simplified = "錑", Traditional = "錑", Pinyin = "lei4", Tag = null }, // 37649
-            new ChineseChar('錒', new[] {"a1", "ke1"}) { Simplified = "锕", Traditional = "錒", Pinyin = "a1", Tag = null }, // 37650
+            new ChineseChar('錒', new[] {"a1", "ke1"}) { Simplified = "锕", Traditional = "錒", Pinyin = "ke1", Tag = null }, // 37650
             new ChineseChar('錓', new[] {"kong1"}) { Simplified = "錓", Traditional = "錓", Pinyin = "kong1", Tag = null }, // 37651
             new ChineseChar('錔', new[] {"ta4"}) { Simplified = "錔", Traditional = "錔", Pinyin = "ta4", Tag = null }, // 37652
             new ChineseChar('錕', new[] {"gun3", "gun5", "kun1", "kun5"}) { Simplified = "锟", Traditional = "錕", Pinyin = "kun1", Tag = null }, // 37653
@@ -17482,7 +17482,7 @@ namespace Chinese.Gen
             new ChineseChar('鍷', new[] {"kui2", "kui5"}) { Simplified = "鍷", Traditional = "鍷", Pinyin = "kui2", Tag = null }, // 37751
             new ChineseChar('鍸', new[] {"hu2"}) { Simplified = "鍸", Traditional = "鍸", Pinyin = "hu2", Tag = null }, // 37752
             new ChineseChar('鍹', new[] {"xuan1", "xuan5"}) { Simplified = "鍹", Traditional = "鍹", Pinyin = "xuan1", Tag = null }, // 37753
-            new ChineseChar('鍺', new[] {"du3", "zhe3"}) { Simplified = "锗", Traditional = "鍺", Pinyin = "zhe3", Tag = null }, // 37754
+            new ChineseChar('鍺', new[] {"du3", "zhe3"}) { Simplified = "锗", Traditional = "鍺", Pinyin = "duo3", Tag = null }, // 37754
             new ChineseChar('鍻', new[] {"jie2"}) { Simplified = "鍻", Traditional = "鍻", Pinyin = "jie2", Tag = null }, // 37755
             new ChineseChar('鍼', new[] {"qian2", "zhen1", "zhen5"}) { Simplified = "鍼", Traditional = "鍼", Pinyin = "zhen1", Tag = null }, // 37756
             new ChineseChar('鍽', new[] {"bian1"}) { Simplified = "鍽", Traditional = "鍽", Pinyin = "bian1", Tag = null }, // 37757
@@ -17511,7 +17511,7 @@ namespace Chinese.Gen
             new ChineseChar('鎕', new[] {"tang2"}) { Simplified = "鎕", Traditional = "鎕", Pinyin = "tang2", Tag = null }, // 37781
             new ChineseChar('鎖', new[] {"suo3"}) { Simplified = "锁", Traditional = "鎖", Pinyin = "suo3", Tag = null }, // 37782
             new ChineseChar('鎗', new[] {"cheng1", "qiang1"}) { Simplified = "枪", Traditional = "鎗", Pinyin = "qiang1", Tag = null }, // 37783
-            new ChineseChar('鎘', new[] {"ge2", "li4"}) { Simplified = "镉", Traditional = "鎘", Pinyin = "ge2", Tag = null }, // 37784
+            new ChineseChar('鎘', new[] {"ge2", "li4"}) { Simplified = "镉", Traditional = "鎘", Pinyin = "li4", Tag = null }, // 37784
             new ChineseChar('鎙', new[] {"shuo4", "shuo5"}) { Simplified = "鎙", Traditional = "鎙", Pinyin = "shuo4", Tag = null }, // 37785
             new ChineseChar('鎚', new[] {"chui2", "chui5", "dui1"}) { Simplified = "鎚", Traditional = "鎚", Pinyin = "chui2", Tag = null }, // 37786
             new ChineseChar('鎛', new[] {"bo2"}) { Simplified = "鎛", Traditional = "鎛", Pinyin = "bo2", Tag = null }, // 37787
@@ -17531,7 +17531,7 @@ namespace Chinese.Gen
             new ChineseChar('鎩', new[] {"sha1", "sha5"}) { Simplified = "铩", Traditional = "鎩", Pinyin = "sha1", Tag = null }, // 37801
             new ChineseChar('鎪', new[] {"sou1"}) { Simplified = "锼", Traditional = "鎪", Pinyin = "sou1", Tag = null }, // 37802
             new ChineseChar('鎫', new[] {"jian3", "wan4", "wan5"}) { Simplified = "鎫", Traditional = "鎫", Pinyin = "wan4", Tag = null }, // 37803
-            new ChineseChar('鎬', new[] {"gao3", "gao5", "hao4"}) { Simplified = "镐", Traditional = "鎬", Pinyin = "gao3", Tag = null }, // 37804
+            new ChineseChar('鎬', new[] {"gao3", "gao5", "hao4"}) { Simplified = "镐", Traditional = "鎬", Pinyin = "hao4", Tag = null }, // 37804
             new ChineseChar('鎭', new[] {"zhen1", "zhen4", "zhen5"}) { Simplified = "鎭", Traditional = "鎭", Pinyin = "zhen4", Tag = null }, // 37805
             new ChineseChar('鎮', new[] {"zhen1", "zhen4", "zhen5"}) { Simplified = "镇", Traditional = "鎮", Pinyin = "zhen4", Tag = null }, // 37806
             new ChineseChar('鎯', new[] {"lang2", "luo3"}) { Simplified = "鎯", Traditional = "鎯", Pinyin = "lang2", Tag = null }, // 37807
@@ -17568,7 +17568,7 @@ namespace Chinese.Gen
             new ChineseChar('鏎', new[] {"bi4", "bi5"}) { Simplified = "鏎", Traditional = "鏎", Pinyin = "bi4", Tag = null }, // 37838
             new ChineseChar('鏏', new[] {"wei4"}) { Simplified = "鏏", Traditional = "鏏", Pinyin = "wei4", Tag = null }, // 37839
             new ChineseChar('鏐', new[] {"liu2"}) { Simplified = "鏐", Traditional = "鏐", Pinyin = "liu2", Tag = null }, // 37840
-            new ChineseChar('鏑', new[] {"di1", "di2"}) { Simplified = "镝", Traditional = "鏑", Pinyin = "di1", Tag = null }, // 37841
+            new ChineseChar('鏑', new[] {"di1", "di2"}) { Simplified = "镝", Traditional = "鏑", Pinyin = "di2", Tag = null }, // 37841
             new ChineseChar('鏒', new[] {"san3"}) { Simplified = "鏒", Traditional = "鏒", Pinyin = "san3", Tag = null }, // 37842
             new ChineseChar('鏓', new[] {"zong3", "zong5"}) { Simplified = "鏓", Traditional = "鏓", Pinyin = "zong3", Tag = null }, // 37843
             new ChineseChar('鏔', new[] {"yi2"}) { Simplified = "鏔", Traditional = "鏔", Pinyin = "yi2", Tag = null }, // 37844
@@ -17608,7 +17608,7 @@ namespace Chinese.Gen
             new ChineseChar('鏶', new[] {"ji2"}) { Simplified = "鏶", Traditional = "鏶", Pinyin = "ji2", Tag = null }, // 37878
             new ChineseChar('鏷', new[] {"pu2", "pu5"}) { Simplified = "镤", Traditional = "鏷", Pinyin = "pu2", Tag = null }, // 37879
             new ChineseChar('鏸', new[] {"hui4", "sui4", "sui5"}) { Simplified = "鏸", Traditional = "鏸", Pinyin = "hui4", Tag = null }, // 37880
-            new ChineseChar('鏹', new[] {"qiang1", "qiang3"}) { Simplified = "镪", Traditional = "鏹", Pinyin = "qiang1", Tag = null }, // 37881
+            new ChineseChar('鏹', new[] {"qiang1", "qiang3"}) { Simplified = "镪", Traditional = "鏹", Pinyin = "qiang3", Tag = null }, // 37881
             new ChineseChar('鏺', new[] {"po1", "po5"}) { Simplified = "鏺", Traditional = "鏺", Pinyin = "po1", Tag = null }, // 37882
             new ChineseChar('鏻', new[] {"lin2", "lin5"}) { Simplified = "鏻", Traditional = "鏻", Pinyin = "lin2", Tag = null }, // 37883
             new ChineseChar('鏼', new[] {"se4"}) { Simplified = "鏼", Traditional = "鏼", Pinyin = "se4", Tag = null }, // 37884
@@ -17624,7 +17624,7 @@ namespace Chinese.Gen
             new ChineseChar('鐆', new[] {"sui4", "sui5"}) { Simplified = "鐆", Traditional = "鐆", Pinyin = "sui4", Tag = null }, // 37894
             new ChineseChar('鐇', new[] {"fan2"}) { Simplified = "鐇", Traditional = "鐇", Pinyin = "fan2", Tag = null }, // 37895
             new ChineseChar('鐈', new[] {"qiao2", "qiao5"}) { Simplified = "鐈", Traditional = "鐈", Pinyin = "qiao2", Tag = null }, // 37896
-            new ChineseChar('鐉', new[] {"quan1"}) { Simplified = "铣", Traditional = "鐉", Pinyin = "xi3", Tag = null }, // 37897
+            new ChineseChar('鐉', new[] {"quan1"}) { Simplified = "铣", Traditional = "鐉", Pinyin = "quan1", Tag = null }, // 37897
             new ChineseChar('鐊', new[] {"yang2"}) { Simplified = "鐊", Traditional = "鐊", Pinyin = "yang2", Tag = null }, // 37898
             new ChineseChar('鐋', new[] {"tang1", "tang4"}) { Simplified = "铴", Traditional = "鐋", Pinyin = "tang1", Tag = null }, // 37899
             new ChineseChar('鐌', new[] {"xiang4"}) { Simplified = "鐌", Traditional = "鐌", Pinyin = "xiang4", Tag = null }, // 37900
@@ -17635,7 +17635,7 @@ namespace Chinese.Gen
             new ChineseChar('鐑', new[] {"qie4"}) { Simplified = "鐑", Traditional = "鐑", Pinyin = "qie4", Tag = null }, // 37905
             new ChineseChar('鐒', new[] {"lao2"}) { Simplified = "铹", Traditional = "鐒", Pinyin = "lao2", Tag = null }, // 37906
             new ChineseChar('鐓', new[] {"dui4", "dun1", "dun5"}) { Simplified = "镦", Traditional = "鐓", Pinyin = "dui4", Tag = null }, // 37907
-            new ChineseChar('鐔', new[] {"tan2", "xin2"}) { Simplified = "镡", Traditional = "鐔", Pinyin = "chan2", Tag = null }, // 37908
+            new ChineseChar('鐔', new[] {"tan2", "xin2"}) { Simplified = "镡", Traditional = "鐔", Pinyin = "xin2", Tag = null }, // 37908
             new ChineseChar('鐕', new[] {"zan1"}) { Simplified = "鐕", Traditional = "鐕", Pinyin = "zan1", Tag = null }, // 37909
             new ChineseChar('鐖', new[] {"ji1", "qi2"}) { Simplified = "鐖", Traditional = "鐖", Pinyin = "ji1", Tag = null }, // 37910
             new ChineseChar('鐗', new[] {"jian1", "jian3"}) { Simplified = "鐗", Traditional = "鐗", Pinyin = "jian3", Tag = null }, // 37911
@@ -17674,7 +17674,7 @@ namespace Chinese.Gen
             new ChineseChar('鐺', new[] {"cheng1", "dang1", "dang5", "tang1"}) { Simplified = "铛", Traditional = "鐺", Pinyin = "dang1", Tag = null }, // 37946
             new ChineseChar('鐻', new[] {"ju4", "qu2"}) { Simplified = "鐻", Traditional = "鐻", Pinyin = "ju4", Tag = null }, // 37947
             new ChineseChar('鐼', new[] {"ben1", "ben5", "fen2"}) { Simplified = "鐼", Traditional = "鐼", Pinyin = "fen2", Tag = null }, // 37948
-            new ChineseChar('鐽', new[] {"da2"}) { Simplified = "钽", Traditional = "鐽", Pinyin = "tan3", Tag = null }, // 37949
+            new ChineseChar('鐽', new[] {"da2"}) { Simplified = "钽", Traditional = "鐽", Pinyin = "da2", Tag = null }, // 37949
             new ChineseChar('鐾', new[] {"bei4"}) { Simplified = "鐾", Traditional = "鐾", Pinyin = "bei4", Tag = null }, // 37950
             new ChineseChar('鐿', new[] {"yi4"}) { Simplified = "镱", Traditional = "鐿", Pinyin = "yi4", Tag = null }, // 37951
             new ChineseChar('鑀', new[] {"ai4", "ai5"}) { Simplified = "鑀", Traditional = "鑀", Pinyin = "ai4", Tag = null }, // 37952
@@ -17694,7 +17694,7 @@ namespace Chinese.Gen
             new ChineseChar('鑎', new[] {"kui4", "kui5"}) { Simplified = "鑎", Traditional = "鑎", Pinyin = "kui4", Tag = null }, // 37966
             new ChineseChar('鑏', new[] {"ning2", "ning5"}) { Simplified = "鑏", Traditional = "鑏", Pinyin = "ning2", Tag = null }, // 37967
             new ChineseChar('鑐', new[] {"ru2", "ru5", "xu1"}) { Simplified = "鑐", Traditional = "鑐", Pinyin = "xu1", Tag = null }, // 37968
-            new ChineseChar('鑑', new[] {"jian4"}) { Simplified = "监", Traditional = "鑑", Pinyin = "jian1", Tag = null }, // 37969
+            new ChineseChar('鑑', new[] {"jian4"}) { Simplified = "监", Traditional = "鑑", Pinyin = "jian4", Tag = null }, // 37969
             new ChineseChar('鑒', new[] {"jian4"}) { Simplified = "鉴", Traditional = "鑒", Pinyin = "jian4", Tag = null }, // 37970
             new ChineseChar('鑓', new[] {"qian3"}) { Simplified = "鑓", Traditional = "鑓", Pinyin = "qian3", Tag = null }, // 37971
             new ChineseChar('鑔', new[] {"cha3", "cha5"}) { Simplified = "鑔", Traditional = "鑔", Pinyin = "cha3", Tag = null }, // 37972
@@ -17713,7 +17713,7 @@ namespace Chinese.Gen
             new ChineseChar('鑡', new[] {"chuo4"}) { Simplified = "鑡", Traditional = "鑡", Pinyin = "chuo4", Tag = null }, // 37985
             new ChineseChar('鑢', new[] {"lv4"}) { Simplified = "鑢", Traditional = "鑢", Pinyin = "lv4", Tag = null }, // 37986
             new ChineseChar('鑣', new[] {"biao1", "biao5"}) { Simplified = "镳", Traditional = "鑣", Pinyin = "biao1", Tag = null }, // 37987
-            new ChineseChar('鑤', new[] {"bao4", "bao5"}) { Simplified = "刨", Traditional = "鑤", Pinyin = "pao2", Tag = null }, // 37988
+            new ChineseChar('鑤', new[] {"bao4", "bao5"}) { Simplified = "刨", Traditional = "鑤", Pinyin = "bao4", Tag = null }, // 37988
             new ChineseChar('鑥', new[] {"lu3"}) { Simplified = "鑥", Traditional = "鑥", Pinyin = "lu3", Tag = null }, // 37989
             new ChineseChar('鑦', new[] {"zhi4"}) { Simplified = "鑦", Traditional = "鑦", Pinyin = "zhi4", Tag = null }, // 37990
             new ChineseChar('鑧', new[] {"kuan1", "kuan5"}) { Simplified = "鑧", Traditional = "鑧", Pinyin = "kuan1", Tag = null }, // 37991
@@ -18008,7 +18008,7 @@ namespace Chinese.Gen
             new ChineseChar('閈', new[] {"bi4", "bi5", "han4"}) { Simplified = "閈", Traditional = "閈", Pinyin = "han4", Tag = null }, // 38280
             new ChineseChar('閉', new[] {"bi4", "bi5"}) { Simplified = "闭", Traditional = "閉", Pinyin = "bi4", Tag = null }, // 38281
             new ChineseChar('開', new[] {"kai1", "kai5"}) { Simplified = "开", Traditional = "開", Pinyin = "kai1", Tag = null }, // 38283
-            new ChineseChar('閌', new[] {"kang1", "kang4", "kang5"}) { Simplified = "闶", Traditional = "閌", Pinyin = "kang1", Tag = null }, // 38284
+            new ChineseChar('閌', new[] {"kang1", "kang4", "kang5"}) { Simplified = "闶", Traditional = "閌", Pinyin = "kang4", Tag = null }, // 38284
             new ChineseChar('閍', new[] {"beng1", "beng5"}) { Simplified = "閍", Traditional = "閍", Pinyin = "beng1", Tag = null }, // 38285
             new ChineseChar('閎', new[] {"hong2"}) { Simplified = "闳", Traditional = "閎", Pinyin = "hong2", Tag = null }, // 38286
             new ChineseChar('閏', new[] {"run4", "run5"}) { Simplified = "闰", Traditional = "閏", Pinyin = "run4", Tag = null }, // 38287
@@ -18028,17 +18028,17 @@ namespace Chinese.Gen
             new ChineseChar('閞', new[] {"bian4"}) { Simplified = "閞", Traditional = "閞", Pinyin = "bian4", Tag = null }, // 38302
             new ChineseChar('閟', new[] {"bi4", "bi5"}) { Simplified = "閟", Traditional = "閟", Pinyin = "bi4", Tag = null }, // 38303
             new ChineseChar('閠', new[] {"run4", "run5"}) { Simplified = "閠", Traditional = "閠", Pinyin = "run4", Tag = null }, // 38304
-            new ChineseChar('閡', new[] {"ai4", "ai5", "he2"}) { Simplified = "阂", Traditional = "閡", Pinyin = "he2", Tag = null }, // 38305
+            new ChineseChar('閡', new[] {"ai4", "ai5", "he2"}) { Simplified = "阂", Traditional = "閡", Pinyin = "ai4", Tag = null }, // 38305
             new ChineseChar('関', new[] {"guan1", "wan1", "wan5"}) { Simplified = "関", Traditional = "関", Pinyin = "guan1", Tag = null }, // 38306
             new ChineseChar('閣', new[] {"ge2"}) { Simplified = "阁", Traditional = "閣", Pinyin = "ge2", Tag = null }, // 38307
-            new ChineseChar('閤', new[] {"ge1", "ge2", "he2"}) { Simplified = "合", Traditional = "閤", Pinyin = "he2", Tag = null }, // 38308
+            new ChineseChar('閤', new[] {"ge1", "ge2", "he2"}) { Simplified = "合", Traditional = "閤", Pinyin = "ge2", Tag = null }, // 38308
             new ChineseChar('閥', new[] {"fa2"}) { Simplified = "阀", Traditional = "閥", Pinyin = "fa2", Tag = null }, // 38309
             new ChineseChar('閦', new[] {"chu4"}) { Simplified = "閦", Traditional = "閦", Pinyin = "chu4", Tag = null }, // 38310
             new ChineseChar('閧', new[] {"hong4", "xiang4"}) { Simplified = "閧", Traditional = "閧", Pinyin = "hong4", Tag = null }, // 38311
             new ChineseChar('閨', new[] {"gui1"}) { Simplified = "闺", Traditional = "閨", Pinyin = "gui1", Tag = null }, // 38312
             new ChineseChar('閩', new[] {"min3", "min5"}) { Simplified = "闽", Traditional = "閩", Pinyin = "min3", Tag = null }, // 38313
             new ChineseChar('閫', new[] {"kun3", "kun5"}) { Simplified = "阃", Traditional = "閫", Pinyin = "kun3", Tag = null }, // 38315
-            new ChineseChar('閬', new[] {"lang2", "lang4"}) { Simplified = "阆", Traditional = "閬", Pinyin = "lang2", Tag = null }, // 38316
+            new ChineseChar('閬', new[] {"lang2", "lang4"}) { Simplified = "阆", Traditional = "閬", Pinyin = "lang4", Tag = null }, // 38316
             new ChineseChar('閭', new[] {"lv2"}) { Simplified = "闾", Traditional = "閭", Pinyin = "lv2", Tag = null }, // 38317
             new ChineseChar('閮', new[] {"ting2", "ting3"}) { Simplified = "閮", Traditional = "閮", Pinyin = "ting2", Tag = null }, // 38318
             new ChineseChar('閯', new[] {"sha4", "sha5"}) { Simplified = "閯", Traditional = "閯", Pinyin = "sha4", Tag = null }, // 38319
@@ -18078,7 +18078,7 @@ namespace Chinese.Gen
             new ChineseChar('闒', new[] {"ta4"}) { Simplified = "闒", Traditional = "闒", Pinyin = "ta4", Tag = null }, // 38354
             new ChineseChar('闓', new[] {"kai3", "kai5"}) { Simplified = "闓", Traditional = "闓", Pinyin = "kai3", Tag = null }, // 38355
             new ChineseChar('闔', new[] {"he2"}) { Simplified = "阖", Traditional = "闔", Pinyin = "he2", Tag = null }, // 38356
-            new ChineseChar('闕', new[] {"que1", "que4", "que5"}) { Simplified = "阙", Traditional = "闕", Pinyin = "que1", Tag = null }, // 38357
+            new ChineseChar('闕', new[] {"que1", "que4", "que5"}) { Simplified = "阙", Traditional = "闕", Pinyin = "que4", Tag = null }, // 38357
             new ChineseChar('闖', new[] {"chen4", "chuang3", "chuang5"}) { Simplified = "闯", Traditional = "闖", Pinyin = "chuang3", Tag = null }, // 38358
             new ChineseChar('闗', new[] {"guan1", "wan1", "wan5"}) { Simplified = "闗", Traditional = "闗", Pinyin = "guan1", Tag = null }, // 38359
             new ChineseChar('闘', new[] {"dou4"}) { Simplified = "闘", Traditional = "闘", Pinyin = "dou4", Tag = null }, // 38360
@@ -18087,7 +18087,7 @@ namespace Chinese.Gen
             new ChineseChar('闛', new[] {"chang1", "chang5", "tang1", "tang2"}) { Simplified = "闛", Traditional = "闛", Pinyin = "tang2", Tag = null }, // 38363
             new ChineseChar('關', new[] {"guan1", "wan1", "wan5"}) { Simplified = "关", Traditional = "關", Pinyin = "guan1", Tag = null }, // 38364
             new ChineseChar('闝', new[] {"piao2", "piao5"}) { Simplified = "闝", Traditional = "闝", Pinyin = "piao2", Tag = null }, // 38365
-            new ChineseChar('闞', new[] {"han3", "kan4"}) { Simplified = "阚", Traditional = "闞", Pinyin = "han3", Tag = null }, // 38366
+            new ChineseChar('闞', new[] {"han3", "kan4"}) { Simplified = "阚", Traditional = "闞", Pinyin = "kan4", Tag = null }, // 38366
             new ChineseChar('闟', new[] {"se4", "xi4"}) { Simplified = "闟", Traditional = "闟", Pinyin = "xi4", Tag = null }, // 38367
             new ChineseChar('闠', new[] {"hui4"}) { Simplified = "闠", Traditional = "闠", Pinyin = "hui4", Tag = null }, // 38368
             new ChineseChar('闡', new[] {"chan3"}) { Simplified = "阐", Traditional = "闡", Pinyin = "chan3", Tag = null }, // 38369
@@ -18213,7 +18213,7 @@ namespace Chinese.Gen
             new ChineseChar('陙', new[] {"chun2", "chun5"}) { Simplified = "陙", Traditional = "陙", Pinyin = "chun2", Tag = null }, // 38489
             new ChineseChar('陚', new[] {"fu4", "wu3"}) { Simplified = "陚", Traditional = "陚", Pinyin = "fu4", Tag = null }, // 38490
             new ChineseChar('陛', new[] {"bi4", "bi5"}) { Simplified = "陛", Traditional = "陛", Pinyin = "bi4", Tag = null }, // 38491
-            new ChineseChar('陜', new[] {"xia2"}) { Simplified = "陕", Traditional = "陜", Pinyin = "shan3", Tag = null }, // 38492
+            new ChineseChar('陜', new[] {"xia2"}) { Simplified = "陕", Traditional = "陜", Pinyin = "xia2", Tag = null }, // 38492
             new ChineseChar('陝', new[] {"shan3"}) { Simplified = "陕", Traditional = "陝", Pinyin = "shan3", Tag = null }, // 38493
             new ChineseChar('陞', new[] {"sheng1"}) { Simplified = "陞", Traditional = "陞", Pinyin = "sheng1", Tag = null }, // 38494
             new ChineseChar('陟', new[] {"zhi4"}) { Simplified = "陟", Traditional = "陟", Pinyin = "zhi4", Tag = null }, // 38495
@@ -18410,7 +18410,7 @@ namespace Chinese.Gen
             new ChineseChar('霡', new[] {"mai4"}) { Simplified = "霡", Traditional = "霡", Pinyin = "mai4", Tag = null }, // 38689
             new ChineseChar('霢', new[] {"mai4"}) { Simplified = "霢", Traditional = "霢", Pinyin = "mai4", Tag = null }, // 38690
             new ChineseChar('霣', new[] {"yun3", "yun5"}) { Simplified = "霣", Traditional = "霣", Pinyin = "yun3", Tag = null }, // 38691
-            new ChineseChar('霤', new[] {"liu4"}) { Simplified = "溜", Traditional = "霤", Pinyin = "liu1", Tag = null }, // 38692
+            new ChineseChar('霤', new[] {"liu4"}) { Simplified = "溜", Traditional = "霤", Pinyin = "liu4", Tag = null }, // 38692
             new ChineseChar('霥', new[] {"meng4", "meng5"}) { Simplified = "霥", Traditional = "霥", Pinyin = "meng4", Tag = null }, // 38693
             new ChineseChar('霦', new[] {"bin1", "bin5"}) { Simplified = "霦", Traditional = "霦", Pinyin = "bin1", Tag = null }, // 38694
             new ChineseChar('霧', new[] {"wu4"}) { Simplified = "雾", Traditional = "霧", Pinyin = "wu4", Tag = null }, // 38695
@@ -18471,7 +18471,7 @@ namespace Chinese.Gen
             new ChineseChar('靣', new[] {"mian4"}) { Simplified = "靣", Traditional = "靣", Pinyin = "mian4", Tag = null }, // 38755
             new ChineseChar('靤', new[] {"bao4", "bao5"}) { Simplified = "靤", Traditional = "靤", Pinyin = "bao4", Tag = null }, // 38756
             new ChineseChar('靥', new[] {"ye4"}) { Simplified = "靥", Traditional = "靨", Pinyin = "ye4", Tag = null }, // 38757
-            new ChineseChar('靦', new[] {"mian3", "tian3", "tian5"}) { Simplified = "腼", Traditional = "靦", Pinyin = "mian3", Tag = null }, // 38758
+            new ChineseChar('靦', new[] {"mian3", "tian3", "tian5"}) { Simplified = "腼", Traditional = "靦", Pinyin = "tian3", Tag = null }, // 38758
             new ChineseChar('靧', new[] {"hui4"}) { Simplified = "靧", Traditional = "靧", Pinyin = "hui4", Tag = null }, // 38759
             new ChineseChar('靨', new[] {"yan3", "yan5", "ye4"}) { Simplified = "靥", Traditional = "靨", Pinyin = "ye4", Tag = null }, // 38760
             new ChineseChar('革', new[] {"ge2", "ji2"}) { Simplified = "革", Traditional = "革", Pinyin = "ge2", Tag = null }, // 38761
@@ -18645,7 +18645,7 @@ namespace Chinese.Gen
             new ChineseChar('頔', new[] {"di2"}) { Simplified = "頔", Traditional = "頔", Pinyin = "di2", Tag = null }, // 38932
             new ChineseChar('頕', new[] {"dan1", "dian4"}) { Simplified = "頕", Traditional = "頕", Pinyin = "dan1", Tag = null }, // 38933
             new ChineseChar('頖', new[] {"pan4"}) { Simplified = "頖", Traditional = "頖", Pinyin = "pan4", Tag = null }, // 38934
-            new ChineseChar('頗', new[] {"po1", "po5"}) { Simplified = "颇", Traditional = "頗", Pinyin = "po3", Tag = null }, // 38935
+            new ChineseChar('頗', new[] {"po1", "po5"}) { Simplified = "颇", Traditional = "頗", Pinyin = "po1", Tag = null }, // 38935
             new ChineseChar('領', new[] {"ling3"}) { Simplified = "领", Traditional = "領", Pinyin = "ling3", Tag = null }, // 38936
             new ChineseChar('頙', new[] {"che4"}) { Simplified = "頙", Traditional = "頙", Pinyin = "che4", Tag = null }, // 38937
             new ChineseChar('頚', new[] {"jing4"}) { Simplified = "頚", Traditional = "頚", Pinyin = "jing4", Tag = null }, // 38938
@@ -18655,12 +18655,12 @@ namespace Chinese.Gen
             new ChineseChar('頞', new[] {"an4", "an5", "e4"}) { Simplified = "頞", Traditional = "頞", Pinyin = "e4", Tag = null }, // 38942
             new ChineseChar('頟', new[] {"e2"}) { Simplified = "頟", Traditional = "頟", Pinyin = "e2", Tag = null }, // 38943
             new ChineseChar('頠', new[] {"wei3"}) { Simplified = "頠", Traditional = "頠", Pinyin = "wei3", Tag = null }, // 38944
-            new ChineseChar('頡', new[] {"jie2", "xie2"}) { Simplified = "颉", Traditional = "頡", Pinyin = "jie2", Tag = null }, // 38945
+            new ChineseChar('頡', new[] {"jie2", "xie2"}) { Simplified = "颉", Traditional = "頡", Pinyin = "xie2", Tag = null }, // 38945
             new ChineseChar('頢', new[] {"kuo4", "kuo5"}) { Simplified = "頢", Traditional = "頢", Pinyin = "kuo4", Tag = null }, // 38946
             new ChineseChar('頣', new[] {"shen3"}) { Simplified = "頣", Traditional = "頣", Pinyin = "shen3", Tag = null }, // 38947
             new ChineseChar('頤', new[] {"yi2"}) { Simplified = "颐", Traditional = "頤", Pinyin = "yi2", Tag = null }, // 38948
             new ChineseChar('頥', new[] {"yi2"}) { Simplified = "頥", Traditional = "頥", Pinyin = "yi2", Tag = null }, // 38949
-            new ChineseChar('頦', new[] {"ke1", "ke2"}) { Simplified = "颏", Traditional = "頦", Pinyin = "ke1", Tag = null }, // 38950
+            new ChineseChar('頦', new[] {"ke1", "ke2"}) { Simplified = "颏", Traditional = "頦", Pinyin = "hai2", Tag = null }, // 38950
             new ChineseChar('頧', new[] {"dui1"}) { Simplified = "頧", Traditional = "頧", Pinyin = "dui1", Tag = null }, // 38951
             new ChineseChar('頨', new[] {"bian4", "yu3", "yu5"}) { Simplified = "頨", Traditional = "頨", Pinyin = "yu3", Tag = null }, // 38952
             new ChineseChar('頩', new[] {"ping1", "ping5"}) { Simplified = "頩", Traditional = "頩", Pinyin = "ping1", Tag = null }, // 38953
@@ -18719,7 +18719,7 @@ namespace Chinese.Gen
             new ChineseChar('顟', new[] {"lao2"}) { Simplified = "顟", Traditional = "顟", Pinyin = "lao2", Tag = null }, // 39007
             new ChineseChar('顠', new[] {"piao3", "piao5"}) { Simplified = "顠", Traditional = "顠", Pinyin = "piao3", Tag = null }, // 39008
             new ChineseChar('顡', new[] {"wai4", "zhuai4", "zhuai5"}) { Simplified = "顡", Traditional = "顡", Pinyin = "wai4", Tag = null }, // 39009
-            new ChineseChar('顢', new[] {"man1", "man5"}) { Simplified = "颟", Traditional = "顢", Pinyin = "man1", Tag = null }, // 39010
+            new ChineseChar('顢', new[] {"man1", "man5"}) { Simplified = "颟", Traditional = "顢", Pinyin = "man2", Tag = null }, // 39010
             new ChineseChar('顣', new[] {"cu4", "cu5"}) { Simplified = "顣", Traditional = "顣", Pinyin = "cu4", Tag = null }, // 39011
             new ChineseChar('顤', new[] {"yao2"}) { Simplified = "顤", Traditional = "顤", Pinyin = "yao2", Tag = null }, // 39012
             new ChineseChar('顥', new[] {"hao4"}) { Simplified = "颢", Traditional = "顥", Pinyin = "hao4", Tag = null }, // 39013
@@ -18937,7 +18937,7 @@ namespace Chinese.Gen
             new ChineseChar('餻', new[] {"gao1", "gao5"}) { Simplified = "餻", Traditional = "餻", Pinyin = "gao1", Tag = null }, // 39227
             new ChineseChar('餼', new[] {"xi4"}) { Simplified = "饩", Traditional = "餼", Pinyin = "xi4", Tag = null }, // 39228
             new ChineseChar('餽', new[] {"kui4", "kui5"}) { Simplified = "馈", Traditional = "餽", Pinyin = "kui4", Tag = null }, // 39229
-            new ChineseChar('餾', new[] {"liu2", "liu4"}) { Simplified = "馏", Traditional = "餾", Pinyin = "liu2", Tag = null }, // 39230
+            new ChineseChar('餾', new[] {"liu2", "liu4"}) { Simplified = "馏", Traditional = "餾", Pinyin = "liu4", Tag = null }, // 39230
             new ChineseChar('餿', new[] {"sou1"}) { Simplified = "馊", Traditional = "餿", Pinyin = "sou1", Tag = null }, // 39231
             new ChineseChar('饀', new[] {"tao1", "tao2"}) { Simplified = "饀", Traditional = "饀", Pinyin = "tao2", Tag = null }, // 39232
             new ChineseChar('饁', new[] {"ye4"}) { Simplified = "饁", Traditional = "饁", Pinyin = "ye4", Tag = null }, // 39233
@@ -19088,7 +19088,7 @@ namespace Chinese.Gen
             new ChineseChar('駕', new[] {"jia4"}) { Simplified = "驾", Traditional = "駕", Pinyin = "jia4", Tag = null }, // 39381
             new ChineseChar('駖', new[] {"ling2"}) { Simplified = "駖", Traditional = "駖", Pinyin = "ling2", Tag = null }, // 39382
             new ChineseChar('駗', new[] {"zhen3", "zhen5"}) { Simplified = "駗", Traditional = "駗", Pinyin = "zhen3", Tag = null }, // 39383
-            new ChineseChar('駘', new[] {"dai4", "tai2"}) { Simplified = "骀", Traditional = "駘", Pinyin = "dai4", Tag = null }, // 39384
+            new ChineseChar('駘', new[] {"dai4", "tai2"}) { Simplified = "骀", Traditional = "駘", Pinyin = "tai2", Tag = null }, // 39384
             new ChineseChar('駙', new[] {"fu4"}) { Simplified = "驸", Traditional = "駙", Pinyin = "fu4", Tag = null }, // 39385
             new ChineseChar('駚', new[] {"yang3"}) { Simplified = "駚", Traditional = "駚", Pinyin = "yang3", Tag = null }, // 39386
             new ChineseChar('駛', new[] {"shi3"}) { Simplified = "驶", Traditional = "駛", Pinyin = "shi3", Tag = null }, // 39387
@@ -19204,7 +19204,7 @@ namespace Chinese.Gen
             new ChineseChar('驌', new[] {"su4", "su5"}) { Simplified = "驌", Traditional = "驌", Pinyin = "su4", Tag = null }, // 39500
             new ChineseChar('驍', new[] {"xiao1"}) { Simplified = "骁", Traditional = "驍", Pinyin = "xiao1", Tag = null }, // 39501
             new ChineseChar('驎', new[] {"lin2", "lin5"}) { Simplified = "驎", Traditional = "驎", Pinyin = "lin2", Tag = null }, // 39502
-            new ChineseChar('驏', new[] {"zhan4"}) { Simplified = "骣", Traditional = "驏", Pinyin = "chan3", Tag = null }, // 39503
+            new ChineseChar('驏', new[] {"zhan4"}) { Simplified = "骣", Traditional = "驏", Pinyin = "zhan4", Tag = null }, // 39503
             new ChineseChar('驐', new[] {"dun1", "dun5"}) { Simplified = "驐", Traditional = "驐", Pinyin = "dun1", Tag = null }, // 39504
             new ChineseChar('驑', new[] {"liu2"}) { Simplified = "驑", Traditional = "驑", Pinyin = "liu2", Tag = null }, // 39505
             new ChineseChar('驒', new[] {"tuo2", "tuo5"}) { Simplified = "驒", Traditional = "驒", Pinyin = "tuo2", Tag = null }, // 39506
@@ -19335,7 +19335,7 @@ namespace Chinese.Gen
             new ChineseChar('髏', new[] {"lou2"}) { Simplified = "髅", Traditional = "髏", Pinyin = "lou2", Tag = null }, // 39631
             new ChineseChar('髐', new[] {"xiao1"}) { Simplified = "髐", Traditional = "髐", Pinyin = "xiao1", Tag = null }, // 39632
             new ChineseChar('髑', new[] {"du2"}) { Simplified = "髑", Traditional = "髑", Pinyin = "du2", Tag = null }, // 39633
-            new ChineseChar('髒', new[] {"zang1", "zang3", "zang5"}) { Simplified = "脏", Traditional = "髒", Pinyin = "zang4", Tag = null }, // 39634
+            new ChineseChar('髒', new[] {"zang1", "zang3", "zang5"}) { Simplified = "脏", Traditional = "髒", Pinyin = "zang1", Tag = null }, // 39634
             new ChineseChar('髓', new[] {"sui3", "sui5"}) { Simplified = "髓", Traditional = "髓", Pinyin = "sui3", Tag = null }, // 39635
             new ChineseChar('體', new[] {"ti1", "ti3"}) { Simplified = "体", Traditional = "體", Pinyin = "ti3", Tag = null }, // 39636
             new ChineseChar('髕', new[] {"bin4", "bin5"}) { Simplified = "髌", Traditional = "髕", Pinyin = "bin4", Tag = null }, // 39637
@@ -19363,7 +19363,7 @@ namespace Chinese.Gen
             new ChineseChar('髫', new[] {"tiao2"}) { Simplified = "髫", Traditional = "髫", Pinyin = "tiao2", Tag = null }, // 39659
             new ChineseChar('髬', new[] {"pi1", "pi5"}) { Simplified = "髬", Traditional = "髬", Pinyin = "pi1", Tag = null }, // 39660
             new ChineseChar('髭', new[] {"zi1"}) { Simplified = "髭", Traditional = "髭", Pinyin = "zi1", Tag = null }, // 39661
-            new ChineseChar('髮', new[] {"fa4", "fa5"}) { Simplified = "发", Traditional = "髮", Pinyin = "fa1", Tag = null }, // 39662
+            new ChineseChar('髮', new[] {"fa4", "fa5"}) { Simplified = "发", Traditional = "髮", Pinyin = "fa4", Tag = null }, // 39662
             new ChineseChar('髯', new[] {"ran2", "ran5"}) { Simplified = "髯", Traditional = "髯", Pinyin = "ran2", Tag = null }, // 39663
             new ChineseChar('髰', new[] {"di4", "ti4"}) { Simplified = "髰", Traditional = "髰", Pinyin = "ti4", Tag = null }, // 39664
             new ChineseChar('髱', new[] {"bao4", "bao5"}) { Simplified = "髱", Traditional = "髱", Pinyin = "bao4", Tag = null }, // 39665
@@ -19421,7 +19421,7 @@ namespace Chinese.Gen
             new ChineseChar('鬥', new[] {"dou4"}) { Simplified = "斗", Traditional = "鬥", Pinyin = "dou4", Tag = null }, // 39717
             new ChineseChar('鬦', new[] {"dou4"}) { Simplified = "鬦", Traditional = "鬦", Pinyin = "dou4", Tag = null }, // 39718
             new ChineseChar('鬧', new[] {"nao4", "nao5"}) { Simplified = "闹", Traditional = "鬧", Pinyin = "nao4", Tag = null }, // 39719
-            new ChineseChar('鬨', new[] {"hong4", "xiang4"}) { Simplified = "哄", Traditional = "鬨", Pinyin = "hong3", Tag = null }, // 39720
+            new ChineseChar('鬨', new[] {"hong4", "xiang4"}) { Simplified = "哄", Traditional = "鬨", Pinyin = "hong4", Tag = null }, // 39720
             new ChineseChar('鬩', new[] {"xi4"}) { Simplified = "阋", Traditional = "鬩", Pinyin = "xi4", Tag = null }, // 39721
             new ChineseChar('鬪', new[] {"dou4"}) { Simplified = "鬪", Traditional = "鬪", Pinyin = "dou4", Tag = null }, // 39722
             new ChineseChar('鬫', new[] {"han3"}) { Simplified = "鬫", Traditional = "鬫", Pinyin = "han3", Tag = null }, // 39723
@@ -19589,7 +19589,7 @@ namespace Chinese.Gen
             new ChineseChar('鯓', new[] {"shen1"}) { Simplified = "鯓", Traditional = "鯓", Pinyin = "shen1", Tag = null }, // 39891
             new ChineseChar('鯔', new[] {"zi1"}) { Simplified = "鲻", Traditional = "鯔", Pinyin = "zi1", Tag = null }, // 39892
             new ChineseChar('鯕', new[] {"qi2"}) { Simplified = "鯕", Traditional = "鯕", Pinyin = "qi2", Tag = null }, // 39893
-            new ChineseChar('鯖', new[] {"qing1", "zheng1"}) { Simplified = "鲭", Traditional = "鯖", Pinyin = "qing1", Tag = null }, // 39894
+            new ChineseChar('鯖', new[] {"qing1", "zheng1"}) { Simplified = "鲭", Traditional = "鯖", Pinyin = "zheng1", Tag = null }, // 39894
             new ChineseChar('鯗', new[] {"xiang3"}) { Simplified = "鯗", Traditional = "鯗", Pinyin = "xiang3", Tag = null }, // 39895
             new ChineseChar('鯘', new[] {"nei3", "nei5"}) { Simplified = "鯘", Traditional = "鯘", Pinyin = "nei3", Tag = null }, // 39896
             new ChineseChar('鯙', new[] {"chun2", "chun5"}) { Simplified = "鯙", Traditional = "鯙", Pinyin = "chun2", Tag = null }, // 39897
@@ -19600,7 +19600,7 @@ namespace Chinese.Gen
             new ChineseChar('鯞', new[] {"zhou3"}) { Simplified = "鯞", Traditional = "鯞", Pinyin = "zhou3", Tag = null }, // 39902
             new ChineseChar('鯟', new[] {"dong1", "dong5"}) { Simplified = "鯟", Traditional = "鯟", Pinyin = "dong1", Tag = null }, // 39903
             new ChineseChar('鯠', new[] {"lai2", "lai5"}) { Simplified = "鯠", Traditional = "鯠", Pinyin = "lai2", Tag = null }, // 39904
-            new ChineseChar('鯡', new[] {"fei1", "fei4", "fei5"}) { Simplified = "鲱", Traditional = "鯡", Pinyin = "fei1", Tag = null }, // 39905
+            new ChineseChar('鯡', new[] {"fei1", "fei4", "fei5"}) { Simplified = "鲱", Traditional = "鯡", Pinyin = "fei4", Tag = null }, // 39905
             new ChineseChar('鯢', new[] {"ni2"}) { Simplified = "鲵", Traditional = "鯢", Pinyin = "ni2", Tag = null }, // 39906
             new ChineseChar('鯣', new[] {"yi4"}) { Simplified = "鯣", Traditional = "鯣", Pinyin = "yi4", Tag = null }, // 39907
             new ChineseChar('鯤', new[] {"kun1", "kun5"}) { Simplified = "鲲", Traditional = "鯤", Pinyin = "kun1", Tag = null }, // 39908
@@ -19970,7 +19970,7 @@ namespace Chinese.Gen
             new ChineseChar('鵝', new[] {"e2"}) { Simplified = "鹅", Traditional = "鵝", Pinyin = "e2", Tag = null }, // 40285
             new ChineseChar('鵞', new[] {"e2"}) { Simplified = "鵞", Traditional = "鵞", Pinyin = "e2", Tag = null }, // 40286
             new ChineseChar('鵟', new[] {"kuang2"}) { Simplified = "鵟", Traditional = "鵟", Pinyin = "kuang2", Tag = null }, // 40287
-            new ChineseChar('鵠', new[] {"gu3", "hu2"}) { Simplified = "鹄", Traditional = "鵠", Pinyin = "gu3", Tag = null }, // 40288
+            new ChineseChar('鵠', new[] {"gu3", "hu2"}) { Simplified = "鹄", Traditional = "鵠", Pinyin = "hu2", Tag = null }, // 40288
             new ChineseChar('鵡', new[] {"wu3"}) { Simplified = "鹉", Traditional = "鵡", Pinyin = "wu3", Tag = null }, // 40289
             new ChineseChar('鵢', new[] {"shen1"}) { Simplified = "鵢", Traditional = "鵢", Pinyin = "shen1", Tag = null }, // 40290
             new ChineseChar('鵣', new[] {"chi4", "chi5", "lai4", "lai5"}) { Simplified = "鵣", Traditional = "鵣", Pinyin = "lai4", Tag = null }, // 40291
@@ -20046,7 +20046,7 @@ namespace Chinese.Gen
             new ChineseChar('鶮', new[] {"he4", "hu2"}) { Simplified = "鶮", Traditional = "鶮", Pinyin = "he4", Tag = null }, // 40366
             new ChineseChar('鶯', new[] {"ying1"}) { Simplified = "莺", Traditional = "鶯", Pinyin = "ying1", Tag = null }, // 40367
             new ChineseChar('鶰', new[] {"yuan2", "yuan5"}) { Simplified = "鶰", Traditional = "鶰", Pinyin = "yuan2", Tag = null }, // 40368
-            new ChineseChar('鶱', new[] {"xian1"}) { Simplified = "骞", Traditional = "鶱", Pinyin = "qian1", Tag = null }, // 40369
+            new ChineseChar('鶱', new[] {"xian1"}) { Simplified = "骞", Traditional = "鶱", Pinyin = "xian1", Tag = null }, // 40369
             new ChineseChar('鶲', new[] {"weng1", "weng5"}) { Simplified = "鶲", Traditional = "鶲", Pinyin = "weng1", Tag = null }, // 40370
             new ChineseChar('鶳', new[] {"shi1"}) { Simplified = "鶳", Traditional = "鶳", Pinyin = "shi1", Tag = null }, // 40371
             new ChineseChar('鶴', new[] {"he4"}) { Simplified = "鹤", Traditional = "鶴", Pinyin = "he4", Tag = null }, // 40372
@@ -20056,7 +20056,7 @@ namespace Chinese.Gen
             new ChineseChar('鶸', new[] {"ruo4", "ruo5"}) { Simplified = "鶸", Traditional = "鶸", Pinyin = "ruo4", Tag = null }, // 40376
             new ChineseChar('鶹', new[] {"liu2"}) { Simplified = "鶹", Traditional = "鶹", Pinyin = "liu2", Tag = null }, // 40377
             new ChineseChar('鶺', new[] {"ji2"}) { Simplified = "鶺", Traditional = "鶺", Pinyin = "ji2", Tag = null }, // 40378
-            new ChineseChar('鶻', new[] {"gu3", "hu2"}) { Simplified = "鹘", Traditional = "鶻", Pinyin = "gu3", Tag = null }, // 40379
+            new ChineseChar('鶻', new[] {"gu3", "hu2"}) { Simplified = "鹘", Traditional = "鶻", Pinyin = "gu2", Tag = null }, // 40379
             new ChineseChar('鶼', new[] {"jian1", "qian1"}) { Simplified = "鹣", Traditional = "鶼", Pinyin = "jian1", Tag = null }, // 40380
             new ChineseChar('鶽', new[] {"sun3", "sun5"}) { Simplified = "鶽", Traditional = "鶽", Pinyin = "sun3", Tag = null }, // 40381
             new ChineseChar('鶾', new[] {"han4"}) { Simplified = "鶾", Traditional = "鶾", Pinyin = "han4", Tag = null }, // 40382
@@ -20313,7 +20313,7 @@ namespace Chinese.Gen
             new ChineseChar('麹', new[] {"qu1"}) { Simplified = "麹", Traditional = "麹", Pinyin = "qu1", Tag = null }, // 40633
             new ChineseChar('麺', new[] {"mian4"}) { Simplified = "麺", Traditional = "麺", Pinyin = "mian4", Tag = null }, // 40634
             new ChineseChar('麻', new[] {"ma1", "ma2", "ma5"}) { Simplified = "麻", Traditional = "麻", Pinyin = "ma2", Tag = null }, // 40635
-            new ChineseChar('麼', new[] {"me5", "mo2"}) { Simplified = "麽", Traditional = "麼", Pinyin = "mo2", Tag = null }, // 40636
+            new ChineseChar('麼', new[] {"me5", "mo2"}) { Simplified = "麽", Traditional = "麼", Pinyin = "me5", Tag = null }, // 40636
             new ChineseChar('麽', new[] {"me5", "mo2"}) { Simplified = "麽", Traditional = "麼", Pinyin = "mo2", Tag = null }, // 40637
             new ChineseChar('麾', new[] {"hui1"}) { Simplified = "麾", Traditional = "麾", Pinyin = "hui1", Tag = null }, // 40638
             new ChineseChar('黀', new[] {"zou1", "zou5"}) { Simplified = "黀", Traditional = "黀", Pinyin = "zou1", Tag = null }, // 40640
@@ -20375,7 +20375,7 @@ namespace Chinese.Gen
             new ChineseChar('黺', new[] {"fen3"}) { Simplified = "黺", Traditional = "黺", Pinyin = "fen3", Tag = null }, // 40698
             new ChineseChar('黻', new[] {"fu2"}) { Simplified = "黻", Traditional = "黻", Pinyin = "fu2", Tag = null }, // 40699
             new ChineseChar('黼', new[] {"fu3"}) { Simplified = "黼", Traditional = "黼", Pinyin = "fu3", Tag = null }, // 40700
-            new ChineseChar('黽', new[] {"meng3", "meng5", "mian3", "min3", "min5"}) { Simplified = "黾", Traditional = "黽", Pinyin = "min3", Tag = null }, // 40701
+            new ChineseChar('黽', new[] {"meng3", "meng5", "mian3", "min3", "min5"}) { Simplified = "黾", Traditional = "黽", Pinyin = "mian3", Tag = null }, // 40701
             new ChineseChar('黾', new[] {"mian3", "min3", "min5"}) { Simplified = "黾", Traditional = "黽", Pinyin = "min3", Tag = null }, // 40702
             new ChineseChar('黿', new[] {"yuan2", "yuan5"}) { Simplified = "鼋", Traditional = "黿", Pinyin = "yuan2", Tag = null }, // 40703
             new ChineseChar('鼀', new[] {"cu4", "cu5"}) { Simplified = "鼀", Traditional = "鼀", Pinyin = "cu4", Tag = null }, // 40704
@@ -20469,7 +20469,7 @@ namespace Chinese.Gen
             new ChineseChar('齙', new[] {"bao1", "bao5"}) { Simplified = "龅", Traditional = "齙", Pinyin = "bao1", Tag = null }, // 40793
             new ChineseChar('齚', new[] {"ze2", "ze5"}) { Simplified = "齚", Traditional = "齚", Pinyin = "ze2", Tag = null }, // 40794
             new ChineseChar('齛', new[] {"shi4", "xie4"}) { Simplified = "齛", Traditional = "齛", Pinyin = "xie4", Tag = null }, // 40795
-            new ChineseChar('齜', new[] {"chai2", "chai5", "zi1"}) { Simplified = "龇", Traditional = "齜", Pinyin = "zi1", Tag = null }, // 40796
+            new ChineseChar('齜', new[] {"chai2", "chai5", "zi1"}) { Simplified = "龇", Traditional = "齜", Pinyin = "chai2", Tag = null }, // 40796
             new ChineseChar('齝', new[] {"chi1", "chi5"}) { Simplified = "齝", Traditional = "齝", Pinyin = "chi1", Tag = null }, // 40797
             new ChineseChar('齞', new[] {"yan3", "yan5"}) { Simplified = "齞", Traditional = "齞", Pinyin = "yan3", Tag = null }, // 40798
             new ChineseChar('齟', new[] {"ju3"}) { Simplified = "龃", Traditional = "齟", Pinyin = "ju3", Tag = null }, // 40799

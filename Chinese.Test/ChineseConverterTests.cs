@@ -22,7 +22,7 @@ namespace Chinese.Test
                 new ChineseWord { Simplified = "后面", Traditional = "後面", Pinyin = "hou4 mian4" },
             };
 
-            using (new ChineseLexicon(Builtin.ChineseChars, words))
+            using (new ChineseLexicon(Builtin.ChineseChars, words).BeginScope())
             {
                 Assert.Equal("皇后在國王後面。", ChineseConverter.ToTraditional("皇后在国王后面。"));
             }

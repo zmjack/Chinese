@@ -14,21 +14,21 @@ namespace Chinese
         /// <param name="chinese"></param>
         /// <param name="format"></param>
         /// <returns></returns>
-        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default) => GetString(ChineseType.Simplified, chinese, format);
+        public static string GetString(string chinese, PinyinFormat format = PinyinFormat.Default) => GetString(ChineseTypes.Simplified, chinese, format);
 
         /// <summary>
         /// 获取指定类型字符串的拼音
         /// </summary>
-        /// <param name="chineseType"></param>
+        /// <param name="chineseTypes"></param>
         /// <param name="chinese"></param>
         /// <param name="format"></param>
         /// <returns></returns>
-        public static string GetString(ChineseType chineseType, string chinese, PinyinFormat format = PinyinFormat.Default)
+        public static string GetString(ChineseTypes chineseTypes, string chinese, PinyinFormat format = PinyinFormat.Default)
         {
-            var lexicon = ChineseLexicon.Current ?? ChineseLexicon.Default;
+            var lexicon = LexiconScope.Current?.Lexicon;
             IEnumerable<int> GetDefaultSteps() { foreach (var ch in chinese) yield return 1; }
 
-            var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chineseType, chinese).Select(x => x.Length);
+            var steps = lexicon is null ? GetDefaultSteps() : ChineseTokenizer.SplitWords(chineseTypes, chinese).Select(x => x.Length);
 
             if (!chinese.IsNullOrWhiteSpace())
             {
@@ -40,18 +40,14 @@ namespace Chinese
                     var word = chinese.Substring(ptext, step);
                     try
                     {
-                        var chineseWord = chineseType switch
-                        {
-                            ChineseType.Simplified => lexicon.Words.FirstOrDefault(x => x.Simplified == word),
-                            ChineseType.Traditional => lexicon.Words.FirstOrDefault(x => x.Traditional == word),
-                            _ => throw new NotImplementedException(),
-                        };
-                        var pinyin = chineseType switch
-                        {
-                            ChineseType.Simplified => chineseWord.SimplifiedPinyin,
-                            ChineseType.Traditional => chineseWord.TraditionalPinyin,
-                            _ => throw new NotImplementedException(),
-                        };
+                        string pinyin = null;
+
+                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Simplified)) pinyin = lexicon.Words.FirstOrDefault(x => x.Simplified == word)?.SimplifiedPinyin;
+                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Traditional)) pinyin = lexicon.Words.FirstOrDefault(x => x.Traditional == word)?.TraditionalPinyin;
+                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Simplified)) pinyin = Builtin.ChineseChars.FirstOrDefault(x => x.Char == word[0])?.SimplifiedPinyin;
+                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Traditional)) pinyin = Builtin.ChineseChars.FirstOrDefault(x => x.Char == word[0])?.TraditionalPinyin;
+
+                        if (pinyin is null) throw new ArgumentException($"未能匹配文字（{word}）。");
 
                         if (format != PinyinFormat.InitialConsonant)
                         {

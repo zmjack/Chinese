@@ -188,7 +188,7 @@ namespace Chinese
             var last = chineseNumber.Last();
             if (last == '两') throw new ArgumentException($"不能以该字结尾：{last}", nameof(chineseNumber));
 
-            using (new ChineseLexicon(NumericalWords))
+            using (new ChineseLexicon(NumericalWords).BeginScope())
             {
                 var words = ChineseTokenizer.SplitWords(chineseNumber);
                 var total = 0m;
