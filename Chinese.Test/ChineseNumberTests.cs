@@ -1,5 +1,4 @@
-﻿using Chinese.Options;
-using System;
+﻿using System;
 using Xunit;
 
 namespace Chinese.Test

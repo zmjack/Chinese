@@ -22,14 +22,23 @@ dotnet add package Chinese.Words
 
 ## 版本更新
 
+**v0.5.0**
+
+- 简繁转换性能优化（**NETStandard2.0+**，**NET5.0+**，通常情况耗时减少约 **90%**）。
+
+- 计量读法性能优化（耗时减少约 **85%**）。
+
+- 修复计量读法尾零转换错误问题：
+
+  ```csharp
+  var wrong = ChineseCurrency.GetString(10_0000);  // 错误：一十万零元整
+  var right = ChineseCurrency.GetString(10_0000);  // 正确：一十万元整
+  ```
+
 **v0.4.5**
 
 - 更新部分字默认拼音。
 - 发布测试词库 **Chinese.Words**（v0.0.1）。
-
-**v0.4.2**
-
-- 支持更多 **.NET** 实现：**Net35**、**Net40**、**Net45**、**Net451**、**Net46**、**Net461**。
 
 **v0.4.1**
 
@@ -237,7 +246,7 @@ ChineseCurrency.GetString(10_0001.03m, options);   // "拾万零壹圆零叁分"
 中文读法转货币数值：
 
 ```c#
-ChineseCurrency.GetNumber("一十万零一元整");          // 10_0001
+ChineseCurrency.GetNumber("一十万零一元整");         // 10_0001
 ChineseCurrency.GetNumber("一十万零一百零一元整");    // 10_0101
 ChineseCurrency.GetNumber("一十万一千零一元整");      // 10_1001
 ChineseCurrency.GetNumber("一十万一千零一十元整");    // 10_1010

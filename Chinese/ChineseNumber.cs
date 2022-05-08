@@ -1,9 +1,7 @@
-﻿using Chinese.Options;
-using NStandard;
+﻿using NStandard;
 using System;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Chinese
 {
@@ -20,6 +18,7 @@ namespace Chinese
         public static readonly string[] LowerNumberValues = new[] { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
         public static readonly string[] LowerNumberCodeValues = new[] { "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
+        private const int PART_COUNT = 4;
         private const int SUPERIOR_LEVELS_COUNT = 8;
         private static string[] superiorLevels;
 
@@ -97,18 +96,21 @@ namespace Chinese
         /// <param name="number"></param>
         /// <returns></returns>
         public static string GetString(decimal number) => GetString(number, ChineseNumberOptions.Default);
+
         /// <summary>
         /// 获取数值的数值读法。
         /// </summary>
         /// <param name="number"></param>
         /// <param name="setOptions"></param>
         /// <returns></returns>
+        /// 
         public static string GetString(decimal number, Action<ChineseNumberOptions> setOptions)
         {
             var options = new ChineseNumberOptions();
             setOptions(options);
             return GetString(number, options);
         }
+
         /// <summary>
         /// 获取数值的数值读法。
         /// </summary>
@@ -132,12 +134,12 @@ namespace Chinese
                 levels = LowerLevels;
             }
 
-            string GetPartString(char[] singles, string level)
+            string GetPartString(char[] singles, string level, bool prevZero)
             {
                 if (!singles.Any()) return string.Empty;
 
                 var sb = new StringBuilder();
-                var zero = false;
+                var zero = prevZero;
                 foreach (var kv in singles.AsKvPairs())
                 {
                     if (kv.Value != '0')
@@ -145,16 +147,15 @@ namespace Chinese
                         var value = numberValues[kv.Value - '0'];
                         var singleNumberUnit = levels[singles.Length - 1 - kv.Key];
 
-                        if (zero)
-                            sb.Append($"{numberValues[0]}{value}{singleNumberUnit}");
-                        else sb.Append($"{value}{singleNumberUnit}");
+                        if (zero) sb.Append(numberValues[0]);
+                        sb.Append($"{value}{singleNumberUnit}");
 
                         zero = false;
                     }
                     else zero = true;
                 }
 
-                if (sb.Length == 0) return numberValues[0];
+                if (sb.Length == 0) return null;
                 else
                 {
                     sb.Append(level);
@@ -162,18 +163,62 @@ namespace Chinese
                 }
             }
 
+            var s_number = number.ToString();
+            var enumerator_s_number = s_number.GetEnumerator();
+
+            var levelParts = new char[(s_number.Length - 1) / 4 + 1][];
+            var enumerator_levelParts = levelParts.GetEnumerator();
+            if (enumerator_levelParts.MoveNext())
+            {
+                int i = 0;
+                var mod = s_number.Length % PART_COUNT;
+                if (mod > 0)
+                {
+                    levelParts[0] = new char[mod];
+                    for (int j = 0; j < levelParts[0].Length; j++)
+                    {
+                        enumerator_s_number.MoveNext();
+                        levelParts[0][j] = enumerator_s_number.Current;
+                    }
+                    i++;
+                }
+
+                while (enumerator_levelParts.MoveNext())
+                {
+                    levelParts[i] = new char[4];
+                    for (int j = 0; j < PART_COUNT; j++)
+                    {
+                        enumerator_s_number.MoveNext();
+                        levelParts[i][j] = enumerator_s_number.Current;
+                    }
+                    i++;
+                }
+            }
+
             var sb = new StringBuilder();
-            var levelParts = number.ToString()
-                .For(parts => parts.AsKvPairs()
-                    .GroupBy(x => (x.Key + (4 - parts.Length % 4)) / 4)
-                    .Select(g => g.Select(x => x.Value).ToArray()))
-                .ToArray();
-            var chLevelParts = levelParts.Select((v, i) => GetPartString(v, SuperiorLevels[levelParts.Length - 1 - i]));
-            var ret = chLevelParts.Join("").RegexReplace(new Regex($@"{numberValues[0]}{{2,}}"), numberValues[0]);
+            int part_i = 0;
+            bool prevZero = false;
+            foreach (var part in levelParts)
+            {
+                var partString = GetPartString(part, SuperiorLevels[levelParts.Length - 1 - part_i], prevZero);
+                if (partString is not null)
+                {
+                    sb.Append(partString);
+                    prevZero = false;
+                }
+                else prevZero = true;
+                part_i++;
+            }
 
-            if (options.Simplified && (ret.StartsWith("一十") || ret.StartsWith("壹拾"))) ret = ret.Substring(1);
+            if (options.Simplified && sb.Length > 1)
+            {
+                if ((sb[0] == '一' && sb[1] == '十') || (sb[0] == '壹' && sb[1] == '拾'))
+                {
+                    sb.Remove(0, 1);
+                }
+            }
 
-            return ret;
+            return sb.ToString();
         }
 
         /// <summary>
@@ -188,7 +233,7 @@ namespace Chinese
             var last = chineseNumber.Last();
             if (last == '两') throw new ArgumentException($"不能以该字结尾：{last}", nameof(chineseNumber));
 
-            using (new ChineseLexicon(NumericalWords).BeginScope())
+            using (Lexicon.Numerical.BeginScope())
             {
                 var words = ChineseTokenizer.SplitWords(chineseNumber);
                 var total = 0m;
@@ -199,7 +244,7 @@ namespace Chinese
                     else if (word == "十" || word == "拾") levelNumber += 10;
                     else
                     {
-                        var numericalWord = Builtin.NumericalWords.FirstOrDefault(x => x.Simplified == word);
+                        var numericalWord = Lexicon.Numerical.Find(ChineseTypes.Simplified, word);
                         if (numericalWord != null) levelNumber += (int)numericalWord.Tag;
                         else
                         {

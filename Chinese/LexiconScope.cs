@@ -12,6 +12,6 @@ namespace Chinese
             Lexicon = lexicon;
         }
 
-        public static LexiconScope Default = new(new ChineseLexicon(Builtin.ChineseChars));
+        public static LexiconScope Default = new(new ChineseLexicon(Builtin.ChineseChars, 1));
     }
 }

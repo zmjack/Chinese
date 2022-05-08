@@ -1,5 +1,4 @@
-﻿using Chinese.Options;
-using NStandard;
+﻿using NStandard;
 using System;
 using System.Text.RegularExpressions;
 
@@ -75,9 +74,9 @@ namespace Chinese
             var regex = new Regex(@"(.+)(?:圆|元)(?:整|(.)角整|(.)角(.)分|零(.)分)");
             var match = regex.Match(chineseCurrency);
 
-            if (!match.Success) throw new ArgumentException("不是合法的中文货币描述。");
+            if (!match.Success) throw new ArgumentException("不是合法的中文货币描述。", nameof(chineseCurrency));
 
-            var yuan = match.Groups[1].Value.For(x => ChineseNumber.GetNumber(x));
+            var yuan = ChineseNumber.GetNumber(match.Groups[1].Value);
             var jiao = (match.Groups[2].Value.For(x => x.IsWhiteSpace() ? null : x)
                      ?? match.Groups[3].Value.For(x => x.IsWhiteSpace() ? null : x))
                      ?.For(x => ChineseNumber.GetNumber(x)) ?? 0m;

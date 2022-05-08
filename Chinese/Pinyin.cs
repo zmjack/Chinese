@@ -43,10 +43,8 @@ namespace Chinese
                     {
                         string pinyin = null;
 
-                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Simplified)) pinyin = lexicon.Words.FirstOrDefault(x => x.Simplified == word)?.SimplifiedPinyin;
-                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Traditional)) pinyin = lexicon.Words.FirstOrDefault(x => x.Traditional == word)?.TraditionalPinyin;
-                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Simplified)) pinyin = Builtin.ChineseChars.FirstOrDefault(x => x.Char == word[0])?.SimplifiedPinyin;
-                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Traditional)) pinyin = Builtin.ChineseChars.FirstOrDefault(x => x.Char == word[0])?.TraditionalPinyin;
+                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Simplified)) pinyin = lexicon.Find(ChineseTypes.Simplified, word)?.SimplifiedPinyin;
+                        if (pinyin is null && chineseTypes.HasFlag(ChineseTypes.Traditional)) pinyin = lexicon.Find(ChineseTypes.Traditional, word)?.TraditionalPinyin;
 
                         if (pinyin is null) throw new ArgumentException($"未能匹配文字（{word}）。");
 

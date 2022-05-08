@@ -1,4 +1,5 @@
-﻿using Chinese.Attributes;
+﻿#if NEW_FEATURE
+using Chinese.Attributes;
 
 namespace Chinese.Grammars
 {
@@ -81,3 +82,4 @@ namespace Chinese.Grammars
     }
 
 }
+#endif

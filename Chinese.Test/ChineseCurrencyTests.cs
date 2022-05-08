@@ -1,10 +1,27 @@
-﻿using Chinese.Options;
-using Xunit;
+﻿using Xunit;
 
 namespace Chinese.Test
 {
     public class ChineseCurrencyTests
     {
+        [Fact]
+        public void LastZeroTest()
+        {
+            var options = new ChineseNumberOptions { Simplified = false, Upper = false };
+            Assert.Equal("一十万元整", ChineseCurrency.GetString(10_0000m, options));
+            Assert.Equal("一十亿元整", ChineseCurrency.GetString(10_0000_0000m, options));
+            Assert.Equal("一十亿零一元整", ChineseCurrency.GetString(10_0000_0001m, options));
+            Assert.Equal("一十亿零一千零一元整", ChineseCurrency.GetString(10_0000_1001m, options));
+            Assert.Equal("一十亿零一百万一千零一元整", ChineseCurrency.GetString(10_0100_1001m, options));
+
+            Assert.Equal(10_0000m, ChineseCurrency.GetNumber("一十万元整"));
+            Assert.Equal(10_0000_0000m, ChineseCurrency.GetNumber("一十亿元整"));
+            Assert.Equal(10_0000_0001m, ChineseCurrency.GetNumber("一十亿零一元整"));
+            Assert.Equal(10_0000_1001m, ChineseCurrency.GetNumber("一十亿零一千零一元整"));
+            Assert.Equal(10_0100_1001m, ChineseCurrency.GetNumber("一十亿零一百万一千零一元整"));
+        }
+
+
         [Fact]
         public void LowerTest()
         {
