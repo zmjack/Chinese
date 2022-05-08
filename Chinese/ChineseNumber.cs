@@ -170,19 +170,15 @@ namespace Chinese
             var enumerator_levelParts = levelParts.GetEnumerator();
             if (enumerator_levelParts.MoveNext())
             {
-                int i = 0;
                 var mod = s_number.Length % PART_COUNT;
-                if (mod > 0)
+                levelParts[0] = new char[mod > 0 ? mod : 4];
+                for (int j = 0; j < levelParts[0].Length; j++)
                 {
-                    levelParts[0] = new char[mod];
-                    for (int j = 0; j < levelParts[0].Length; j++)
-                    {
-                        enumerator_s_number.MoveNext();
-                        levelParts[0][j] = enumerator_s_number.Current;
-                    }
-                    i++;
+                    enumerator_s_number.MoveNext();
+                    levelParts[0][j] = enumerator_s_number.Current;
                 }
 
+                int i = 1;
                 while (enumerator_levelParts.MoveNext())
                 {
                     levelParts[i] = new char[4];

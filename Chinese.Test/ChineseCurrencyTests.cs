@@ -7,18 +7,22 @@ namespace Chinese.Test
         [Fact]
         public void LastZeroTest()
         {
+            ChineseCurrency.GetString(10203040);
+
             var options = new ChineseNumberOptions { Simplified = false, Upper = false };
             Assert.Equal("一十万元整", ChineseCurrency.GetString(10_0000m, options));
             Assert.Equal("一十亿元整", ChineseCurrency.GetString(10_0000_0000m, options));
             Assert.Equal("一十亿零一元整", ChineseCurrency.GetString(10_0000_0001m, options));
             Assert.Equal("一十亿零一千零一元整", ChineseCurrency.GetString(10_0000_1001m, options));
             Assert.Equal("一十亿零一百万一千零一元整", ChineseCurrency.GetString(10_0100_1001m, options));
+            Assert.Equal("一千零二十万三千零四十元整", ChineseCurrency.GetString(1020_3040m, options));
 
             Assert.Equal(10_0000m, ChineseCurrency.GetNumber("一十万元整"));
             Assert.Equal(10_0000_0000m, ChineseCurrency.GetNumber("一十亿元整"));
             Assert.Equal(10_0000_0001m, ChineseCurrency.GetNumber("一十亿零一元整"));
             Assert.Equal(10_0000_1001m, ChineseCurrency.GetNumber("一十亿零一千零一元整"));
             Assert.Equal(10_0100_1001m, ChineseCurrency.GetNumber("一十亿零一百万一千零一元整"));
+            Assert.Equal(1020_3040m, ChineseCurrency.GetNumber("一千零二十万三千零四十元整"));
         }
 
 
