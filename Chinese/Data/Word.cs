@@ -1,55 +1,50 @@
-﻿using System;
+﻿using Chinese.Core;
+using Chinese.Data;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Chinese
+namespace Chinese.Data
 {
-    public class ChineseWord : IEquatable<ChineseWord>
+    public class Word : IWord
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+
         /// <summary>
-        /// 中文字符串
+        /// 词组类型
         /// </summary>
-        public string Word
-        {
-            set
-            {
-                Simplified = value;
-                Traditional = value;
-            }
-        }
+        public WordType Type { get; set; }
+
         /// <summary>
         /// 简体中文字符串
         /// </summary>
+        [StringLength(64)]
         public string Simplified { get; set; }
+
         /// <summary>
         /// 繁体中文字符串
         /// </summary>
+        [StringLength(64)]
         public string Traditional { get; set; }
 
         /// <summary>
-        /// 拼音
-        /// </summary>
-        public string Pinyin
-        {
-            set
-            {
-                SimplifiedPinyin = value;
-                TraditionalPinyin = value;
-            }
-        }
-        /// <summary>
         /// 简体中文拼音
         /// </summary>
+        [StringLength(64)]
         public string SimplifiedPinyin { get; set; }
+
         /// <summary>
         /// 繁体中文拼音
         /// </summary>
+        [StringLength(64)]
         public string TraditionalPinyin { get; set; }
 
-        /// <summary>
-        /// 额外数据
-        /// </summary>
-        public object Tag { get; set; }
+        public int HashCode { get; set; }
 
-        public bool Equals(ChineseWord other)
+        public object Tag => null;
+
+        public bool Equals(IWord other)
         {
             return Simplified == other.Simplified && Traditional == other.Traditional;
         }

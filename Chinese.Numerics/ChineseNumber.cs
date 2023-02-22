@@ -1,13 +1,14 @@
-﻿using NStandard;
+﻿using Chinese.Core;
+using NStandard;
 using System;
 using System.Linq;
 using System.Text;
 
-namespace Chinese
+namespace Chinese.Numerics
 {
     public static class ChineseNumber
     {
-        public static ChineseWord[] NumericalWords;
+        private static Lexicon _lexicon = new(Builtin.NumericalWords);
 
         static ChineseNumber()
         {
@@ -33,18 +34,18 @@ namespace Chinese
                 if (value.Length != SUPERIOR_LEVELS_COUNT) throw new ArgumentException("自定义分级读法必须设置八级。");
 
                 superiorLevels = value;
-                NumericalWords = Builtin.NumericalWords.Concat(value.Select(word =>
+                _lexicon = new Lexicon(Builtin.NumericalWords.Concat(value.Select(word =>
                 {
-                    var pinyin = Pinyin.GetString(word);
+                    var pinyin = string.Empty; // TODO: Pinyin.GetPinyin(word);
                     var chineseWord = new ChineseWord
                     {
                         Simplified = word,
-                        Traditional = ChineseConverter.ToTraditional(word),
+                        Traditional = word,
                         SimplifiedPinyin = pinyin,
                         TraditionalPinyin = pinyin,
                     };
                     return chineseWord;
-                })).ToArray();
+                })).ToArray());
             }
         }
 
@@ -140,12 +141,12 @@ namespace Chinese
 
                 var sb = new StringBuilder();
                 var zero = prevZero;
-                foreach (var kv in singles.AsKvPairs())
+                foreach (var (index, single) in singles.AsIndexValuePairs())
                 {
-                    if (kv.Value != '0')
+                    if (single != '0')
                     {
-                        var value = numberValues[kv.Value - '0'];
-                        var singleNumberUnit = levels[singles.Length - 1 - kv.Key];
+                        var value = numberValues[single - '0'];
+                        var singleNumberUnit = levels[singles.Length - 1 - index];
 
                         if (zero) sb.Append(numberValues[0]);
                         sb.Append($"{value}{singleNumberUnit}");
@@ -229,44 +230,41 @@ namespace Chinese
             var last = chineseNumber.Last();
             if (last == '两') throw new ArgumentException($"不能以该字结尾：{last}", nameof(chineseNumber));
 
-            using (Lexicon.Numerical.BeginScope())
+            var words = _lexicon.SplitWords(ChineseType.Simplified, chineseNumber);
+            var total = 0m;
+            var levelNumber = 0;
+            foreach (var word in words)
             {
-                var words = ChineseTokenizer.SplitWords(chineseNumber);
-                var total = 0m;
-                var levelNumber = 0;
-                foreach (var word in words)
+                if (word == "零") continue;
+                else if (word == "十" || word == "拾") levelNumber += 10;
+                else
                 {
-                    if (word == "零") continue;
-                    else if (word == "十" || word == "拾") levelNumber += 10;
+                    var numericalWord = _lexicon.GetWordFromCache(ChineseType.Simplified, word);
+                    if (numericalWord != null) levelNumber += (int)numericalWord.Tag;
                     else
                     {
-                        var numericalWord = Lexicon.Numerical.Find(ChineseTypes.Simplified, word);
-                        if (numericalWord != null) levelNumber += (int)numericalWord.Tag;
-                        else
+                        var level = superiorLevels.IndexOf(word);
+                        if (level > -1)
                         {
-                            var level = superiorLevels.IndexOf(word);
-                            if (level > -1)
+                            total += levelNumber * (level switch
                             {
-                                total += levelNumber * (level switch
-                                {
-                                    1 => 1_0000,
-                                    2 => 1_0000_0000,
-                                    3 => 1_0000_0000_0000,
-                                    4 => 1_0000_0000_0000_0000,
-                                    5 => 1_0000_0000_0000_0000_0000m,
-                                    6 => 1_0000_0000_0000_0000_0000_0000m,
-                                    7 => 1_0000_0000_0000_0000_0000_0000_0000m,
-                                    _ => throw new NotImplementedException(),
-                                });
-                                levelNumber = 0;
-                            }
-                            else throw new ArgumentException($"不能解析的词汇：{word}", nameof(chineseNumber));
+                                1 => 1_0000,
+                                2 => 1_0000_0000,
+                                3 => 1_0000_0000_0000,
+                                4 => 1_0000_0000_0000_0000,
+                                5 => 1_0000_0000_0000_0000_0000m,
+                                6 => 1_0000_0000_0000_0000_0000_0000m,
+                                7 => 1_0000_0000_0000_0000_0000_0000_0000m,
+                                _ => throw new NotImplementedException(),
+                            });
+                            levelNumber = 0;
                         }
+                        else throw new ArgumentException($"不能解析的词汇：{word}", nameof(chineseNumber));
                     }
                 }
-                total += levelNumber;
-                return total;
             }
+            total += levelNumber;
+            return total;
         }
 
     }

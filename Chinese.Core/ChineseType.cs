@@ -1,6 +1,6 @@
 ﻿namespace Chinese
 {
-    public enum ChineseTypes
+    public enum ChineseType
     {
         Undefined = 0,
 

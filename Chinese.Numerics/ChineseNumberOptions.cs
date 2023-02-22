@@ -1,4 +1,4 @@
-﻿namespace Chinese
+﻿namespace Chinese.Numerics
 {
     public class ChineseNumberOptions
     {

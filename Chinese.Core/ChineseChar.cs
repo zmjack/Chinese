@@ -2,7 +2,7 @@
 {
     public class ChineseChar : ChineseWord
     {
-        public ChineseChar(char ch, ChineseTypes types, string[] pinyins)
+        public ChineseChar(char ch, ChineseType types, string[] pinyins)
         {
             Char = ch;
             Pinyins = pinyins;
@@ -13,6 +13,6 @@
         public char Char { get; }
         public string[] Pinyins { get; }
         public bool IsPolyphone { get; }
-        public ChineseTypes Types { get; }
+        public ChineseType Types { get; }
     }
 }

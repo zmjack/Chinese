@@ -1,10 +1,11 @@
+using Chinese.Core;
 using System;
 
-namespace Chinese
+namespace Chinese.Numerics
 {
-    public static partial class Builtin
+    public static class Builtin
     {
-        public static readonly ChineseWord[] NumericalWords = new[]
+        public static readonly IWord[] NumericalWords = new[]
         {
             new ChineseWord { Simplified = "壹", SimplifiedPinyin = "yi1", Traditional = "壹", TraditionalPinyin = "yi1", Tag = 1 },
             new ChineseWord { Simplified = "贰", SimplifiedPinyin = "er4", Traditional = "貳", TraditionalPinyin = "er4", Tag = 2 },

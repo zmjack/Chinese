@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>148e957f-3bbc-4f93-8713-609008d90d46</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Chinese.Data</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ApplicationDbContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Char.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CharType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Word.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\NumericWord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\WordType.cs" />
+  </ItemGroup>
+</Project>

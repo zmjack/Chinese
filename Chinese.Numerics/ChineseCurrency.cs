@@ -2,12 +2,13 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Chinese
+namespace Chinese.Numerics
 {
     public static class ChineseCurrency
     {
         private static readonly string[] UpperLevels = new[] { "圆", "角", "分" };
         private static readonly string[] LowerLevels = new[] { "元", "角", "分" };
+        private static readonly Regex CurrencyRegex = new Regex(@"^(.+)(?:圆|元)(?:整|(.)角整|(.)角(.)分|零(.)分)$");
 
         /// <summary>
         /// 获取数值的货币读法。
@@ -71,8 +72,7 @@ namespace Chinese
         /// <returns></returns>
         public static decimal GetNumber(string chineseCurrency)
         {
-            var regex = new Regex(@"(.+)(?:圆|元)(?:整|(.)角整|(.)角(.)分|零(.)分)");
-            var match = regex.Match(chineseCurrency);
+            var match = CurrencyRegex.Match(chineseCurrency);
 
             if (!match.Success) throw new ArgumentException("不是合法的中文货币描述。", nameof(chineseCurrency));
 
