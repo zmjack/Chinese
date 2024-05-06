@@ -12,13 +12,7 @@
 dotnet add package Chinese
 ```
 
-词库安装：
 
-```powershell
-dotnet add package Chinese.Words
-```
-
-<br/>
 
 ## 版本更新
 
