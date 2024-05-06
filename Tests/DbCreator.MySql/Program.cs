@@ -1,18 +1,22 @@
 ﻿using Chinese.Data;
-using System;
+using Microsoft.EntityFrameworkCore;
 
-namespace DbCreator
+namespace DbCreator;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            using (var sqlite = ApplicationDbContext.UseSqlite("filename=chinese.db"))
-            using (var mysql = ApplicationDbContext.UseMySql("server=127.0.0.1;database=chinese"))
-            {
-            }
+        var sqliteOptions = new DbContextOptionsBuilder<ChineseDbContext>().UseSqlite("filename=chinese.db", null).Options;
+        var mysqlConnectionString = "server=127.0.0.1;database=chinese";
+        var mysqlOptions = new DbContextOptionsBuilder<ChineseDbContext>().UseMySql(mysqlConnectionString, ServerVersion.AutoDetect(mysqlConnectionString), null).Options;
 
-            Console.WriteLine("Complete.");
+        using (var sqlite = new ChineseDbContext(sqliteOptions))
+        using (var mysql = new ChineseDbContext(mysqlOptions))
+        {
+            sqlite.Database.Migrate();
         }
+
+        Console.WriteLine("Complete.");
     }
 }

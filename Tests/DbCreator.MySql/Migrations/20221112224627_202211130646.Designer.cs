@@ -8,123 +8,122 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DbCreator.MySql.Migrations
+namespace DbCreator.MySql.Migrations;
+
+[DbContext(typeof(ChineseDbContext))]
+[Migration("20221112224627_202211130646")]
+partial class _202211130646
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221112224627_202211130646")]
-    partial class _202211130646
+    protected override void BuildTargetModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.11")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+        modelBuilder
+            .HasAnnotation("ProductVersion", "6.0.11")
+            .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Chinese.Data.Char", b =>
-                {
-                    b.Property<int>("Unicode")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+        modelBuilder.Entity("Chinese.Data.Char", b =>
+            {
+                b.Property<int>("Unicode")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    b.Property<string>("Character")
-                        .IsRequired()
-                        .HasColumnType("varchar(1)");
+                b.Property<string>("Character")
+                    .IsRequired()
+                    .HasColumnType("varchar(1)");
 
-                    b.Property<bool>("IsPolyphone")
-                        .HasColumnType("tinyint(1)");
+                b.Property<bool>("IsPolyphone")
+                    .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Pinyins")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Pinyins")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("Simplified")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Simplified")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("SimplifiedPinyin")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("SimplifiedPinyin")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("Traditional")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Traditional")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("TraditionalPinyin")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("TraditionalPinyin")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<int>("Types")
-                        .HasColumnType("int");
+                b.Property<int>("Types")
+                    .HasColumnType("int");
 
-                    b.HasKey("Unicode");
+                b.HasKey("Unicode");
 
-                    b.ToTable("Chars");
-                });
+                b.ToTable("Chars");
+            });
 
-            modelBuilder.Entity("Chinese.Data.Data.NumericWord", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+        modelBuilder.Entity("Chinese.Data.Data.NumericWord", b =>
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("char(36)");
 
-                    b.Property<string>("Simplified")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Simplified")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("SimplifiedPinyin")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("SimplifiedPinyin")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("Traditional")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Traditional")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("TraditionalPinyin")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("TraditionalPinyin")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                b.Property<int>("Type")
+                    .HasColumnType("int");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
+                b.Property<int>("Value")
+                    .HasColumnType("int");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("NumericWords");
-                });
+                b.ToTable("NumericWords");
+            });
 
-            modelBuilder.Entity("Chinese.Word", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+        modelBuilder.Entity("Chinese.Word", b =>
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("char(36)");
 
-                    b.Property<string>("Simplified")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Simplified")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("SimplifiedPinyin")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("SimplifiedPinyin")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("Traditional")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Traditional")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("TraditionalPinyin")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("TraditionalPinyin")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                b.Property<int>("Type")
+                    .HasColumnType("int");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Words");
-                });
+                b.ToTable("Words");
+            });
 #pragma warning restore 612, 618
-        }
     }
 }

@@ -1,20 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6</TargetFrameworks>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <LangVersion>preview</LangVersion>
-    <Version>0.7.0-preview</Version>
+    <Nullable>enable</Nullable>
+    <Version>0.8.1-alpha</Version>
     <Authors>zmjack</Authors>
     <Description>中文解析通用工具。包括拼音，简繁转换，数字读法，货币读法。</Description>
-    <Copyright>Copyright © nstandard.net 2020-2022</Copyright>
+    <Copyright>Copyright © nstandard.net 2023</Copyright>
     <PackageId>Chinese</PackageId>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/zmjack/Chinese</PackageProjectUrl>
     <PackageIcon>Chinese.png</PackageIcon>
     <RepositoryUrl>https://github.com/zmjack/Chinese</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Chinese Pinyin Number</PackageTags>
+    <PackageTags>Chinese Pinyin Numerics</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,49 +28,20 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NStandard" Version="0.21.0" />
-    <PackageReference Include="LinqSharp.EFCore" Version="6.0.200-alpha" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.11" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.11">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.11" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
-      <Version>7.0.0</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
-      <Version>6.0.1</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5'">
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
-      <Version>6.0.1</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6'">
-    <PackageReference Include="LinqSharp.EFCore">
-      <Version>6.0.200-alpha</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
-      <Version>6.0.1</Version>
-    </PackageReference>
+    <PackageReference Include="LinqSharp" Version="7.0.36" />
+    <PackageReference Include="NStandard" Version="0.59.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chinese.Core\Chinese.Core.csproj" />
+    <ProjectReference Include="..\Chinese.Abstract\Chinese.Abstract.csproj" />
   </ItemGroup>
 
 </Project>

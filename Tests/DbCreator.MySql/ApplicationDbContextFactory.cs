@@ -2,13 +2,19 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace DbCreator.MySql
+namespace DbCreator.MySql;
+
+public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ChineseDbContext>
 {
-    public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    public ChineseDbContext CreateDbContext(string[] args)
     {
-        public ApplicationDbContext CreateDbContext(string[] args)
-        {
-            return ApplicationDbContext.UseMySql("server=127.0.0.1;port=33306;user=root;password=root;database=chinese", b => b.MigrationsAssembly("DbCreator.MySql"));
-        }
+        var mysqlConnectionString = "server=127.0.0.1;port=33306;user=root;password=root;database=chinese";
+        var mysqlOptions = new DbContextOptionsBuilder<ChineseDbContext>().UseMySql(
+            mysqlConnectionString,
+            ServerVersion.AutoDetect(mysqlConnectionString),
+            b => b.MigrationsAssembly("DbCreator.MySql")
+        ).Options;
+
+        return new ChineseDbContext(mysqlOptions);
     }
 }

@@ -7,136 +7,90 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DbCreator.MySql.Migrations
+namespace DbCreator.MySql.Migrations;
+
+[DbContext(typeof(ChineseDbContext))]
+partial class ApplicationDbContextModelSnapshot : ModelSnapshot
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.11")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+        modelBuilder
+            .HasAnnotation("ProductVersion", "6.0.11")
+            .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Chinese.Data.Char", b =>
-                {
-                    b.Property<int>("Unicode")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+        modelBuilder.Entity("Chinese.Data.Char", b =>
+            {
+                b.Property<int>("Unicode")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    b.Property<string>("Character")
-                        .IsRequired()
-                        .HasColumnType("varchar(1)");
+                b.Property<string>("Character")
+                    .IsRequired()
+                    .HasColumnType("varchar(1)");
 
-                    b.Property<string>("DefaultPinyin")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("DefaultPinyin")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<bool>("IsPolyphone")
-                        .HasColumnType("tinyint(1)");
+                b.Property<bool>("IsPolyphone")
+                    .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Pinyins")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("Pinyins")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<bool>("Sight")
-                        .HasColumnType("tinyint(1)");
+                b.Property<bool>("Sight")
+                    .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Simplified")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("Simplified")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<string>("Traditional")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("Traditional")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<int>("Types")
-                        .HasColumnType("int");
+                b.Property<int>("Types")
+                    .HasColumnType("int");
 
-                    b.HasKey("Unicode");
+                b.HasKey("Unicode");
 
-                    b.ToTable("Chars");
-                });
+                b.ToTable("Chars");
+            });
 
-            modelBuilder.Entity("Chinese.Data.Data.NumericWord", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+        modelBuilder.Entity("Chinese.Data.Word", b =>
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("char(36)");
 
-                    b.Property<string>("Simplified")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<int>("HashCode")
+                    .HasColumnType("int");
 
-                    b.Property<string>("SimplifiedPinyin")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("Simplified")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<string>("Traditional")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("SimplifiedPinyin")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<string>("TraditionalPinyin")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
+                b.Property<string>("Traditional")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                b.Property<string>("TraditionalPinyin")
+                    .HasMaxLength(64)
+                    .HasColumnType("varchar(64)");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
+                b.Property<int>("Type")
+                    .HasColumnType("int");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Numerics");
-                });
-
-            modelBuilder.Entity("Chinese.Word", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
-
-                    b.Property<int>("HashCode")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Simplified")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
-
-                    b.Property<string>("SimplifiedPinyin")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
-
-                    b.Property<string>("Traditional")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
-
-                    b.Property<string>("TraditionalPinyin")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("varchar(64)");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Words");
-                });
+                b.ToTable("Words");
+            });
 #pragma warning restore 612, 618
-        }
     }
 }

@@ -1,0 +1,194 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Net" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.XPath" #>
+<#@ output extension=".cs" #>
+namespace Chinese.Mainland;
+
+public static class Generator
+{
+	public class Result
+	{
+		public required Province[] Provinces { get; set; }
+		public required City[] Cities { get; set; }
+		public required Country[] Countries { get; set; }
+	}
+	
+#pragma warning disable IDE0028 // Simplify collection initialization
+	public static Result Build()
+	{
+		var list = GetModels();
+
+		Province? province = null;
+		City? city = null;
+
+		List<Province> provinces = [];
+		List<City> cities = [];
+		List<Country> countries = [];
+
+		foreach (var item in list)
+		{
+			if (item.Level == 0)
+			{
+				province = new()
+				{
+					Code = item.Code,
+					Name = item.Name,
+					Cities = new List<City>(),
+				};
+				provinces.Add(province);
+			}
+			else if (item.Level == 1)
+			{
+				city = new()
+				{
+					Code = item.Code,
+					Name = item.Name,
+					Province = province!,
+					Countries = new List<Country>(),
+				};
+				cities.Add(city);				
+                (province!.Cities as List<City>)!.Add(city);
+			}
+			else if (item.Level == 2)
+			{
+				var country = new Country()
+				{
+					Code = item.Code,
+					Name = item.Name,
+					City = city!,
+				};
+				countries.Add(country);
+                (city!.Countries as List<Country>)!.Add(country);
+			}
+		}
+
+		return new Result
+		{
+			Provinces = [.. provinces],
+			Cities = [.. cities],
+			Countries = [.. countries],
+		};
+	}
+#pragma warning restore IDE0028 // Simplify collection initialization
+
+    internal static IEnumerable<Model> GetModels()
+    {
+<#
+	foreach(var model in GetModels())
+	{
+#>
+		yield return new Model { Level = <#=model.Level#>, Code = "<#=model.Code#>", Name = "<#=model.Name#>" };
+<#
+	}
+#>
+    }
+}
+
+<#+
+class Model
+{
+	public int Level { get; set; }
+	public string Code { get; set; }
+	public string Name { get; set; }
+}
+
+IEnumerable<Model> GetModels()
+{
+	var projectPath = Host.ResolveAssemblyReference("$(ProjectDir)");
+    var path = Path.Combine(projectPath, @"source\202201xzqh.html");
+    var html = File.ReadAllText(path);
+    
+	var regex = new Regex(@"(<table .+>.+</table>)", RegexOptions.Singleline);
+	var match = regex.Match(html);
+	var table = match.Groups[1].Value;
+
+	table = table.Replace(Encoding.UTF8.GetString(new byte[] { 0xc2, 0xa0 }), " ");
+	table = new Regex(@"<!--.+?-->", RegexOptions.Singleline).Replace(table, "");
+	table = new Regex(@"(\r\n)\s+<!\[if .+<!\[endif\]>", RegexOptions.Singleline).Replace(table, "");
+	table = new Regex(@"(\r\n)\s+<col .+?>", RegexOptions.Singleline).Replace(table, "");
+	table = new Regex(@" style='.+?'", RegexOptions.Singleline).Replace(table, "");
+	table = new Regex(@" (cellpadding|cellspacing|border|colspan|height|width|class)=.+?(?= |>)", RegexOptions.Singleline).Replace(table, "");
+	table = new Regex(@"<font\s*>(.+?)</font>", RegexOptions.Singleline).Replace(table, "$1");
+	table = new Regex(@"<span\s*>(.+?)</span>", RegexOptions.Singleline).Replace(table, "$1");
+
+	var doc = new XmlDocument();
+	doc.LoadXml($"""
+		<?xml version="1.0" encoding="utf-8"?>
+		{table}
+		"""
+	);
+
+	var list = new List<Model>();
+	var start = false;
+	Model pre = null;
+
+	foreach (XmlNode child in doc.DocumentElement.ChildNodes)
+	{
+		if (child.ChildNodes[1].InnerText == "行政区划代码")
+		{
+			start = true;
+			continue;
+		}
+
+		if (start)
+		{
+			var col2 = child.ChildNodes[2].InnerText;
+			if (!string.IsNullOrEmpty(col2))
+			{
+				var level = col2.StartsWith("   ") ? 2
+					: col2.StartsWith(" ") ? 1
+					: 0;
+				var name = col2.Trim();
+
+				Model item;
+				if (level == 2 && pre.Level == 0)
+				{
+					item = new Model
+					{
+						Level = 1,
+						Code = pre.Code,
+						Name = pre.Name,
+					};
+					list.Add(item);
+					pre = item;
+				}
+
+				var col1 = child.ChildNodes[1].InnerText.Trim();
+				if (int.TryParse(col1, out var _code))
+				{
+					var code = _code.ToString();
+					item = new()
+					{
+						Level = level,
+						Code = code,
+						Name = name,
+					};
+				}
+				else
+				{
+					item = new()
+					{
+						Level = level,
+						Code = pre.Code,
+						Name = name,
+					};
+				}
+
+				list.Add(item);
+				pre = item;
+			}
+			else break;
+		}
+	}
+
+	return list;
+}
+#>

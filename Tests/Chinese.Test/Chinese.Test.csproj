@@ -1,21 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LinqSharp" Version="7.0.36" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="NStandard" Version="0.21.0" />
+    <PackageReference Include="NStandard" Version="0.59.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Chinese.Numerics\Chinese.Numerics.csproj" />
+    <ProjectReference Include="..\..\Chinese.Abstract\Chinese.Abstract.csproj" />
+    <ProjectReference Include="..\..\Chinese.Lexicon\Chinese.Lexicon.csproj" />
+    <ProjectReference Include="..\..\Chinese.Region\Chinese.Region.csproj" />
     <ProjectReference Include="..\..\Chinese\Chinese.csproj" />
   </ItemGroup>
 

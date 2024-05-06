@@ -22,14 +22,25 @@ dotnet add package Chinese.Words
 
 ## 版本更新
 
-### 版本计划：0.7.0
+### 版本计划：0.8.1-alpha
 
-- [x] 单独提供专用于 **处理中文数值** 的库：**Chinese.Numerics**。
-- [x] 优化缓存逻辑：现在不会在初始化时载入所有字词，以减小启动压力（初始内存使用减少约 **90%**）。
-- [x] 提供外部词库支持，现可使用 **数据库** 作为外部词库源。
-- [ ] 提供一个外部词库（提供 **sqlite** 格式介质，收录约 **7w** 词，可自行转换为其他数据库格式）。
-- [ ] 大量逻辑优化。
-- [ ] 收集建议：希望能够通过某种方式接受用户提交词库修正。
+欢迎仅使用 **数字转换** / **货币转换** 功能的项目升级试用。
+
+- [x] 大量逻辑优化，优化内存使用。
+
+- [x] 提高 **数字转换** / **货币转换** 性能，修复一些 **BUG**（Issues: #10）。
+
+  ```csharp
+  Lexicon.Currency.GetString(0.1m);  // 零元一角整
+  ```
+
+- [x] 修复 **中文掺杂字母或拼音** 转换时缺少 **空格** 的问题（Issues: #12）。
+
+- [ ] 数值读法增加 **小数** 读法。
+
+- [ ] 提供外部词库支持，现可使用 **数据库** 作为外部词库源。（结构需优化）
+
+- [ ] 词库编译生成器（解析 **文本结构** 到 **Sqlite** 数据库文件，用户可以通过文本结构提交 PR 贡献）。
 
 ### 版本：0.5.0
 
@@ -79,21 +90,6 @@ Pinyin.GetString("免费，跨平台，开源！", PinyinFormat.InitialConsonant
 
 <br/>
 
-使用词库 [Chinese.Words](https://github.com/zmjack/Chinese/blob/master/Chinese.Words/README.md) 示例 ：
-
-```csharp
-var lexicon = new ChineseLexicon(Additional.CommonWords, Builtin.ChineseChars);
-using (lexicon.BeginScope())
-{
-    var str = Pinyin.GetString("只有这只鸟跑得很快。");	
-    // zhi3 you3 zhe4 zhi1 niao3 pao3 de2 hen3 kuai4。
-    var words = ChineseTokenizer.SplitWords("只有这只鸟跑得很快。");
-    // 只有 / 这只 / 鸟 / 跑 / 得 / 很快 / 。
-}
-```
-
-<br/>
-
 ## 简繁转换
 
 ```c#
@@ -105,73 +101,58 @@ ChineseConverter.ToSimplified("免費，跨平臺，開源！");     // "免费�
 
 ## 数字读法
 
+| NumberMode 选项 | 描述                                                         | 示例                      |
+| --------------- | ------------------------------------------------------------ | ------------------------- |
+| **Default**     | 流行读法，亿级以上使用 `千亿` `万亿` 等单位；<br />不省略第一个 `十` 前的 `一` ；<br/>小写读法。 | -                         |
+| **Classical**   | 经典读法，亿级以上使用 `兆` `京` 等单位                      | -                         |
+| **Concise**     | 简洁读法，省略第一个 `十` 前的 `一`                          | `10_0001` 读作 `十万零一` |
+| **Upper**       | 大写读法                                                     | `1` 读作 `壹`             |
+
+
+
 ### 计量读法
 
-小写读法：
-
 ```c#
-var options = new ChineseNumberOptions { Simplified = false, Upper = false };
-ChineseNumber.GetString(10_0001, options);    // "一十万零一"
-ChineseNumber.GetString(10_0101, options);    // "一十万零一百零一"
-ChineseNumber.GetString(10_1001, options);    // "一十万一千零一"
-ChineseNumber.GetString(10_1010, options);    // "一十万一千零一十"
+var lexicon = Lexicon.Number;
+lexicon.GetString(10_0001);  // "一十万零一"
+lexicon.GetString(10_0101);  // "一十万零一百零一"
+lexicon.GetString(10_1001);  // "一十万一千零一"
+lexicon.GetString(10_1010);  // "一十万一千零一十"
+
+lexicon.GetNumber("一十万零一");        // 10_0001
+lexicon.GetNumber("一十万零一百零一");  // 10_0101
+lexicon.GetNumber("一十万一千零一");    // 10_1001
+lexicon.GetNumber("一十万一千零一十");  // 10_1010
 ```
 
-```c#
-var options = new ChineseNumberOptions { Simplified = true, Upper = false };
-ChineseNumber.GetString(10_0001, options);    // "十万零一"
-ChineseNumber.GetString(10_0101, options);    // "十万零一百零一"
-ChineseNumber.GetString(10_1001, options);    // "十万一千零一"
-ChineseNumber.GetString(10_1010, options);    // "十万一千零一十"
-```
-大写读法：
+#### 大数读法
 
-```c#
-var options = new ChineseNumberOptions { Simplified = false, Upper = true };
-ChineseNumber.GetString(10_0001, options);    // "壹拾万零壹"
-ChineseNumber.GetString(10_0101, options);    // "壹拾万零壹佰零壹"
-ChineseNumber.GetString(10_1001, options);    // "壹拾万壹仟零壹"
-ChineseNumber.GetString(10_1010, options);    // "壹拾万壹仟零壹拾"
-```
+##### 流行读法
 
-```c#
-var options = new ChineseNumberOptions { Simplified = true, Upper = true };
-ChineseNumber.GetString(10_0001, options);    // "拾万零壹"
-ChineseNumber.GetString(10_0101, options);    // "拾万零壹佰零壹"
-ChineseNumber.GetString(10_1001, options);    // "拾万壹仟零壹"
-ChineseNumber.GetString(10_1010, options);    // "拾万壹仟零壹拾"
+亿级以上使用（万亿、亿亿、万亿亿、亿亿亿、万亿亿亿）：
+
+```csharp
+var lexicon = Lexicon.Number;
+
+// "一万亿亿亿二千三百四十五亿亿亿六千七百八十九万亿亿零一百二十三亿亿四千五百六十七万亿八千九百零一亿二千三百四十五万六千七百八十九"
+lexicon.GetString(1_2345_6789_0123_4567_8901_2345_6789m);
+
+// 12345678901234567890123456789
+lexicon.GetNumber("一万亿亿亿二千三百四十五亿亿亿六千七百八十九万亿亿零一百二十三亿亿四千五百六十七万亿八千九百零一亿二千三百四十五万六千七百八十九");
 ```
 
-大数读法（万、亿、兆、京、垓、秭、穰）：
+##### 经典读法
+
+亿级以上使用（兆、京、垓、秭、穰）：
 
 ```c#
+var lexicon = Lexicon.NumberWith(NumberMode.Classical);
+
 // "一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九"
-ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m);
-```
+lexicon.GetString(1_2345_6789_0123_4567_8901_2345_6789m);
 
-```c#
-// "壹穰贰仟叁佰肆拾伍秭陆仟柒佰捌拾玖垓零壹佰贰拾叁京肆仟伍佰陆拾柒兆捌仟玖佰零壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖"
-ChineseNumber.GetString(1_2345_6789_0123_4567_8901_2345_6789m, x => x.Upper = true);
-```
-
-中文读法转数值：
-
-```c#
-ChineseNumber.GetNumber("一十万零一");          // 10_0001
-ChineseNumber.GetNumber("一十万零一百零一");    // 10_0101
-ChineseNumber.GetNumber("一十万一千零一");      // 10_1001
-ChineseNumber.GetNumber("一十万一千零一十");    // 10_1010
-```
-```c#
-// 1_2345_6789_0123_4567_8901_2345_6789
-ChineseNumber.GetNumber("一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九");
-```
-
-自定义分级单位：
-
-```c#
-ChineseNumber.SuperiorLevels = new[] { "", "万", "亿", "万亿", "亿亿", "万亿亿", "亿亿亿", "万亿亿亿" };            
-ChineseNumber.GetString(30_0020_0000_0001);    // 三十万亿零二十亿零一
+// 12345678901234567890123456789
+lexicon.GetNumber("一穰二千三百四十五秭六千七百八十九垓零一百二十三京四千五百六十七兆八千九百零一亿二千三百四十五万六千七百八十九");
 ```
 
 <br/>
@@ -179,88 +160,42 @@ ChineseNumber.GetString(30_0020_0000_0001);    // 三十万亿零二十亿零一
 ### 编号读法
 
 ```c#
-ChineseNumber.GetCodeString(10_0001.ToString(), upper: false);    // "一〇〇〇〇一"
-ChineseNumber.GetCodeString(10_0101.ToString(), upper: false);    // "一〇〇一〇一"
-ChineseNumber.GetCodeString(10_1001.ToString(), upper: false);    // "一〇一〇〇一"
-ChineseNumber.GetCodeString(10_1010.ToString(), upper: false);    // "一〇一〇一〇"
+var lexicon = Lexicon.NumberWith(NumberMode.Code);
+lexicon.GetString(10_0001);  // "一〇〇〇〇一"
+lexicon.GetString(10_0101);  // "一〇〇一〇一"
+lexicon.GetString(10_1001);  // "一〇一〇〇一"
+lexicon.GetString(10_1010);  // "一〇一〇一〇"
+
+lexicon.GetNumber("一〇〇〇〇一");  // 10_0001
+lexicon.GetNumber("一〇〇一〇一");  // 10_0101
+lexicon.GetNumber("一〇一〇〇一");  // 10_1001
+lexicon.GetNumber("一〇一〇一〇");  // 10_1010
 ```
 
-```c#
-ChineseNumber.GetCodeString(10_0001.ToString(), upper: true);     // "壹零零零零壹"
-ChineseNumber.GetCodeString(10_0101.ToString(), upper: true);     // "壹零零壹零壹"
-ChineseNumber.GetCodeString(10_1001.ToString(), upper: true);     // "壹零壹零零壹"
-ChineseNumber.GetCodeString(10_1010.ToString(), upper: true);     // "壹零壹零壹零"
-```
-
-中文读法转数值编号：
-
-```c#
-ChineseNumber.GetCodeNumber("一〇〇〇〇一");    // "100001"
-ChineseNumber.GetCodeNumber("一〇〇一〇一");    // "100101"
-ChineseNumber.GetCodeNumber("一〇一〇〇一");    // "101001"
-ChineseNumber.GetCodeNumber("一〇一〇一〇");    // "101010"
-```
 <br/>
 
 ### 货币读法
 
-货币小写读法：
-
 ```c#
-var options = new ChineseNumberOptions { Simplified = false, Upper = false };
-ChineseCurrency.GetString(10_0001, options);       // "一十万零一元整"
-ChineseCurrency.GetString(10_0101, options);       // "一十万零一百零一元整"
-ChineseCurrency.GetString(10_1001, options);       // "一十万一千零一元整"
-ChineseCurrency.GetString(10_1010, options);       // "一十万一千零一十元整"
-ChineseCurrency.GetString(10_0001.2m, options);    // "一十万零一元二角整"
-ChineseCurrency.GetString(10_0001.23m, options);   // "一十万零一元二角三分"
-ChineseCurrency.GetString(10_0001.03m, options);   // "一十万零一元零三分"
+var lexicon = Lexicon.Currency;
+
+lexicon.GetString(1);        // "一元整"
+lexicon.GetString(10_0001);  // "一十万零一元整"
+lexicon.GetString(10_0101);  // "一十万零一百零一元整"
+lexicon.GetString(10_1001);  // "一十万一千零一元整"
+lexicon.GetString(10_1010);  // "一十万一千零一十元整"
+lexicon.GetString(10_0001.2m);   // "一十万零一元二角整"
+lexicon.GetString(10_0001.23m);  // "一十万零一元二角三分"
+lexicon.GetString(10_0001.03m);  // "一十万零一元零三分"
+
+lexicon.GetNumber("一元整");                // 1
+lexicon.GetNumber("一十万零一元整");        // 10_0001
+lexicon.GetNumber("一十万零一百零一元整");  // 10_0101
+lexicon.GetNumber("一十万一千零一元整");    // 10_1001
+lexicon.GetNumber("一十万一千零一十元整");  // 10_1010
+lexicon.GetNumber("一十万零一元二角整");    // 10_0001.2m
+lexicon.GetNumber("一十万零一元二角三分");  // 10_0001.23m
+lexicon.GetNumber("一十万零一元零三分");    // 10_0001.03m
 ```
 
-```c#
-var options = new ChineseNumberOptions { Simplified = true, Upper = false };
-ChineseCurrency.GetString(10_0001, options);       // "十万零一元整"
-ChineseCurrency.GetString(10_0101, options);       // "十万零一百零一元整"
-ChineseCurrency.GetString(10_1001, options);       // "十万一千零一元整"
-ChineseCurrency.GetString(10_1010, options);       // "十万一千零一十元整"
-ChineseCurrency.GetString(10_0001.2m, options);    // "十万零一元二角整"
-ChineseCurrency.GetString(10_0001.23m, options);   // "十万零一元二角三分"
-ChineseCurrency.GetString(10_0001.03m, options);   // "十万零一元零三分"
-```
-
-货币大写读法：
-
-```c#
-var options = new ChineseNumberOptions { Simplified = false, Upper = true };
-ChineseCurrency.GetString(10_0001, options);       // "壹拾万零壹圆整"
-ChineseCurrency.GetString(10_0101, options);       // "壹拾万零壹佰零壹圆整"
-ChineseCurrency.GetString(10_1001, options);       // "壹拾万壹仟零壹圆整"
-ChineseCurrency.GetString(10_1010, options);       // "壹拾万壹仟零壹拾圆整"
-ChineseCurrency.GetString(10_0001.2m, options);    // "壹拾万零壹圆贰角整"
-ChineseCurrency.GetString(10_0001.23m, options);   // "壹拾万零壹圆贰角叁分"
-ChineseCurrency.GetString(10_0001.03m, options);   // "壹拾万零壹圆零叁分"
-```
-
-```c#
-var options = new ChineseNumberOptions { Simplified = true, Upper = true };
-ChineseCurrency.GetString(10_0001, options);       // "拾万零壹圆整"
-ChineseCurrency.GetString(10_0101, options);       // "拾万零壹佰零壹圆整"
-ChineseCurrency.GetString(10_1001, options);       // "拾万壹仟零壹圆整"
-ChineseCurrency.GetString(10_1010, options);       // "拾万壹仟零壹拾圆整"
-ChineseCurrency.GetString(10_0001.2m, options);    // "拾万零壹圆贰角整"
-ChineseCurrency.GetString(10_0001.23m, options);   // "拾万零壹圆贰角叁分"
-ChineseCurrency.GetString(10_0001.03m, options);   // "拾万零壹圆零叁分"
-```
-
-中文读法转货币数值：
-
-```c#
-ChineseCurrency.GetNumber("一十万零一元整");         // 10_0001
-ChineseCurrency.GetNumber("一十万零一百零一元整");    // 10_0101
-ChineseCurrency.GetNumber("一十万一千零一元整");      // 10_1001
-ChineseCurrency.GetNumber("一十万一千零一十元整");    // 10_1010
-ChineseCurrency.GetNumber("一十万零一元二角整");      // 10_0001.2m
-ChineseCurrency.GetNumber("一十万零一元二角三分");    // 10_0001.23m
-ChineseCurrency.GetNumber("一十万零一元零三分");      // 10_0001.03m
-```
 <br/>
