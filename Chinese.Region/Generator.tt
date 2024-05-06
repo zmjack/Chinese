@@ -103,7 +103,7 @@ class Model
 IEnumerable<Model> GetModels()
 {
 	var projectPath = Host.ResolveAssemblyReference("$(ProjectDir)");
-    var path = Path.Combine(projectPath, @"source\202201xzqh.html");
+    var path = Path.Combine(projectPath, @"source\202201xzqh");
     var html = File.ReadAllText(path);
     
 	var regex = new Regex(@"(<table .+>.+</table>)", RegexOptions.Singleline);
